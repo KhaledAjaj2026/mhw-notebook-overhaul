@@ -18,10 +18,6 @@ nav * {
   align-self: center;
 }
 
-.navbar_query-arrows {
-  overflow: hidden;
-  position: relative;
-}
 .navbar_query-arrows button {
   border: none;
   background: none;

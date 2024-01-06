@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import arrowLeftInactive from '../../assets/arrow-left-gray.svg';
-import arrowRightInactive from '../../assets/arrow-right-gray.svg';
-import arrowLeftActive from '../../assets/arrow-left-white.svg';
-import arrowRightActive from '../../assets/arrow-right-white.svg';
-import menuIcon from '../../assets/hamburger-menu.svg';
+import arrowLeftInactive from '../../assets/misc/arrow-left-gray.svg';
+import arrowRightInactive from '../../assets/misc/arrow-right-gray.svg';
+import arrowLeftActive from '../../assets/misc/arrow-left-white.svg';
+import arrowRightActive from '../../assets/misc/arrow-right-white.svg';
+import menuIcon from '../../assets/misc/hamburger-menu.svg';
 import './Navbar.css';
 
 export default function NavBar() {
