@@ -1,0 +1,159 @@
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    height: 108px;
+    background: #322423;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+
+    * {
+        margin: 7px 10px;
+    }
+}
+
+.navbar_query-arrows,
+.navbar_links,
+.navbar_main-title,
+.navbar_mobile-menu {
+    align-self: center;
+}
+
+.navbar_query-arrows {
+    overflow: hidden;
+    position: relative;
+
+    button {
+        border: none;
+        background: none;
+        padding: 0;
+        margin: 0;
+        // cursor: pointer;
+    }
+
+    :first-child {
+        margin-right: 5px;
+    }
+
+    :last-child {
+        margin-left: 5px;
+    }
+
+    img {
+        margin: 0;
+    }
+}
+
+.navbar_title {
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    line-height: 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.navbar_sliding-menu {
+    width: 40vw;
+    height: calc(100vh - 108px);
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 109px;
+    right: 0;
+    z-index: 2;
+    font-size: 1.7rem;
+
+    a {
+        margin: 5px;
+    }
+}
+
+.navbar_links {
+    justify-self: end;
+    font-size: 1.5rem;
+    font-family: 'Nanum Myeongjo', serif;
+
+    a {
+        margin: auto 10px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+.navbar_mobile-menu {
+    justify-self: end;
+    align-self: center;
+    // width: 4.5rem;
+    // height: 4.5rem;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    img {
+        margin: auto;
+        width: 4.5rem;
+    }
+}
+
+@media screen and (max-width: 1149px) {
+    .navbar_links {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1150px) {
+
+    .navbar_mobile-menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .navbar_title {
+        font-size: 1rem;
+        line-height: 30px;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .navbar_title-short {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 640px) {
+
+    .navbar_query-arrows {
+        button {
+            margin: 0;
+        }
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .navbar_title-long {
+        display: none;
+    }
+
+    .navbar_title-short {
+        display: inline;
+    }
+
+    .navbar_mobile-menu {
+        img {
+            width: 3rem;
+        }
+    }
+}
