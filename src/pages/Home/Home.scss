@@ -2,7 +2,7 @@
     background: linear-gradient(to bottom, rgba(44, 22, 13, 0.90) 0%, rgba(221, 185, 152, 0.5) 100%),
         url('src/assets/biomes/astera.jpeg') no-repeat;
     background-size: cover;
-    margin-bottom: 10rem;
+    // margin-bottom: 20rem;
 }
 
 .home_header {
@@ -14,6 +14,13 @@
     letter-spacing: 15px;
 }
 
+@media screen and (max-width: 600px) {
+    .home_header {
+        font-size: 2rem;
+        letter-spacing: 10px;
+    }
+}
+
 .home_header_flare {
     position: absolute;
     width: 70vw;
@@ -22,35 +29,21 @@
     left: 15vw;
 }
 
-.home_gif-container {
-    margin: auto;
-    width: 80vw;
-    height: 350px;
-    background: url('src/assets/misc/mhwgif1.gif') no-repeat;
-    background-size: cover;
-    background-position: 50% 40%;
-    // margin-top: -8rem;
-    // -webkite-clip-path: inset(77px 55px -184px 30px);
-    // clip-path: inset(8rem 0 7rem 0);
-}
-
-.home_gif {
-    width: 80vw;
-}
-
 .home_description {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 40rem;
-    height: 6rem;
+    width: 40vw;
     margin: 2rem auto;
-    font-family: 'Hind', sans-serif;
-    font-size: 1.5rem;
-    letter-spacing: 5px;
     background: rgba(0, 0, 0, 0.35);
     box-shadow: 0px 0px 20px 15px rgba(0, 0, 0, 0.35);
+
+    p {
+        font-family: 'Hind', sans-serif;
+        font-size: 1.5rem;
+        letter-spacing: 5px;
+    }
 }
 
 .home_search-link {

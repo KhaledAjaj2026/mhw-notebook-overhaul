@@ -1,7 +1,7 @@
 import NavBar from '../../components/NavBar/NavBar';
-import gif1 from '../../assets/misc/mhwgif1.gif';
 import flare from '../../assets/misc/lens-flare-green.png';
 import './Home.css';
+import Carousel from '../../components/Carousel/Carousel';
 
 export default function Home() {
 	return (
@@ -9,7 +9,7 @@ export default function Home() {
 			<NavBar />
 			<h1 className='home_header'>Discover Monsters</h1>
 			<img className='home_header_flare' src={flare} alt='lens flare' />
-			<div className='home_gif-container'></div>
+			<Carousel />
 			<div className='home_description'>
 				<p>
 					Learn about monster ecology, hunting techniques, quest rewards, and
