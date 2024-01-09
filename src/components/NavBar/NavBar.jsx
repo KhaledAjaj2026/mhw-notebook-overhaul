@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import arrowLeftInactive from '../../assets/misc/arrow-left-gray.svg';
 import arrowRightInactive from '../../assets/misc/arrow-right-gray.svg';
@@ -15,7 +16,7 @@ export default function NavBar() {
 
 	return (
 		<>
-			<nav>
+			<nav id='navbar-container'>
 				<div className='navbar_query-arrows'>
 					<button onClick={() => alert('left!!')}>
 						<img src={arrowLeftInactive} width={50} />

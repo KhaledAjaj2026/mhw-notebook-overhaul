@@ -1,4 +1,4 @@
-nav {
+#navbar-container {
   position: sticky;
   top: 0;
   z-index: 3;
@@ -7,7 +7,7 @@ nav {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
 }
-nav * {
+#navbar-container * {
   margin: 7px 10px;
 }
 
