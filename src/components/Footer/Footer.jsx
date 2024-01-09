@@ -10,7 +10,7 @@ export default function Footer() {
 					<br />
 					Hunters Notes
 				</h4>
-				<nav className='footer_navigation'>
+				<div className='footer_navigation'>
 					<ul>
 						<li>
 							<a
@@ -37,7 +37,7 @@ export default function Footer() {
 							</a>
 						</li>
 					</ul>
-				</nav>
+				</div>
 			</div>
 			<div className='footer_disclaimer__copyright'>
 				<p className='footer_disclaimer'>
