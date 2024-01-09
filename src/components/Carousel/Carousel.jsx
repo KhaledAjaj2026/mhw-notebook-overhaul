@@ -1,7 +1,5 @@
-import { useState } from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
-import { debounce } from 'lodash';
 import './Carousel.css';
 
 const slides = [

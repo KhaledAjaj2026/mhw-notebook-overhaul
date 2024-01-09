@@ -34,20 +34,27 @@ export default function NavBar() {
 					</h2>
 				</a>
 				<div className='navbar_links'>
-					<a href='/'>Home</a>
-					<a href='/'>Search</a>
-					<a href='/'>About</a>
+					<a href='/' className='hover-underline-animation'>
+						Home
+					</a>
+					<a href='/' className='hover-underline-animation'>
+						Search
+					</a>
+					<a href='/' className='hover-underline-animation'>
+						About
+					</a>
 				</div>
-				<button className='navbar_mobile-menu' onClick={handleMenuShow}>
+				<button className='navbar_hamburger-icon' onClick={handleMenuShow}>
 					<img src={menuIcon} alt='hamburger menu' />
 				</button>
 			</nav>
 			<div
-				className='navbar_sliding-menu'
-				style={menuShow ? { display: 'flex' } : { display: 'none' }}
+				className={`navbar_sliding-menu${
+					menuShow ? ' menu-appear' : ' menu-disappear'
+				}`}
 			>
 				<a href='/'>Home</a>
-				<a href='/shop'>Shop</a>
+				<a href='/search'>Search</a>
 				<a href='/about'>About</a>
 			</div>
 		</>

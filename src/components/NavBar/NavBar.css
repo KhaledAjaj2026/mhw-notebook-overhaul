@@ -46,19 +46,33 @@ nav * {
   font-family: "Nanum Myeongjo", serif;
 }
 
+.menu-appear {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.menu-disappear {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
 .navbar_sliding-menu {
   width: 40vw;
   height: calc(100vh - 108px);
-  display: none;
+  display: flex;
   flex-direction: column;
   position: fixed;
-  top: 109px;
+  top: 108px;
   right: 0;
   z-index: 2;
-  font-size: 1.7rem;
+  background: linear-gradient(to bottom, rgba(204, 150, 119, 0.9) 0%, rgba(107, 101, 98, 0.9) 100%);
+  font-size: 3rem;
+  font-family: "Kotta One", serif;
 }
 .navbar_sliding-menu a {
-  margin: 5px;
+  margin: 2rem;
+  color: #fff;
+  text-decoration: none;
 }
 
 .navbar_links {
@@ -71,11 +85,32 @@ nav * {
   color: #fff;
   text-decoration: none;
 }
-.navbar_links a:hover {
-  text-decoration: underline;
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #70bc66;
 }
 
-.navbar_mobile-menu {
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #70bc66;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.navbar_hamburger-icon {
   justify-self: end;
   align-self: center;
   padding: 0;
@@ -83,7 +118,7 @@ nav * {
   border: none;
   cursor: pointer;
 }
-.navbar_mobile-menu img {
+.navbar_hamburger-icon img {
   margin: auto;
   width: 4.5rem;
 }
@@ -94,7 +129,10 @@ nav * {
   }
 }
 @media screen and (min-width: 1150px) {
-  .navbar_mobile-menu {
+  .navbar_hamburger-icon {
+    display: none;
+  }
+  .navbar_sliding-menu {
     display: none;
   }
 }
@@ -123,7 +161,14 @@ nav * {
   .navbar_title-short {
     display: inline;
   }
-  .navbar_mobile-menu img {
+  .navbar_hamburger-icon img {
     width: 3rem;
+  }
+  .navbar_sliding-menu {
+    font-size: 2rem;
+    width: 100vw;
+  }
+  .navbar_sliding-menu a {
+    margin: 3rem auto;
   }
 }/*# sourceMappingURL=NavBar.css.map */
