@@ -8,7 +8,7 @@
     grid-template-columns: 1fr 2fr 1fr;
 
     * {
-        margin: 7px 10px;
+        margin: auto 10px;
     }
 }
 
@@ -52,19 +52,6 @@
     font-weight: bold;
     font-family: 'Nanum Myeongjo', serif;
 }
-
-// @keyframes slidingMenu {
-//     0% {
-//         display: none;
-//         opacity: 0;
-//     }
-
-//     100% {
-//         display: flex;
-//         opacity: 1;
-//     }
-// }
-// animation: 0.3s slidingMenu ease-in-out forwards;
 
 .menu-appear {
     opacity: 1;

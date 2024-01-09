@@ -19,7 +19,6 @@ footer {
   list-style-type: none;
   display: flex;
   padding: 0;
-  margin-bottom: 3rem;
 }
 
 .footer_navigation-link {
@@ -69,13 +68,16 @@ footer {
   padding: 1rem;
 }
 
-@media screen and (max-width: 995px) {
+@media screen and (max-width: 951px) {
   .footer_title__navigation {
     justify-content: center;
     text-align: center;
   }
   .footer_title {
     margin-bottom: 0;
+  }
+  .footer_navigation ul {
+    margin-bottom: 3rem;
   }
 }
 @media screen and (max-width: 600px) {
