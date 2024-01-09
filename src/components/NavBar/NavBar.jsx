@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { Link, ScrollRestoration } from 'react-router-dom';
 import arrowLeftInactive from '../../assets/misc/arrow-left-gray.svg';
 import arrowRightInactive from '../../assets/misc/arrow-right-gray.svg';
 import arrowLeftActive from '../../assets/misc/arrow-left-white.svg';
@@ -26,24 +27,24 @@ export default function NavBar() {
 						<img src={arrowRightInactive} width={50} />
 					</button>
 				</div>
-				<a href='/' className='navbar_title'>
+				<Link to='/' className='navbar_title'>
 					<h2>
 						<span className='navbar_title-short'>MHW</span>
 						<span className='navbar_title-long'>Monster Hunter World</span>
 						<br />
 						Hunters Notes
 					</h2>
-				</a>
+				</Link>
 				<div className='navbar_links'>
-					<a href='/' className='hover-underline-animation'>
+					<Link to='/' className='hover-underline-animation'>
 						Home
-					</a>
-					<a href='/' className='hover-underline-animation'>
+					</Link>
+					<Link to='/' className='hover-underline-animation'>
 						Search
-					</a>
-					<a href='/' className='hover-underline-animation'>
+					</Link>
+					<Link to='/about' className='hover-underline-animation'>
 						About
-					</a>
+					</Link>
 				</div>
 				<button className='navbar_hamburger-icon' onClick={handleMenuShow}>
 					<img src={menuIcon} alt='hamburger menu' />
@@ -54,10 +55,11 @@ export default function NavBar() {
 					menuShow ? ' menu-appear' : ' menu-disappear'
 				}`}
 			>
-				<a href='/'>Home</a>
-				<a href='/search'>Search</a>
-				<a href='/about'>About</a>
+				<Link to='/'>Home</Link>
+				<Link to='/'>Search</Link>
+				<Link to='/about'>About</Link>
 			</div>
+			<ScrollRestoration />
 		</>
 	);
 }

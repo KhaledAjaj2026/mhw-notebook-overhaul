@@ -70,6 +70,9 @@
     width: 80vw;
   }
   .home_description p {
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+  .home_search-link {
+    margin-bottom: 8rem;
   }
 }/*# sourceMappingURL=Home.css.map */

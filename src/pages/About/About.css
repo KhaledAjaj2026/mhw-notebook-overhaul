@@ -1,7 +1,6 @@
 #page_about-container {
   background: linear-gradient(to bottom, rgba(44, 22, 13, 0.9) 0%, rgba(221, 185, 152, 0.5) 100%), url("src/assets/biomes/astera2.webp") no-repeat;
   background-size: cover;
-  background-position: right;
 }
 
 .about_header-container {

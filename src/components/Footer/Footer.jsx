@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, ScrollRestoration } from 'react-router-dom';
 import './Footer.css';
 
 export default function Footer() {
@@ -13,28 +14,28 @@ export default function Footer() {
 				<div className='footer_navigation'>
 					<ul>
 						<li>
-							<a
-								href='/'
+							<Link
+								to='/'
 								className='footer_navigation-link hover-underline-animation'
 							>
 								Home
-							</a>
+							</Link>
 						</li>
 						<li>
-							<a
-								href='/'
+							<Link
+								to='/'
 								className='footer_navigation-link hover-underline-animation'
 							>
 								Search
-							</a>
+							</Link>
 						</li>
 						<li>
-							<a
-								href='/'
+							<Link
+								to='/about'
 								className='footer_navigation-link hover-underline-animation'
 							>
 								About
-							</a>
+							</Link>
 						</li>
 					</ul>
 				</div>
@@ -53,6 +54,7 @@ export default function Footer() {
 					Copyright © 2024 Khaled Ajaj. All rights reserved.
 				</p>
 			</div>
+			<ScrollRestoration />
 		</footer>
 	);
 }

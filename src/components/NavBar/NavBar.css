@@ -167,6 +167,7 @@
   .navbar_sliding-menu {
     font-size: 2rem;
     width: 100vw;
+    right: auto;
   }
   .navbar_sliding-menu a {
     margin: 3rem auto;

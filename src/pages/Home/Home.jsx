@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, ScrollRestoration } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
 import flare from '../../assets/misc/lens-flare-green.png';
 import './Home.css';
@@ -20,10 +21,11 @@ export default function Home() {
 					more
 				</p>
 			</div>
-			<a href='/' className='home_search-link'>
+			<Link to='/' className='home_search-link'>
 				Search Now
-			</a>
+			</Link>
 			<Footer />
+			<ScrollRestoration />
 		</div>
 	);
 }
