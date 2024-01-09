@@ -7,8 +7,10 @@ export default function Home() {
 	return (
 		<div id='page_home-container'>
 			<NavBar />
-			<h1 className='home_header'>Discover Monsters</h1>
-			<img className='home_header_flare' src={flare} alt='lens flare' />
+			<div className='home_header-container'>
+				<h1 className='home_header-title'>Discover Monsters</h1>
+				<img className='home_header-flare' src={flare} alt='lens flare' />
+			</div>
 			<Carousel />
 			<div className='home_description'>
 				<p>
