@@ -1,0 +1,104 @@
+@use '../../index.scss';
+
+#page_search-container {
+    background:
+        linear-gradient(to bottom, rgba(44, 22, 13, 0.90) 0%, rgba(221, 185, 152, 0.5) 100%),
+        url('src/assets/biomes/astera.jpeg') no-repeat;
+    background-size: cover;
+}
+
+.search_header-container {
+    @include index.mainHeaderContainer;
+}
+
+.search_header-title {
+    @include index.mainHeaderTitle;
+}
+
+.search_header-flare {
+    @include index.mainHeaderFlare;
+}
+
+form {
+    width: calc(60vw + 3rem);
+    margin-left: calc(20vw - 1.5rem);
+    margin-bottom: 20rem;
+}
+
+.search_input__icon {
+    display: flex;
+    height: 3rem;
+}
+
+.search_label {
+    font-family: 'Kotta One', serif;
+    font-size: 1.2rem;
+}
+
+#monster-search {
+    width: calc(60vw - 1.5rem);
+    border: none;
+    border-radius: 8px 0 0 0;
+    background-color: #D9D9D9;
+    font-family: 'Linden Hill', serif;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: #000000;
+    padding-left: 1.5rem;
+}
+
+.search_submit {
+    height: 3rem;
+    width: 3rem;
+    border: none;
+    border-radius: 0 0 8px 0;
+    background-color: #DBA075;
+    cursor: pointer;
+    padding: 0;
+
+    &:hover {
+        background-color: #cb936b;
+    }
+
+    &:active {
+        background-color: #bc8a65;
+    }
+}
+
+#search_autofill-container {
+    background-color: #D9D9D9;
+    width: 60vw;
+    position: absolute;
+
+    p {
+        margin: 0;
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+        color: #000000;
+        font-family: 'Linden Hill', serif;
+        padding-left: 1.5rem;
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #cbcbcb;
+        }
+
+        &:active {
+            background-color: #bcbcbc;
+        }
+    }
+
+    hr {
+        margin: 0;
+        width: 95%;
+        margin-left: 2.5%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .search_header-title {
+        @include index.mainHeaderTitleQuery;
+    }
+}

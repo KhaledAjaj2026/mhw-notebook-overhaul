@@ -21,7 +21,7 @@ export default function Home() {
 					more
 				</p>
 			</div>
-			<Link to='/' className='home_search-link'>
+			<Link to='/search' className='home_search-link'>
 				Search Now
 			</Link>
 			<Footer />

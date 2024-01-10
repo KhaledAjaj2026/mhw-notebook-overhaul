@@ -23,7 +23,7 @@ export default function Footer() {
 						</li>
 						<li>
 							<Link
-								to='/'
+								to='/search'
 								className='footer_navigation-link hover-underline-animation'
 							>
 								Search
@@ -42,13 +42,12 @@ export default function Footer() {
 			</div>
 			<div className='footer_disclaimer__copyright'>
 				<p className='footer_disclaimer'>
-					DISCLAIMER: Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Ipsum facilis, repellat blanditiis odio quasi officiis. Cupiditate
-					incidunt ea, tenetur quos cum, veniam, eum enim suscipit facere maxime
-					quam quas consectetur! Lorem ipsum dolor sit amet, consectetur
-					adipisicing elit. Voluptas vel maiores explicabo. Itaque nulla aliquam
-					quis dolorem magni assumenda soluta iste deleniti officiis? Maxime
-					iure impedit illo sed recusandae aperiam.
+					DISCLAIMER: Monster Hunter, Monster Hunter World, and all assets from
+					the Monster Hunter franchise and their rights all belong to Capcom.
+					This website is a work of fiction, all content is entirely made up by
+					the author of this site. The author claims no ownership whatsoever
+					over any assets used on this site of which have their rightful
+					creators and owners.
 				</p>
 				<p className='footer_copyright'>
 					Copyright © 2024 Khaled Ajaj. All rights reserved.

@@ -1,3 +1,20 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
 #page_home-container {
   background: linear-gradient(to bottom, rgba(44, 22, 13, 0.9) 0%, rgba(221, 185, 152, 0.5) 100%), url("src/assets/biomes/astera.jpeg") no-repeat;
   background-size: cover;
@@ -10,7 +27,6 @@
 }
 
 .home_header-title {
-  display: absolute;
   z-index: 1;
   text-align: center;
   font-size: 4rem;
@@ -70,7 +86,7 @@
     width: 80vw;
   }
   .home_description p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
   .home_search-link {
     margin-bottom: 8rem;

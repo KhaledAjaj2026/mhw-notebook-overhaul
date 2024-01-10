@@ -39,7 +39,7 @@ export default function NavBar() {
 					<Link to='/' className='hover-underline-animation'>
 						Home
 					</Link>
-					<Link to='/' className='hover-underline-animation'>
+					<Link to='/search' className='hover-underline-animation'>
 						Search
 					</Link>
 					<Link to='/about' className='hover-underline-animation'>
@@ -56,7 +56,7 @@ export default function NavBar() {
 				}`}
 			>
 				<Link to='/'>Home</Link>
-				<Link to='/'>Search</Link>
+				<Link to='/search'>Search</Link>
 				<Link to='/about'>About</Link>
 			</div>
 			<ScrollRestoration />
