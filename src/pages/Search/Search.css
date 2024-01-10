@@ -1,14 +1,25 @@
 #page_search-container {
+  min-height: 50rem;
   background: linear-gradient(to bottom, rgba(44, 22, 13, 0.9) 0%, rgba(221, 185, 152, 0.5) 100%), url("src/assets/biomes/astera.jpeg") no-repeat;
   background-size: cover;
 }
 
 form {
-  position: static;
-  top: calc(108px + 10rem);
+  position: absolute;
+  top: calc(108px + 18rem);
   width: calc(60vw + 3rem);
   margin-left: calc(20vw - 1.5rem);
   margin-bottom: 20rem;
+}
+
+.search_input-rise {
+  transform: translateY(-15rem);
+  transition: transform 0.5s ease-out;
+}
+
+.search_input-fall {
+  transform: translateY(0);
+  transition: transform 0.5s ease-out;
 }
 
 .search_input__icon {
