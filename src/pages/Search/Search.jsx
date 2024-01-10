@@ -1,22 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Autofill from '../../components/Autofill/Autofill';
 import NavBar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer';
+import Result from '../../components/Result/Result';
 import flare from '../../assets/misc/lens-flare-green.png';
 import './Search.css';
 
 export default function Search() {
+	const [result, setResult] = new useState(true);
+
 	return (
 		<div id='page_search-container'>
 			<NavBar />
-			<header className='search_header-container'>
-				<h1 className='search_header-title'>
+			<header
+				className={`main-header_container${
+					result ? ' fade-appear' : ' fade-disappear'
+				}`}
+			>
+				<h1 className='main-header_title'>
 					Start your
 					<br />
 					adventure
 				</h1>
-				<img className='search_header-flare' src={flare} alt='lens flare' />
+				<img className='main-header_flare' src={flare} alt='lens flare' />
 			</header>
-			<form>
+			<form className={`${result ? 'search_input-fall' : 'search_input-rise'}`}>
 				<label htmlFor='monster-search' className='search_label'>
 					Search for a monster below
 				</label>
@@ -27,7 +35,11 @@ export default function Search() {
 						id='monster-search'
 						placeholder='E.g. Anjanath'
 					/>
-					<button type='button' className='search_submit'>
+					<button
+						type='button'
+						className='search_submit'
+						onClick={() => setResult(!result)}
+					>
 						<img
 							src='src/assets/misc/magnifying-glass-9.svg'
 							className='search_icon'
@@ -35,13 +47,8 @@ export default function Search() {
 						/>
 					</button>
 				</div>
-				<div id='search_autofill-container'>
-					<p>Ancient Leshen</p>
-					<hr />
-					<p>Anjanath</p>
-					<hr />
-					<p>Azure Rathalos</p>
-				</div>
+				{/* <Autofill /> */}
+				<Result />
 			</form>
 			<Footer />
 		</div>

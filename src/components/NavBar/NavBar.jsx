@@ -52,7 +52,7 @@ export default function NavBar() {
 			</nav>
 			<div
 				className={`navbar_sliding-menu${
-					menuShow ? ' menu-appear' : ' menu-disappear'
+					menuShow ? ' fade-appear' : ' fade-disappear'
 				}`}
 			>
 				<Link to='/'>Home</Link>

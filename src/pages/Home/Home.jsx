@@ -10,12 +10,12 @@ export default function Home() {
 	return (
 		<div id='page_home-container'>
 			<NavBar />
-			<header className='home_header-container'>
-				<h1 className='home_header-title'>Discover Monsters</h1>
-				<img className='home_header-flare' src={flare} alt='lens flare' />
+			<header className='main-header_container'>
+				<h1 className='main-header_title'>Discover Monsters</h1>
+				<img className='main-header_flare' src={flare} alt='lens flare' />
 			</header>
 			<Carousel />
-			<div className='home_description'>
+			<div className='main-description'>
 				<p>
 					Learn about monster ecology, hunting techniques, quest rewards, and
 					more

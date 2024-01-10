@@ -1,0 +1,27 @@
+#autofill-container {
+  background-color: #D9D9D9;
+  width: 60vw;
+  position: absolute;
+}
+#autofill-container p {
+  margin: 0;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  color: #000000;
+  font-family: "Linden Hill", serif;
+  padding-left: 1.5rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+#autofill-container p:hover {
+  cursor: pointer;
+  background-color: #cbcbcb;
+}
+#autofill-container p:active {
+  background-color: #bcbcbc;
+}
+#autofill-container hr {
+  margin: 0;
+  width: 95%;
+  margin-left: 2.5%;
+}/*# sourceMappingURL=Autofill.css.map */

@@ -46,16 +46,6 @@
   font-family: "Nanum Myeongjo", serif;
 }
 
-.menu-appear {
-  opacity: 1;
-  transition: opacity 0.3s;
-}
-
-.menu-disappear {
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
 .navbar_sliding-menu {
   width: 40vw;
   height: calc(100vh - 108px);

@@ -11,11 +11,11 @@ export default function About() {
 	return (
 		<div id='page_about-container'>
 			<NavBar />
-			<header className='about_header-container'>
-				<h1 className='about_header-title'>Hunting made simple</h1>
-				<img className='about_header-flare' src={flare} alt='lens flare' />
+			<header className='main-header_container'>
+				<h1 className='main-header_title'>Hunting made simple</h1>
+				<img className='main-header_flare' src={flare} alt='lens flare' />
 			</header>
-			<div className='about_description'>
+			<div className='main-description'>
 				<p>
 					A tool for researching monsters, a better way to learn about the
 					ecology of Astera.
