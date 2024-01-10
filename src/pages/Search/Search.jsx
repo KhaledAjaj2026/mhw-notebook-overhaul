@@ -7,7 +7,7 @@ import flare from '../../assets/misc/lens-flare-green.png';
 import './Search.css';
 
 export default function Search() {
-	const [result, setResult] = new useState(true);
+	const [result, setResult] = new useState(false);
 
 	return (
 		<>
@@ -15,7 +15,7 @@ export default function Search() {
 				<NavBar />
 				<header
 					className={`main-header_container${
-						result ? ' fade-appear' : ' fade-disappear'
+						result ? ' fade-disappear' : ' fade-appear'
 					}`}
 				>
 					<h1 className='main-header_title'>
@@ -26,7 +26,7 @@ export default function Search() {
 					<img className='main-header_flare' src={flare} alt='lens flare' />
 				</header>
 				<form
-					className={`${result ? 'search_input-fall' : 'search_input-rise'}`}
+					className={`${result ? 'search_input-rise' : 'search_input-fall'}`}
 				>
 					<label htmlFor='monster-search' className='search_label'>
 						Search for a monster below
@@ -41,7 +41,7 @@ export default function Search() {
 						<button
 							type='button'
 							className='search_submit'
-							onClick={() => setResult(false)}
+							onClick={() => setResult(true)}
 						>
 							<img
 								src='src/assets/misc/magnifying-glass-9.svg'

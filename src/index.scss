@@ -25,7 +25,6 @@ body {
 }
 
 .main-header_title {
-    // display: absolute;
     z-index: 1;
     text-align: center;
     font-size: 4rem;
@@ -50,7 +49,7 @@ body {
     align-items: center;
     text-align: center;
     width: 40vw;
-    margin: 2rem auto;
+    margin: 1.5rem auto 2rem;
     background: rgba(0, 0, 0, 0.25);
     box-shadow: 0px 0px 20px 15px rgba(0, 0, 0, 0.25);
 
@@ -63,15 +62,16 @@ body {
 
 @media screen and (max-width: 600px) {
     .main-header_title {
-        font-size: 2rem;
+        font-size: 2.2rem;
         letter-spacing: 10px;
     }
 
-    .main_description {
-        width: 80vw;
+    div .main-description {
+        width: 100vw;
 
         p {
             font-size: 0.8rem;
+            padding: 0 1.2rem;
         }
     }
 }
