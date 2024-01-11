@@ -1,6 +1,7 @@
 #navbar-container {
   position: sticky;
   top: 0;
+  transition: top 0.3s;
   z-index: 3;
   height: 108px;
   background: #322423;

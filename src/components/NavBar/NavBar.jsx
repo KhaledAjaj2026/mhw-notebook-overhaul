@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, ScrollRestoration } from 'react-router-dom';
 import arrowLeftInactive from '../../assets/misc/arrow-left-gray.svg';
 import arrowRightInactive from '../../assets/misc/arrow-right-gray.svg';
@@ -10,14 +9,32 @@ import './Navbar.css';
 
 export default function NavBar() {
 	const [menuShow, setMenuShow] = new useState(false);
+	const [prevScrollpos, setPrevScrollpos] = useState(window.scrollY);
+	const [navTop, setNavTop] = useState(0);
 
 	const handleMenuShow = () => {
 		setMenuShow(!menuShow);
 	};
 
+	useEffect(() => {
+		const handleScroll = () => {
+			const currentScrollPos = window.scrollY;
+			if (prevScrollpos > currentScrollPos) {
+				setNavTop(0);
+			} else {
+				setNavTop(-108);
+			}
+			setPrevScrollpos(currentScrollPos);
+		};
+		window.addEventListener('scroll', handleScroll);
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, [prevScrollpos]);
+
 	return (
 		<>
-			<nav id='navbar-container'>
+			<nav id='navbar-container' style={{ top: `${navTop}px` }}>
 				<div className='navbar_query-arrows'>
 					<button onClick={() => alert('left!!')}>
 						<img src={arrowLeftInactive} width={50} />
