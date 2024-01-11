@@ -3,10 +3,14 @@
   box-shadow: 0px 0px 15px 20px rgba(204, 176, 156, 0.8);
   margin: 2.5rem;
   margin-top: 12rem;
+  color: black;
 }
-
-.result_section-monster_image {
-  width: 300px;
+#component_result-container section {
+  margin: 3rem auto 5rem;
+}
+#component_result-container p {
+  font-family: "Kite One", sans-serif;
+  letter-spacing: 2px;
 }
 
 .result_section-heading_container {
@@ -23,8 +27,8 @@
   font-size: 3rem;
   text-transform: uppercase;
   text-align: center;
+  text-shadow: 0 3px 2px #777777;
   letter-spacing: 3px;
-  color: black;
   border: 1px solid black;
 }
 
@@ -52,6 +56,91 @@
   font-size: 2rem;
 }
 
+.result_section-image__description {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.result_section-monster_image-container {
+  box-shadow: 0px 0px 15px 1px #000;
+  position: relative;
+  width: 365px;
+  height: 365px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, rgba(125, 96, 73, 0.7490196078) 0%, rgba(93, 112, 67, 0.7490196078) 100%);
+}
+
+.result_section-image_border {
+  width: 400px;
+  position: absolute;
+}
+
+.result_section-monster_image {
+  width: 280px;
+  filter: drop-shadow(13px 10px 2px #222);
+  -webkit-filter: drop-shadow(13px 10px 2px rgba(0, 0, 0, 0.3490196078));
+}
+
+.result_section-monster_description {
+  width: 400px;
+  height: 400px;
+  background-color: rgba(145, 101, 68, 0.3019607843);
+  border: 1px solid black;
+}
+.result_section-monster_description p {
+  margin: 1.5rem;
+}
+
+.monster-main_description {
+  font-size: 1.2rem;
+}
+
+.monster_attribute {
+  height: 30px;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+}
+.monster_attribute h4 {
+  font-family: "Libre Caslon Text", serif;
+  text-transform: uppercase;
+}
+.monster_attribute p {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 930px) {
+  .result_section-monster_image-container {
+    width: 275px;
+    height: 275px;
+  }
+  .result_section-image_border {
+    width: 300px;
+  }
+  .result_section-monster_image {
+    width: 200px;
+    height: 200px;
+  }
+  .result_section-monster_description {
+    width: 300px;
+    height: 300px;
+  }
+  p.monster-main_description {
+    font-size: 1rem;
+    margin-top: -1rem;
+  }
+}
+@media screen and (max-width: 715px) {
+  .result_section-image__description {
+    flex-direction: column;
+  }
+  .result_section-monster_image-container {
+    margin-bottom: 2rem;
+  }
+}
 @media screen and (max-width: 500px) {
   .monster-name {
     font-size: 2rem;

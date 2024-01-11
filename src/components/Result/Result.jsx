@@ -1,5 +1,6 @@
 import React from 'react';
 import anjanath from '../../assets/monsters-min/anjanath.webp';
+import border from '../../assets/misc/fancy-border.png';
 import topCorner from '../../assets/misc/corner-design-topleft.png';
 import bottomCorner from '../../assets/misc/corner-design-bottomRight.png';
 import './Result.css';
@@ -25,14 +26,28 @@ export default function Result({ show }) {
 					/>
 				</div>
 			</header>
-			<section className='result_section-image_description'>
-				<img
-					src={anjanath}
-					alt='Anjanath'
-					className='result_section-monster_image'
-				/>
+			<section className='result_section-image__description'>
+				<div className='result_section-monster_image-container'>
+					<img src={border} className='result_section-image_border' alt='' />
+					<img
+						src={anjanath}
+						alt='Anjanath'
+						className='result_section-monster_image'
+					/>
+				</div>
 				<div className='result_section-monster_description'>
-					<p>
+					<div className='monster_attribute'>
+						<h4>Species: </h4>
+						<p>Brute Wyvern</p>
+					</div>
+					<div className='monster_attribute'>
+						<h4>Habitat: </h4>
+						<p>Ancient Forest</p>
+					</div>
+					<div className='monster_attribute'>
+						<h4>Description: </h4>
+					</div>
+					<p className='monster-main_description'>
 						The Anjanath patrols the Ancient Forest, looking for its favorite
 						meal, Aptonoth. This belligerent monster will attack anything
 						without hesitation.
