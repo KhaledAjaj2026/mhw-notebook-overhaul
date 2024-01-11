@@ -23,6 +23,7 @@ export default function NavBar() {
 				setNavTop(0);
 			} else {
 				setNavTop(-108);
+				setMenuShow(false);
 			}
 			setPrevScrollpos(currentScrollPos);
 		};

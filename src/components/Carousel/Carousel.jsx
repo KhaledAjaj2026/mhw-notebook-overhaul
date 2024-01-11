@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import './Carousel.css';
@@ -50,10 +50,9 @@ export default function Carousel() {
 				disableDotsControls
 				disableButtonsControls
 				autoPlay='true'
-				autoPlayInterval={10000}
+				autoPlayInterval={9500}
 				autoPlayStrategy='none'
 				infinite
-				keyboardNavigation
 			/>
 		</div>
 	);
