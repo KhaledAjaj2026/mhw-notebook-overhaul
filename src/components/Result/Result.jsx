@@ -85,9 +85,9 @@ export default function Result({ show }) {
 					</p>
 				</div>
 			</section>
-			<section className='result_section-resistances_weaknesses'>
+			<section className='result_section-resistances__weaknesses'>
 				<div className='result_section-resistances'>
-					<div className='result_section-heading_container'>
+					<div className='result_section-heading_container section_subheading-resistance'>
 						<img
 							src={topCorner}
 							className='decorative-corner'
@@ -107,7 +107,7 @@ export default function Result({ show }) {
 					</ul>
 				</div>
 				<div className='result_section-weaknesses'>
-					<div className='result_section-heading_container'>
+					<div className='result_section-heading_container section_subheading-weakness'>
 						<img
 							src={topCorner}
 							className='decorative-corner'
