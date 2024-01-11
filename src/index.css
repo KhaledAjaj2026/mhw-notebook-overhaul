@@ -66,7 +66,6 @@ body {
   width: 15rem;
   height: 4.5rem;
   margin: 5rem auto;
-  margin-left: calc(50vw - 7.5rem);
   font-size: 2rem;
   font-family: "Kotta One", serif;
   background: linear-gradient(to bottom, #9A6D4C 0%, #E9AF8E 100%);
