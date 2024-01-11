@@ -3,14 +3,11 @@
   box-shadow: 0px 0px 15px 20px rgba(204, 176, 156, 0.8);
   margin: 2.5rem;
   margin-top: 12rem;
+  padding: 1px;
   color: black;
 }
 #component_result-container section {
-  margin: 3rem auto 5rem;
-}
-#component_result-container p {
-  font-family: "Kite One", sans-serif;
-  letter-spacing: 2px;
+  margin: 3rem auto 8rem;
 }
 
 .result_section-heading_container {
@@ -61,9 +58,13 @@
   justify-content: space-evenly;
   align-items: center;
 }
+.result_section-image__description p {
+  font-family: "Kite One", sans-serif;
+  letter-spacing: 2px;
+}
 
 .result_section-monster_image-container {
-  box-shadow: 0px 0px 15px 1px #000;
+  box-shadow: 0px 0px 10px 1px #000;
   position: relative;
   width: 365px;
   height: 365px;
@@ -112,6 +113,43 @@
   margin-left: 10px;
 }
 
+.result_section-ailments {
+  width: 70vw;
+}
+
+.result_section-ailment {
+  padding: 1rem;
+  border: 1px solid black;
+  background: rgba(145, 101, 68, 0.3019607843);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.result_section-ailment_name__icon {
+  display: flex;
+  align-items: center;
+}
+
+.result_section-ailment_name {
+  font-family: "Libre Caslon Text", serif;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  text-decoration: underline;
+  letter-spacing: 3px;
+}
+
+.result_section-ailment_icon {
+  width: 70px;
+}
+
+.result_section-ailment_description {
+  width: 50%;
+  font-family: "Kite One", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
 @media screen and (max-width: 930px) {
   .result_section-monster_image-container {
     width: 275px;
@@ -132,6 +170,9 @@
     font-size: 1rem;
     margin-top: -1rem;
   }
+  .result_section-ailments {
+    width: 80vw;
+  }
 }
 @media screen and (max-width: 715px) {
   .result_section-image__description {
@@ -139,6 +180,12 @@
   }
   .result_section-monster_image-container {
     margin-bottom: 2rem;
+  }
+  .result_section-ailment_name {
+    font-size: 1.2rem;
+  }
+  .result_section-ailment_description {
+    font-size: 0.8rem;
   }
 }
 @media screen and (max-width: 500px) {
@@ -163,5 +210,11 @@
   .decorative-corner_bottom-header {
     top: 20px;
     left: calc(100% - 30px);
+  }
+  .result_section-ailment {
+    flex-direction: column;
+  }
+  .result_section-ailment_description {
+    width: 90%;
   }
 }/*# sourceMappingURL=Result.css.map */

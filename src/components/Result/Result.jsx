@@ -71,8 +71,14 @@ export default function Result({ show }) {
 					/>
 				</div>
 				<div className='result_section-ailment' id='ailment-1'>
-					<p className='result_section-ailment_name'>Fireblight</p>
-					<img src='src/assets/icons/fireblight.png' alt='fireblight' />
+					<div className='result_section-ailment_name__icon'>
+						<p className='result_section-ailment_name'>Fireblight</p>
+						<img
+							src='src/assets/icons/fireblight.png'
+							className='result_section-ailment_icon'
+							alt='fireblight'
+						/>
+					</div>
 					<p className='result_section-ailment_description'>
 						Fireblight causes damage over time, and negates regular health
 						recovery.
