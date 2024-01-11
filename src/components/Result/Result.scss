@@ -1,8 +1,83 @@
 #component_result-container {
-    background-color: darkslategrey;
-    margin-top: 13rem;
+    background-color: #CCB09CCC;
+    box-shadow: 0px 0px 15px 20px #CCB09CCC;
+    margin: 2.5rem;
+    margin-top: 12rem;
 }
 
 .result_section-monster_image {
     width: 300px;
+}
+
+.result_section-heading_container {
+    position: relative;
+    width: min-content;
+    margin: auto;
+}
+
+.result_section-heading {
+    padding: 0 3rem;
+    background-color: #FFFFFF52;
+    font-family: 'Junge', cursive;
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    color: black;
+    border: 1px solid black;
+}
+
+.decorative-corner {
+    position: absolute;
+    width: 30px;
+}
+
+.decorative-corner-header {
+    position: absolute;
+    width: 40px;
+}
+
+.decorative-corner_bottom {
+    top: 20px;
+    left: calc(100% - 30px);
+}
+
+.decorative-corner_bottom-header {
+    top: 34px;
+    left: calc(100% - 40px);
+}
+
+.section_subheading {
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 500px) {
+    .monster-name {
+        font-size: 2rem;
+    }
+
+    .result_section-heading {
+        padding: 0 2rem;
+    }
+
+    .section_subheading {
+        font-size: 1.6rem;
+    }
+
+    .decorative-corner {
+        width: 20px;
+    }
+
+    .decorative-corner-header {
+        width: 30px;
+    }
+
+    .decorative-corner_bottom {
+        left: calc(100% - 20px);
+    }
+
+    .decorative-corner_bottom-header {
+        top: 20px;
+        left: calc(100% - 30px);
+    }
 }

@@ -1,5 +1,7 @@
 import React from 'react';
 import anjanath from '../../assets/monsters-min/anjanath.webp';
+import topCorner from '../../assets/misc/corner-design-topleft.png';
+import bottomCorner from '../../assets/misc/corner-design-bottomRight.png';
 import './Result.css';
 
 export default function Result({ show }) {
@@ -9,7 +11,19 @@ export default function Result({ show }) {
 			// className={`${show ? 'fade-appear' : 'fade-disappear'}`}
 		>
 			<header className='result_monster-name'>
-				<h2 className='result_section-heading'>Anjanath</h2>
+				<div className='result_section-heading_container'>
+					<img
+						src={topCorner}
+						className='decorative-corner-header'
+						alt='decorative corner'
+					/>
+					<h2 className='result_section-heading monster-name'>Anjanath</h2>
+					<img
+						src={bottomCorner}
+						className='decorative-corner-header decorative-corner_bottom-header'
+						alt='decorative corner'
+					/>
+				</div>
 			</header>
 			<section className='result_section-image_description'>
 				<img
@@ -26,7 +40,21 @@ export default function Result({ show }) {
 				</div>
 			</section>
 			<section className='result_section-ailments'>
-				<h3 className='result_section-heading'>Ailments</h3>
+				<div className='result_section-heading_container'>
+					<img
+						src={topCorner}
+						className='decorative-corner'
+						alt='decorative corner'
+					/>
+					<h3 className='result_section-heading section_subheading'>
+						Ailments
+					</h3>
+					<img
+						src={bottomCorner}
+						className='decorative-corner decorative-corner_bottom'
+						alt='decorative corner'
+					/>
+				</div>
 				<div className='result_section-ailment' id='ailment-1'>
 					<p className='result_section-ailment_name'>Fireblight</p>
 					<img src='src/assets/icons/fireblight.png' alt='fireblight' />
@@ -38,13 +66,41 @@ export default function Result({ show }) {
 			</section>
 			<section className='result_section-resistances_weaknesses'>
 				<div className='result_section-resistances'>
-					<h3 className='result_section-heading'>Resistances</h3>
+					<div className='result_section-heading_container'>
+						<img
+							src={topCorner}
+							className='decorative-corner'
+							alt='decorative corner'
+						/>
+						<h3 className='result_section-heading section_subheading'>
+							Resistances
+						</h3>
+						<img
+							src={bottomCorner}
+							className='decorative-corner decorative-corner_bottom'
+							alt='decorative corner'
+						/>
+					</div>
 					<ul>
 						<li>Fire</li>
 					</ul>
 				</div>
 				<div className='result_section-weaknesses'>
-					<h3 className='result_section-heading'>Weaknesses</h3>
+					<div className='result_section-heading_container'>
+						<img
+							src={topCorner}
+							className='decorative-corner'
+							alt='decorative corner'
+						/>
+						<h3 className='result_section-heading section_subheading'>
+							Weaknesses
+						</h3>
+						<img
+							src={bottomCorner}
+							className='decorative-corner decorative-corner_bottom'
+							alt='decorative corner'
+						/>
+					</div>
 					<ul>
 						<li>Water</li>
 						<li>Thunder</li>
@@ -55,7 +111,19 @@ export default function Result({ show }) {
 				</div>
 			</section>
 			<section className='result_section-rewards'>
-				<h3 className='result_section-heading'>Rewards</h3>
+				<div className='result_section-heading_container'>
+					<img
+						src={topCorner}
+						className='decorative-corner'
+						alt='decorative corner'
+					/>
+					<h3 className='result_section-heading section_subheading'>Rewards</h3>
+					<img
+						src={bottomCorner}
+						className='decorative-corner decorative-corner_bottom'
+						alt='decorative corner'
+					/>
+				</div>
 				<ul>
 					<li>Monster Bone L</li>
 					<li>Monster Keenbone</li>
