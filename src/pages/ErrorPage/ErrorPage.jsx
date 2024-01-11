@@ -15,7 +15,7 @@ function ErrorPage() {
 			<div className='main-description'>
 				<p>Sorry! This page does not exist.</p>
 			</div>
-			<Link to='/' className='error_home-link'>
+			<Link to='/' className='navigation-button'>
 				Back to Home
 			</Link>
 			<Footer />

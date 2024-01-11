@@ -51,8 +51,8 @@ export default function Search() {
 						</button>
 					</div>
 					{/* <Autofill /> */}
-					<Result />
 				</form>
+				<Result show={result} />
 			</div>
 			<Footer />
 		</>
