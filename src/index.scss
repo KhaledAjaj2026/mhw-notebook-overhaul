@@ -4,8 +4,6 @@
 
     color-scheme: light dark;
     color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
-
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -16,64 +14,6 @@
 body {
     height: 100%;
     margin: 0;
-}
-
-.main-header_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.main-header_title {
-    z-index: 1;
-    text-align: center;
-    font-size: 4rem;
-    font-family: 'Nanum Myeongjo', serif;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 15px;
-}
-
-.main-header_flare {
-    position: absolute;
-    z-index: 0;
-    opacity: 0.75;
-    width: 80vw;
-    height: 80px;
-    left: 10vw;
-}
-
-.main-description {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 40vw;
-    margin: 1.5rem auto 2rem;
-    background: rgba(0, 0, 0, 0.25);
-    box-shadow: 0px 0px 20px 15px rgba(0, 0, 0, 0.25);
-
-    p {
-        font-family: 'Hind', sans-serif;
-        font-size: 1.2rem;
-        letter-spacing: 3px;
-    }
-}
-
-.navigation-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: #000000;
-    border: 2px solid black;
-    width: 15rem;
-    height: 4.5rem;
-    margin: 5rem auto;
-    font-size: 2rem;
-    font-family: 'Kotta One', serif;
-    background: linear-gradient(to bottom, #9A6D4C 0%, #E9AF8E 100%);
-    cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {

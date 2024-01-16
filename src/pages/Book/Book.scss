@@ -1,6 +1,107 @@
-#book-container {
+#background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
     background:
-        linear-gradient(to bottom, rgba(44, 22, 13, 0.90) 0%, rgba(221, 185, 152, 0.5) 100%),
-        url('src/assets/biomes/astera.jpeg') no-repeat;
+        linear-gradient(to bottom right, #f4e79e61 0%, #a1622e4f 100%),
+        url('/src/assets/misc/wood-bg-min.jpg') no-repeat center;
     background-size: cover;
+    filter: blur(2px);
+    perspective: 800px;
+}
+
+.book-leather_cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 466px;
+    height: 700px;
+    margin: 2.5rem auto;
+    background: linear-gradient(to bottom right, #e4d08525 0%, #44444400 50%), url('/src/assets/misc/leather-cover2.jpeg') no-repeat center;
+    // background-image: url('/src/assets/misc/leather-cover2.jpeg') no-repeat center;
+    background-size: contain;
+    text-align: center;
+    box-shadow: 10px 5px 10px 5px #00000082;
+}
+
+.cover-header_title {
+    width: 60%;
+    margin: auto;
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    background-image: linear-gradient(to bottom left,
+            #462523 0,
+            #cb9b51 13%,
+            #f6e27a 45%,
+            #f6f2c0 50%,
+            #f6e27a 55%,
+            #cb9b51 87%,
+            #462523 100%);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-filter: drop-shadow(2px 2px #000000);
+    filter: drop-shadow(2px 2px #000000);
+}
+
+.cover-header_title-subheader {
+    letter-spacing: 0;
+    font-size: 1.4rem;
+}
+
+.cover-header_flare {
+    position: absolute;
+    z-index: 0;
+    opacity: 0.75;
+    width: 80vw;
+    height: 80px;
+    left: 10vw;
+}
+
+.cover-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+
+    p {
+        font-family: 'Kotta One', cursive;
+        font-size: 1.2rem;
+        background-image: linear-gradient(to bottom left,
+                #462523 0,
+                #cb9b51 13%,
+                #f6e27a 45%,
+                #f6f2c0 50%,
+                #f6e27a 55%,
+                #cb9b51 87%,
+                #462523 100%);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-filter: drop-shadow(1px 1px #000000);
+        filter: drop-shadow(1px 1px #000000);
+    }
+}
+
+.navigation-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #000000;
+    border: 2px solid black;
+    width: 10rem;
+    height: 3rem;
+    font-size: 1.3rem;
+    font-family: 'Kotta One', serif;
+    background: linear-gradient(to bottom, #9A6D4C 0%, #E9AF8E 100%);
+    cursor: pointer;
 }
