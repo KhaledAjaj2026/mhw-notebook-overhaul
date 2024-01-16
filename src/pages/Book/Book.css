@@ -1,3 +1,12 @@
+.book-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 800px;
+}
+
 #background {
   position: absolute;
   top: 0;
@@ -5,10 +14,9 @@
   z-index: -1;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(to bottom right, rgba(244, 231, 158, 0.3803921569) 0%, rgba(161, 98, 46, 0.3098039216) 100%), url("/src/assets/misc/wood-bg-min.jpg") no-repeat center;
+  background: linear-gradient(to bottom right, rgba(254, 210, 160, 0.3803921569) 0%, rgba(61, 32, 8, 0.3098039216) 60%), url("/src/assets/misc/wood-bg-min.jpg") no-repeat center;
   background-size: cover;
   filter: blur(2px);
-  perspective: 800px;
 }
 
 .book-leather_cover {
@@ -17,19 +25,25 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  width: 466px;
-  height: 700px;
-  margin: 2.5rem auto;
+  width: 40vw;
+  height: 90vh;
   background: linear-gradient(to bottom right, rgba(228, 208, 133, 0.1450980392) 0%, rgba(68, 68, 68, 0) 50%), url("/src/assets/misc/leather-cover2.jpeg") no-repeat center;
-  background-size: contain;
+  background-size: 100% 100%;
   text-align: center;
   box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5098039216);
+  transition: transform 0.7s ease-in-out;
+  transform-origin: left;
+}
+
+.flip-open {
+  transform: rotateY(-135deg);
 }
 
 .cover-header_title {
   width: 60%;
   margin: auto;
   font-family: "Nanum Myeongjo", serif;
+  font-size: 2.2rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 5px;
@@ -84,4 +98,35 @@
   font-family: "Kotta One", serif;
   background: linear-gradient(to bottom, #9A6D4C 0%, #E9AF8E 100%);
   cursor: pointer;
+}
+
+@media screen and (min-width: 1800px) {
+  .cover-header_title {
+    font-size: 3.5rem;
+  }
+  .cover-header_title-subheader {
+    font-size: 2.3rem;
+  }
+  .cover-description p {
+    font-size: 1.8rem;
+  }
+  .navigation-button {
+    width: 12rem;
+    height: 4rem;
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .book-leather_cover {
+    width: 60vw;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 650px) {
+  .book-leather_cover {
+    width: 90vw;
+    height: 75vh;
+    margin: auto;
+    gap: 5px;
+  }
 }/*# sourceMappingURL=Book.css.map */

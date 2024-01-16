@@ -16,56 +16,56 @@ body {
     margin: 0;
 }
 
-@media screen and (max-width: 600px) {
-    .main-header_title {
-        font-size: 2.2rem;
-        letter-spacing: 10px;
+@keyframes slideUp {
+    0% {
+        margin-top: 150%;
+        transform: rotateZ(30deg);
     }
 
-    div .main-description {
-        width: 100vw;
-
-        p {
-            font-size: 0.8rem;
-            padding: 0 1.2rem;
-        }
+    20% {
+        margin-top: 149%;
     }
 
-    .navigation-button {
-        margin-bottom: 8rem;
+    100% {
+        margin-top: unset;
+        transform: rotateZ(0deg);
     }
 }
 
-@keyframes fadeIn {
-    from {
-        display: none;
-        opacity: 0;
-    }
-
-    to {
-        display: flex;
-        opacity: 1;
-    }
+.slide-up {
+    animation: 1.2s slideUp ease-out;
 }
 
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-        display: flex;
-    }
+// @keyframes fadeIn {
+//     from {
+//         display: none;
+//         opacity: 0;
+//     }
 
-    to {
-        opacity: 0;
-        display: none;
-    }
-}
+//     to {
+//         display: flex;
+//         opacity: 1;
+//     }
+// }
 
-.fade-appear {
-    animation: fadeIn 300ms;
-    display: flex;
-}
+// @keyframes fadeOut {
+//     from {
+//         opacity: 1;
+//         display: flex;
+//     }
 
-.fade-disappear {
-    animation: fadeOut 300ms;
-    display: none;
-}
+//     to {
+//         opacity: 0;
+//         display: none;
+//     }
+// }
+
+// .fade-appear {
+//     animation: fadeIn 300ms;
+//     display: flex;
+// }
+
+// .fade-disappear {
+//     animation: fadeOut 300ms;
+//     display: none;
+// }
