@@ -30,4 +30,8 @@ body {
 .flip-open {
   transform: rotateY(-135deg);
   z-index: 2;
+}
+
+.hidden {
+  opacity: 0;
 }/*# sourceMappingURL=index.css.map */

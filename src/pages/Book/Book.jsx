@@ -4,10 +4,8 @@ import Leaf from '../Leaf/Leaf';
 
 export default function Book() {
 	const [open, setOpen] = new useState(false);
+	const handleOpen = () => setOpen(!open);
 
-	const handleOpen = () => {
-		setOpen(!open);
-	};
 	return (
 		<div className='book-container'>
 			<div id='background'></div>

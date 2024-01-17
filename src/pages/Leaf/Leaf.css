@@ -10,10 +10,6 @@
   box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5098039216);
 }
 
-.hidden {
-  opacity: 0;
-}
-
 @media screen and (max-width: 1000px) {
   .book-leaf {
     width: 60vw;

@@ -27,8 +27,6 @@ body {
     }
 }
 
-// rotateZ(30deg);
-
 .slide-up {
     animation: 1.7s slideUp ease-out;
 }
@@ -38,36 +36,6 @@ body {
     z-index: 2;
 }
 
-// @keyframes fadeIn {
-//     from {
-//         display: none;
-//         opacity: 0;
-//     }
-
-//     to {
-//         display: flex;
-//         opacity: 1;
-//     }
-// }
-
-// @keyframes fadeOut {
-//     from {
-//         opacity: 1;
-//         display: flex;
-//     }
-
-//     to {
-//         opacity: 0;
-//         display: none;
-//     }
-// }
-
-// .fade-appear {
-//     animation: fadeIn 300ms;
-//     display: flex;
-// }
-
-// .fade-disappear {
-//     animation: fadeOut 300ms;
-//     display: none;
-// }
+.hidden {
+    opacity: 0;
+}

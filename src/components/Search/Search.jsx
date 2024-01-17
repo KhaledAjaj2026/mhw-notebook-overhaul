@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Autofill from '../../components/Autofill/Autofill';
 import './Search.css';
 
 export default function Search() {
+	const [show, setShow] = new useState(false);
+
+	const handleShow = (event) => {
+		const val = event.target.value;
+		if (val.length > 0) setShow(true);
+		else setShow(false);
+	};
+
 	return (
 		<div id='component_search-container'>
 			<form>
@@ -15,6 +23,7 @@ export default function Search() {
 						name='monster-search'
 						id='monster-search'
 						placeholder='E.g. Anjanath'
+						onChange={handleShow}
 					/>
 					<button type='button' className='search_submit'>
 						<img
@@ -25,7 +34,7 @@ export default function Search() {
 					</button>
 				</div>
 			</form>
-			<Autofill />
+			<Autofill show={show} />
 		</div>
 	);
 }
