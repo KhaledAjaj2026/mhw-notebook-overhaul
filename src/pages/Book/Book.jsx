@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './Book.css';
 
 export default function Book() {
@@ -7,9 +7,6 @@ export default function Book() {
 	const handleOpen = () => {
 		setOpen(!open);
 	};
-	// useEffect(() => {
-	// 	window.onload = console.log('jsaflkdsaj');
-	// });
 	return (
 		<div className='book-container'>
 			<div id='background'></div>
@@ -28,6 +25,11 @@ export default function Book() {
 					Search Now
 				</button>
 			</div>
+			<div
+				className={`book-leather_cover-back slide-up${
+					open ? ' flip-open' : ''
+				}`}
+			></div>
 		</div>
 	);
 }
