@@ -1,9 +1,10 @@
 import React from 'react';
+import Autofill from '../../components/Autofill/Autofill';
 import './Search.css';
 
 export default function Search() {
 	return (
-		<div id='page_search-container'>
+		<div id='component_search-container'>
 			<form>
 				<label htmlFor='monster-search' className='search_label'>
 					Search for a monster below
@@ -24,6 +25,7 @@ export default function Search() {
 					</button>
 				</div>
 			</form>
+			<Autofill />
 		</div>
 	);
 }

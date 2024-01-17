@@ -29,6 +29,7 @@
     gap: 2rem;
     width: 40vw;
     height: 90vh;
+    margin-top: 3rem;
     background:
         linear-gradient(to bottom right, #e4d08525 0%, #44444400 50%),
         url('/src/assets/misc/leather-cover2.jpeg') no-repeat center;
@@ -48,14 +49,9 @@
         linear-gradient(to bottom right, #e4d08525 0%, #44444400 50%),
         url('/src/assets/misc/leather-cover2_back.png') no-repeat center;
     background-size: 100% 100%;
-    box-shadow: 10px 5px 10px 5px #00000082;
+    // box-shadow: 10px 5px 10px 5px #00000082;
     transition: transform 0.7s ease-in-out, z-index 0.7s;
     transform-origin: left;
-}
-
-.flip-open {
-    transform: rotateY(-135deg);
-    z-index: 2;
 }
 
 .cover-header_title {
@@ -157,14 +153,18 @@
 }
 
 @media screen and (max-width: 1000px) {
-    .book-leather_cover {
+
+    .book-leather_cover,
+    .book-leather_cover-back {
         width: 60vw;
         margin: auto;
     }
 }
 
 @media screen and (max-width: 650px) {
-    .book-leather_cover {
+
+    .book-leather_cover,
+    .book-leather_cover-back {
         width: 90vw;
         height: 75vh;
         margin: auto;

@@ -1,0 +1,52 @@
+// .leaf-container {
+//     position: fixed;
+//     height: 100vh;
+//     width: 100vw;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     perspective: 800px;
+// }
+
+.book-leaf {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+    width: 40vw;
+    height: 90vh;
+    background:
+        linear-gradient(to bottom right, #e4d08525 0%, #44444400 50%),
+        url('/src/assets/misc/oldpage4.png') no-repeat center;
+    background-size: 100% 100%;
+    box-shadow: 10px 5px 10px 5px #00000082;
+    // transition: transform 0.7s ease-in-out, z-index 0.7s;
+    // transform-origin: left;
+}
+
+// .leaf-show {
+//     opacity: 1;
+// }
+
+// .leaf-hide {
+//     opacity: 0;
+// }
+.hidden {
+    opacity: 0;
+}
+
+@media screen and (max-width: 1000px) {
+    .book-leaf {
+        width: 60vw;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .book-leaf {
+        width: 90vw;
+        height: 75vh;
+        margin: auto;
+        gap: 5px
+    }
+}

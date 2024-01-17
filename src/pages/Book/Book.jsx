@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Book.css';
+import Leaf from '../Leaf/Leaf';
 
 export default function Book() {
 	const [open, setOpen] = new useState(false);
@@ -26,10 +27,9 @@ export default function Book() {
 				</button>
 			</div>
 			<div
-				className={`book-leather_cover-back slide-up${
-					open ? ' flip-open' : ''
-				}`}
+				className={`book-leather_cover-back${open ? ' flip-open' : ' hidden'}`}
 			></div>
+			<Leaf open={open} />
 		</div>
 	);
 }

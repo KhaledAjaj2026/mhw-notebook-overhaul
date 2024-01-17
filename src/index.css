@@ -7,6 +7,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 
 body {
@@ -16,17 +17,17 @@ body {
 
 @keyframes slideUp {
   0% {
-    margin-top: 150%;
-    transform: rotateZ(30deg);
-  }
-  20% {
-    margin-top: 149%;
+    transform: translateY(1500px) rotateZ(30deg);
   }
   100% {
-    margin-top: unset;
-    transform: rotateZ(0deg);
+    transform: translateY(0px) rotateZ(0deg);
   }
 }
 .slide-up {
-  animation: 1.2s slideUp ease-out;
+  animation: 1.7s slideUp ease-out;
+}
+
+.flip-open {
+  transform: rotateY(-135deg);
+  z-index: 2;
 }/*# sourceMappingURL=index.css.map */
