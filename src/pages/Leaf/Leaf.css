@@ -10,6 +10,31 @@
   box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5098039216);
 }
 
+.book-leaf_title {
+  position: fixed;
+  margin-top: 4rem;
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: "Nanum Myeongjo", serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  line-height: 2.5rem;
+}
+
+.book-leaf_title-top {
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 1800px) {
+  .book-leaf_title {
+    font-size: 4rem;
+    line-height: 4rem;
+    margin-top: 5rem;
+  }
+  .book-leaf_title-top {
+    font-size: 3rem;
+  }
+}
 @media screen and (max-width: 1000px) {
   .book-leaf {
     width: 60vw;

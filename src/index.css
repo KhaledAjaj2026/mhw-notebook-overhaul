@@ -28,7 +28,7 @@ body {
 }
 
 .flip-open {
-  transform: rotateY(-135deg);
+  transform: rotateY(-185deg);
   z-index: 2;
 }
 
