@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import './Book.css';
-import Leaf from '../Leaf/Leaf';
+import Leaf from '../components/Leaf/Leaf';
+import SearchPage from '../pages/SearchPage/SearchPage';
 
 export default function Book() {
 	const [open, setOpen] = new useState(false);
-	const handleOpen = () => setOpen(!open);
+	const handleOpen = () => setOpen(true);
 
 	return (
 		<div className='book-container'>
@@ -27,7 +28,8 @@ export default function Book() {
 			<div
 				className={`book-leather_cover-back${open ? ' flip-open' : ' hidden'}`}
 			></div>
-			<Leaf open={open} />
+			<Leaf open={open} content={SearchPage} />
+			{/* <Leaf open={open} content={TableOfContents} /> */}
 		</div>
 	);
 }

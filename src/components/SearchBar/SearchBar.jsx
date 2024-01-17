@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Autofill from '../../components/Autofill/Autofill';
-import './Search.css';
+import Autofill from '../Autofill/Autofill';
+import './SearchBar.css';
 
 export default function Search() {
 	const [show, setShow] = new useState(false);

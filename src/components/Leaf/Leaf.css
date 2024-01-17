@@ -8,10 +8,12 @@
   background: linear-gradient(to bottom right, rgba(228, 208, 133, 0.1450980392) 0%, rgba(68, 68, 68, 0) 50%), url("/src/assets/misc/oldpage4.png") no-repeat center;
   background-size: 100% 100%;
   box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5098039216);
+  transition: transform 0.8s ease-in-out, z-index 0.7s;
+  transform-origin: left;
 }
 
 .book-leaf_title {
-  position: fixed;
+  position: absolute;
   margin-top: 4rem;
   text-align: center;
   font-size: 2.5rem;
@@ -23,6 +25,11 @@
 
 .book-leaf_title-top {
   font-size: 2rem;
+}
+
+.turn-leaf {
+  position: absolute;
+  bottom: 2rem;
 }
 
 @media screen and (min-width: 1800px) {
