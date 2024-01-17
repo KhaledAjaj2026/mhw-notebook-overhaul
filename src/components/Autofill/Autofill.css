@@ -1,5 +1,5 @@
 #autofill-container {
-  background-color: #D9D9D9;
+  background-color: #f7f3db;
   width: 20.5rem;
   position: absolute;
 }
@@ -15,13 +15,23 @@
 }
 #autofill-container p:hover {
   cursor: pointer;
-  background-color: #cbcbcb;
+  background-color: #ebe7d0;
 }
 #autofill-container p:active {
-  background-color: #bcbcbc;
+  background-color: #e2ddc3;
 }
 #autofill-container hr {
   margin: 0;
   width: 95%;
   margin-left: 2.5%;
+  border-color: goldenrod;
+}
+
+@media screen and (min-width: 1800px) {
+  #autofill-container {
+    width: 29rem;
+  }
+  #autofill-container p {
+    font-size: 2.3rem;
+  }
 }/*# sourceMappingURL=Autofill.css.map */

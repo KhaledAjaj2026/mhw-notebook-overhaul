@@ -24,6 +24,7 @@ export default function Search() {
 						id='monster-search'
 						placeholder='E.g. Anjanath'
 						onChange={handleShow}
+						autoComplete='off'
 					/>
 					<button type='button' className='search_submit'>
 						<img
