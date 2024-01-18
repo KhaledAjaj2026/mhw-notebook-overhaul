@@ -12,7 +12,7 @@ export default function Search() {
 	};
 
 	return (
-		<div id='component_search-container'>
+		<div>
 			<form>
 				<label htmlFor='monster-search' className='search_label'>
 					Search for a monster below

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Book.css';
 import Leaf from '../components/Leaf/Leaf';
 import SearchPage from '../pages/SearchPage/SearchPage';
+import TableOfContents from '../pages/TableOfContents/TableOfContents';
 
 export default function Book() {
 	const [open, setOpen] = new useState(false);
@@ -28,8 +29,8 @@ export default function Book() {
 			<div
 				className={`book-leather_cover-back${open ? ' flip-open' : ' hidden'}`}
 			></div>
-			<Leaf open={open} content={SearchPage} />
-			{/* <Leaf open={open} content={TableOfContents} /> */}
+			<Leaf open={open} content={TableOfContents} id={'toc-page_container'} />
+			<Leaf open={open} content={SearchPage} id={'search-page_container'} />
 		</div>
 	);
 }

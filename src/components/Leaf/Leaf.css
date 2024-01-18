@@ -5,26 +5,22 @@
   z-index: -1;
   width: 40vw;
   height: 90vh;
-  background: linear-gradient(to bottom right, rgba(228, 208, 133, 0.1450980392) 0%, rgba(68, 68, 68, 0) 50%), url("/src/assets/misc/oldpage4.png") no-repeat center;
+  background: linear-gradient(to bottom right, rgba(228, 208, 133, 0.1450980392) 0%, rgba(68, 68, 68, 0) 50%), linear-gradient(to right, rgba(0, 0, 0, 0.6784313725) 0%, rgba(0, 0, 0, 0.2392156863) 3%, rgba(68, 68, 68, 0) 7%), url("/src/assets/misc/oldpage4.png") no-repeat center;
   background-size: 100% 100%;
   box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5098039216);
   transition: transform 0.8s ease-in-out, z-index 0.7s;
   transform-origin: left;
 }
 
-.book-leaf_title {
-  position: absolute;
-  margin-top: 4rem;
-  text-align: center;
-  font-size: 2.5rem;
-  font-family: "Nanum Myeongjo", serif;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  line-height: 2.5rem;
-}
-
-.book-leaf_title-top {
-  font-size: 2rem;
+.book-leaf-back {
+  position: fixed;
+  z-index: -1;
+  width: 40vw;
+  height: 90vh;
+  background: linear-gradient(to bottom right, rgba(228, 208, 133, 0.1450980392) 0%, rgba(68, 68, 68, 0) 50%), url("/src/assets/misc/oldpage4.png") no-repeat center;
+  background-size: 100% 100%;
+  transition: transform 1.2s ease-in-out, z-index 0.9s;
+  transform-origin: left;
 }
 
 .turn-leaf {
@@ -32,16 +28,6 @@
   bottom: 2rem;
 }
 
-@media screen and (min-width: 1800px) {
-  .book-leaf_title {
-    font-size: 4rem;
-    line-height: 4rem;
-    margin-top: 5rem;
-  }
-  .book-leaf_title-top {
-    font-size: 3rem;
-  }
-}
 @media screen and (max-width: 1000px) {
   .book-leaf {
     width: 60vw;
