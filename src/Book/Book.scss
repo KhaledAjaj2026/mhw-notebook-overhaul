@@ -119,18 +119,43 @@
 }
 
 .navigation-button {
-    display: flex;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 0 0, #bf6e50 0, #5d290f 100%);
+    border: 0;
+    border-radius: 3px;
+    box-shadow: #3a150566 0 2px 4px, #1405014d 0 7px 13px -3px, #1b0d0180 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #f6e27a;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 1rem;
+    height: 3rem;
+    text-transform: uppercase;
     justify-content: center;
     align-items: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding: 0 1.5rem;
+    position: relative;
     text-decoration: none;
-    color: #000000;
-    border: 2px solid black;
-    width: 10rem;
-    height: 3rem;
-    font-size: 1.3rem;
-    font-family: 'Kotta One', serif;
-    background: linear-gradient(to bottom, #9A6D4C 0%, #E9AF8E 100%);
-    cursor: pointer;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    transition: background-image 1s ease-out;
+}
+
+.navigation-button:hover {
+    background-image: radial-gradient(100% 100% at 10% 10%, #bf6e50 0, #5d290f 100%);
+}
+
+.navigation-button:active {
+    background-image: radial-gradient(100% 100% at -5% -5%, #bf6e50 0, #5d290f 100%);
+    box-shadow: #2b1206 0 3px 7px inset;
 }
 
 @media screen and (min-width: 1800px) {
