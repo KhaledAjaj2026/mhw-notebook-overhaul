@@ -1,7 +1,7 @@
 import React from 'react';
 import './TableOfContents.css';
 
-export default function TableOfContents(setFlip) {
+export default function TableOfContents(handler) {
 	return (
 		<>
 			<h2 className='toc-leaf_title'>Table of Contents</h2>
@@ -35,8 +35,7 @@ export default function TableOfContents(setFlip) {
 					</ul>
 				</div>
 			</div>
-
-			<button type='button' className='turn-leaf' onClick={setFlip}>
+			<button type='button' className='turn_leaf-button' onClick={handler}>
 				Go to Search
 			</button>
 		</>

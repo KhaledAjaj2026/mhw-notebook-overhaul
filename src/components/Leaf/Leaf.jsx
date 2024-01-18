@@ -1,21 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Leaf.css';
 
-export default function Leaf({ open, id, content }) {
-	const [flip, setFlip] = new useState(false);
-	const handleFlip = () => setFlip(!flip);
-
+export default function Leaf({ open, id, content, flip, handler }) {
 	return (
 		<>
 			<div
 				id={id}
 				className={`book-leaf${open ? '' : ' hidden'}${
-					flip ? ' flip-open' : ''
+					flip ? ' flip-leaf_open' : ' flip-leaf_close'
 				}`}
 			>
-				{content(handleFlip)}
+				{content(handler)}
 			</div>
-			<div className={`book-leaf-back${open ? ' flip-open' : ' hidden'}`}></div>
+			<div
+				className={`book-leaf-back${open ? '' : ' hidden'}${
+					flip ? ' flip-leaf_open_back' : ' flip-leaf_close'
+				}`}
+			></div>
 		</>
 	);
 }

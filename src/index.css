@@ -27,9 +27,28 @@ body {
   animation: 1.7s slideUp ease-out;
 }
 
-.flip-open {
+.flip-cover {
   transform: rotateY(-185deg);
-  z-index: 1;
+  z-index: -1;
+}
+
+.flip-cover_back {
+  transform: rotateY(-185deg);
+  z-index: 0;
+}
+
+.flip-leaf_open {
+  transform: rotateY(-185deg);
+  z-index: 2;
+}
+
+.flip-leaf_open_back {
+  transform: rotateY(-185deg);
+  z-index: 3;
+}
+
+.flip-leaf_close {
+  transform: rotateY(0deg);
 }
 
 .hidden {

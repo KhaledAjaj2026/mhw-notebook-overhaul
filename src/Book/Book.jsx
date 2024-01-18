@@ -6,12 +6,19 @@ import TableOfContents from '../pages/TableOfContents/TableOfContents';
 
 export default function Book() {
 	const [open, setOpen] = new useState(false);
+	const [flip, setFlip] = new useState(false);
+
 	const handleOpen = () => setOpen(true);
+
+	const handleFlipTrue = () => setFlip(true);
+	const handleFlipFalse = () => setFlip(false);
 
 	return (
 		<div className='book-container'>
 			<div id='background'></div>
-			<div className={`book-leather_cover slide-up${open ? ' flip-open' : ''}`}>
+			<div
+				className={`book-leather_cover slide-up${open ? ' flip-cover' : ''}`}
+			>
 				<header>
 					<h1 className='cover-header_title'>
 						Monster Hunter World
@@ -27,10 +34,23 @@ export default function Book() {
 				</button>
 			</div>
 			<div
-				className={`book-leather_cover-back${open ? ' flip-open' : ' hidden'}`}
+				className={`book-leather_cover-back${
+					open ? ' flip-cover_back' : ' hidden'
+				}`}
 			></div>
-			<Leaf open={open} content={TableOfContents} id={'toc-page_container'} />
-			<Leaf open={open} content={SearchPage} id={'search-page_container'} />
+			<Leaf
+				open={open}
+				content={TableOfContents}
+				id={'toc-page_container'}
+				handler={handleFlipFalse}
+			/>
+			<Leaf
+				open={open}
+				content={SearchPage}
+				id={'search-page_container'}
+				flip={flip}
+				handler={handleFlipTrue}
+			/>
 		</div>
 	);
 }

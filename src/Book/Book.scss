@@ -11,7 +11,7 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    z-index: -1;
+    z-index: -3;
     width: 100vw;
     height: 100vh;
     background:
@@ -22,10 +22,12 @@
 }
 
 .book-leather_cover {
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 1;
     gap: 2rem;
     width: 40vw;
     height: 90vh;
@@ -35,13 +37,13 @@
     background-size: 100% 100%;
     text-align: center;
     box-shadow: 10px 5px 10px 5px #00000082;
-    transition: transform 1.2s ease-in-out;
+    transition: transform 1.2s ease-in-out, z-index 2.8s;
     transform-origin: left;
 }
 
 .book-leather_cover-back {
     position: fixed;
-    z-index: -1;
+    z-index: 0;
     width: 40vw;
     height: 90vh;
     background:
@@ -49,7 +51,7 @@
         url('/src/assets/misc/leather-cover2_back.png') no-repeat center;
     background-size: 100% 100%;
     // box-shadow: 10px 5px 10px 5px #00000082;
-    transition: transform 1.2s ease-in-out, z-index 0.9s;
+    transition: transform 1.2s ease-in-out;
     transform-origin: left;
 }
 
