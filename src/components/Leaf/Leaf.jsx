@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
 import './Leaf.css';
 
-export default function Leaf({ open, id, content, flip, handler }) {
+export default function Leaf({
+	open,
+	id,
+	content,
+	flip,
+	handler,
+	handleTurnPage,
+}) {
 	const [search, setSearch] = new useState(false);
 	const handleSearch = () => setSearch(!search);
 
@@ -13,7 +20,7 @@ export default function Leaf({ open, id, content, flip, handler }) {
 					flip ? ' flip-leaf_open' : ' flip-leaf_close'
 				}`}
 			>
-				{content(handler, handleSearch)}
+				{content(handler, handleTurnPage)}
 				<div className={`${search ? 'loading-animation' : ''}`}></div>
 			</div>
 			<div

@@ -1,0 +1,30 @@
+.flip_animation {
+  position: fixed;
+  z-index: 0;
+  width: 40vw;
+  height: 90vh;
+  background: linear-gradient(to bottom right, rgba(228, 208, 133, 0.1450980392) 0%, rgba(68, 68, 68, 0) 50%), linear-gradient(to right, rgba(0, 0, 0, 0.6784313725) 0%, rgba(0, 0, 0, 0.2392156863) 3%, rgba(68, 68, 68, 0) 7%), url("/src/assets/misc/oldpage4.png") no-repeat center;
+  background-size: 100% 100%;
+  transition: transform 0.8s ease-in-out, z-index 0.8s;
+  transform-origin: left;
+}
+
+.flip-to-result {
+  transform: rotateY(-185deg);
+}
+
+.flip_page-2 {
+  transition-delay: 0.2s;
+}
+
+.flip_page-3 {
+  transition-delay: 0.4s;
+}
+
+.flip-change_index-2 {
+  z-index: 1;
+}
+
+.flip-change_index-3 {
+  z-index: 2;
+}/*# sourceMappingURL=FlipToPage.css.map */

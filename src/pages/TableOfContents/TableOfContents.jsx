@@ -1,7 +1,7 @@
 import React from 'react';
 import './TableOfContents.css';
 
-export default function TableOfContents(handler) {
+export default function TableOfContents(handler, handleTurnPage) {
 	return (
 		<>
 			<h2 className='toc-leaf_title'>
@@ -12,7 +12,7 @@ export default function TableOfContents(handler) {
 			<div className='toc-list'>
 				<div className='toc-list-row_1'>
 					<ul>
-						<li>Great Jagras</li>
+						<li onClick={handleTurnPage}>Great Jagras</li>
 						<li>Kulu-Ya-Ku</li>
 						<li>Barroth</li>
 						<li>Jyuratodus</li>

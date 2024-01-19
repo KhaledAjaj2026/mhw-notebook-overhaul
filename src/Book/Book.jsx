@@ -4,15 +4,19 @@ import Leaf from '../components/Leaf/Leaf';
 import SearchPage from '../pages/SearchPage/SearchPage';
 import TableOfContents from '../pages/TableOfContents/TableOfContents';
 import Result from '../pages/Result/Result';
+import FlipToPage from '../components/FlipToPage/FlipToPage';
 
 export default function Book() {
 	const [open, setOpen] = new useState(false);
 	const [flip, setFlip] = new useState(false);
+	const [turnPage, setTurnPage] = new useState(false);
 
 	const handleOpen = () => setOpen(true);
 
 	const handleFlipTrue = () => setFlip(true);
 	const handleFlipFalse = () => setFlip(false);
+
+	const handleTurnPage = () => setTurnPage(true);
 
 	return (
 		<div className='book-container'>
@@ -45,11 +49,13 @@ export default function Book() {
 				id={'result-page_container'}
 				handler={handleFlipFalse}
 			/>
-			<Leaf
+			<FlipToPage turnPage={turnPage} />
+			{/* <Leaf
 				open={open}
 				content={TableOfContents}
 				id={'toc-page_container'}
 				handler={handleFlipFalse}
+				handleTurnPage={handleTurnPage}
 			/>
 			<Leaf
 				open={open}
@@ -57,7 +63,7 @@ export default function Book() {
 				id={'search-page_container'}
 				flip={flip}
 				handler={handleFlipTrue}
-			/>
+			/> */}
 		</div>
 	);
 }
