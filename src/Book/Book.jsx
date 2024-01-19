@@ -13,18 +13,9 @@ export default function Book() {
 	const [flip, setFlip] = new useState(false);
 
 	const handleOpen = () => setOpen(true);
-	const handleTurnPage = () => {
-		setTurnPage(!turnPage);
-		console.log('setTurnPage');
-	};
-	const handleSeekMonster = () => {
-		setSeekMonster(!seekMonster);
-		console.log('setSeekMonster');
-	};
-	const handleFlip = () => {
-		setFlip(!flip);
-		console.log('setFlip');
-	};
+	const handleTurnPage = () => setTurnPage(!turnPage);
+	const handleSeekMonster = () => setSeekMonster(!seekMonster);
+	const handleFlip = () => setFlip(!flip);
 
 	return (
 		<div className='book-container'>
@@ -51,14 +42,14 @@ export default function Book() {
 					open ? ' flip-cover_back' : ' hidden'
 				}`}
 			></div>
-			<Leaf
+			{/* <Leaf
 				open={open}
 				content={Result}
 				id={'result-page_container'}
 				handleTurnPage={handleTurnPage}
-			/>
-			{/* <FlipToPage flip={flip} /> */}
-			<Leaf
+			/> */}
+			<FlipToPage flip={flip} />
+			{/* <Leaf
 				open={open}
 				content={TableOfContents}
 				id={'toc-page_container'}
@@ -73,7 +64,7 @@ export default function Book() {
 				handleTurnPage={handleTurnPage}
 				seekMonster={seekMonster}
 				handleSeekMonster={handleSeekMonster}
-			/>
+			/> */}
 		</div>
 	);
 }

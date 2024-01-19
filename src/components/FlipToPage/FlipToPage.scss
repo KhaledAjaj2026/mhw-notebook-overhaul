@@ -1,5 +1,7 @@
 .flip_animation {
-    perspective: 800px;
+    width: 40vw;
+    height: 90vh;
+    perspective: 1000px;
 }
 
 .flip-page {
@@ -25,7 +27,7 @@
 }
 
 .flip_page-3 {
-    transition-delay: 0.4s;
+    transition-delay: 0.3s;
 }
 
 .flip-change_index-2 {
