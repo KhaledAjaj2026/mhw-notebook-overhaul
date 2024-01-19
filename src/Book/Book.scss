@@ -146,17 +146,17 @@
     touch-action: manipulation;
     white-space: nowrap;
     will-change: box-shadow, transform;
-    transition: background-image 1s ease-out;
+
+    &:hover {
+        background-image: radial-gradient(100% 100% at 10% 10%, #bf6e50 0, #5d290f 100%);
+    }
+
+    &:active {
+        background-image: radial-gradient(100% 100% at -5% -5%, #bf6e50 0, #5d290f 100%);
+        box-shadow: #2b1206 0 3px 7px inset;
+    }
 }
 
-.navigation-button:hover {
-    background-image: radial-gradient(100% 100% at 10% 10%, #bf6e50 0, #5d290f 100%);
-}
-
-.navigation-button:active {
-    background-image: radial-gradient(100% 100% at -5% -5%, #bf6e50 0, #5d290f 100%);
-    box-shadow: #2b1206 0 3px 7px inset;
-}
 
 @media screen and (min-width: 1800px) {
     .cover-header_title {

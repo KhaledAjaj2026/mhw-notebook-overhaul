@@ -43,16 +43,16 @@ export default function Book() {
 				open={open}
 				content={Result}
 				id={'result-page_container'}
+				handler={handleFlipFalse}
+			/>
+			<Leaf
+				open={open}
+				content={TableOfContents}
+				id={'toc-page_container'}
 				flip={flip}
 				handler={handleFlipTrue}
 			/>
 			{/* <Leaf
-				open={open}
-				content={TableOfContents}
-				id={'toc-page_container'}
-				handler={handleFlipFalse}
-			/>
-			<Leaf
 				open={open}
 				content={SearchPage}
 				id={'search-page_container'}

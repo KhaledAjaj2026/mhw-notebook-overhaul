@@ -5,7 +5,7 @@ import rightCorner from '../../assets/misc/gold_corner-bottom_right.png';
 import leftCorner from '../../assets/misc/gold_corner-bottom_left.png';
 import './Result.css';
 
-export default function Result({ handler }) {
+export default function Result(handler) {
 	return (
 		<>
 			<h2 className='result-leaf_title'>Anjanath</h2>
