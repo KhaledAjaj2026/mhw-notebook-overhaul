@@ -24,6 +24,7 @@
   padding: 0;
   list-style: none;
   font-family: "Libre Caslon Text", sans-serif;
+  font-size: 1.2rem;
 }
 .toc-list li {
   width: -moz-max-content;
@@ -45,5 +46,14 @@
   }
   .toc-list ul {
     font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .toc-leaf_title {
+    font-size: 1.6rem;
+    margin-top: 0;
+  }
+  .toc-list ul {
+    font-size: 0.9rem;
   }
 }/*# sourceMappingURL=TableOfContents.css.map */

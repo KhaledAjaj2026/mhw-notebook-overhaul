@@ -34,4 +34,9 @@
   #autofill-container p {
     font-size: 2.3rem;
   }
+}
+@media screen and (max-width: 400px) {
+  #autofill-container {
+    width: 16rem;
+  }
 }/*# sourceMappingURL=Autofill.css.map */

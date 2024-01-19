@@ -67,4 +67,24 @@ form {
     width: 30px;
     height: 30px;
   }
+}
+@media screen and (max-width: 400px) {
+  .search_label {
+    font-size: 0.8rem;
+  }
+  .search_input__icon {
+    height: 2.3rem;
+  }
+  #monster-search {
+    width: 12rem;
+    font-size: 1.4rem;
+  }
+  .search_submit {
+    height: 2.3rem;
+    width: 36px;
+  }
+  .search_icon {
+    width: 20px;
+    height: 20px;
+  }
 }/*# sourceMappingURL=SearchBar.css.map */

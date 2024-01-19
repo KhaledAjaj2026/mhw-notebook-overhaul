@@ -4,7 +4,11 @@ import './TableOfContents.css';
 export default function TableOfContents(handler) {
 	return (
 		<>
-			<h2 className='toc-leaf_title'>Table of Contents</h2>
+			<h2 className='toc-leaf_title'>
+				Table of
+				<br />
+				Contents
+			</h2>
 			<div className='toc-list'>
 				<div className='toc-list-row_1'>
 					<ul>

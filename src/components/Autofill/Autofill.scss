@@ -40,3 +40,9 @@
         }
     }
 }
+
+@media screen and (max-width: 400px) {
+    #autofill-container {
+        width: 16rem;
+    }
+}
