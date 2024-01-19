@@ -8,15 +8,23 @@ import FlipToPage from '../components/FlipToPage/FlipToPage';
 
 export default function Book() {
 	const [open, setOpen] = new useState(false);
-	const [flip, setFlip] = new useState(false);
 	const [turnPage, setTurnPage] = new useState(false);
+	const [seekMonster, setSeekMonster] = new useState(false);
+	const [flip, setFlip] = new useState(false);
 
 	const handleOpen = () => setOpen(true);
-
-	const handleFlipTrue = () => setFlip(true);
-	const handleFlipFalse = () => setFlip(false);
-
-	const handleTurnPage = () => setTurnPage(true);
+	const handleTurnPage = () => {
+		setTurnPage(!turnPage);
+		console.log('setTurnPage');
+	};
+	const handleSeekMonster = () => {
+		setSeekMonster(!seekMonster);
+		console.log('setSeekMonster');
+	};
+	const handleFlip = () => {
+		setFlip(!flip);
+		console.log('setFlip');
+	};
 
 	return (
 		<div className='book-container'>
@@ -47,23 +55,25 @@ export default function Book() {
 				open={open}
 				content={Result}
 				id={'result-page_container'}
-				handler={handleFlipFalse}
+				handleTurnPage={handleTurnPage}
 			/>
-			<FlipToPage turnPage={turnPage} />
-			{/* <Leaf
+			{/* <FlipToPage flip={flip} /> */}
+			<Leaf
 				open={open}
 				content={TableOfContents}
 				id={'toc-page_container'}
-				handler={handleFlipFalse}
 				handleTurnPage={handleTurnPage}
+				handleFlip={handleFlip}
 			/>
 			<Leaf
 				open={open}
 				content={SearchPage}
 				id={'search-page_container'}
-				flip={flip}
-				handler={handleFlipTrue}
-			/> */}
+				turnPage={turnPage}
+				handleTurnPage={handleTurnPage}
+				seekMonster={seekMonster}
+				handleSeekMonster={handleSeekMonster}
+			/>
 		</div>
 	);
 }

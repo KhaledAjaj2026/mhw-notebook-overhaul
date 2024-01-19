@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Autofill from '../Autofill/Autofill';
 import './SearchBar.css';
 
-export default function Search({ handleSearch }) {
+export default function Search({ handleSeekMonster }) {
 	const [show, setShow] = new useState(false);
 
 	const handleShow = (event) => {
@@ -29,7 +29,7 @@ export default function Search({ handleSearch }) {
 					<button
 						type='button'
 						className='search_submit'
-						onClick={handleSearch}
+						onClick={handleSeekMonster}
 					>
 						<img
 							src='src/assets/misc/magnifying-glass-9.svg'

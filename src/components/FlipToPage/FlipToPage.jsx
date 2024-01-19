@@ -1,28 +1,22 @@
 import React from 'react';
 import './FlipToPage.css';
 
-export default function FlipToPage({ turnPage }) {
+export default function FlipToPage({ flip }) {
 	return (
-		<>
+		<div className='flip_animation slide-up'>
 			<div
-				className={`flip_animation flip_page-3${
-					turnPage
-						? ' flip-to-result flip-change_index-3'
-						: ' flip-leaf_close hidden'
+				className={`flip-page flip_page-3${
+					flip ? ' flip-to-result flip-change_index-3' : ' hidden'
 				}`}
 			></div>
 			<div
-				className={`flip_animation flip_page-2${
-					turnPage
-						? ' flip-to-result flip-change_index-2'
-						: ' flip-leaf_close hidden'
+				className={`flip-page flip_page-2${
+					flip ? ' flip-to-result flip-change_index-2' : ' hidden'
 				}`}
 			></div>
 			<div
-				className={`flip_animation${
-					turnPage ? ' flip-to-result' : ' flip-leaf_close'
-				}`}
+				className={`flip-page${flip ? ' flip-to-result' : ' flip-leaf_close'}`}
 			></div>
-		</>
+		</div>
 	);
 }

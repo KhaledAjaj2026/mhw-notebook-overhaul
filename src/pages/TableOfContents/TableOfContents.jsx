@@ -1,7 +1,11 @@
 import React from 'react';
 import './TableOfContents.css';
 
-export default function TableOfContents(handler, handleTurnPage) {
+export default function TableOfContents(
+	handleTurnPage,
+	handleSeekMonster,
+	handleFlip
+) {
 	return (
 		<>
 			<h2 className='toc-leaf_title'>
@@ -12,7 +16,7 @@ export default function TableOfContents(handler, handleTurnPage) {
 			<div className='toc-list'>
 				<div className='toc-list-row_1'>
 					<ul>
-						<li onClick={handleTurnPage}>Great Jagras</li>
+						<li onClick={handleFlip}>Great Jagras</li>
 						<li>Kulu-Ya-Ku</li>
 						<li>Barroth</li>
 						<li>Jyuratodus</li>
@@ -39,7 +43,11 @@ export default function TableOfContents(handler, handleTurnPage) {
 					</ul>
 				</div>
 			</div>
-			<button type='button' className='turn_leaf-button' onClick={handler}>
+			<button
+				type='button'
+				className='turn_leaf-button'
+				onClick={handleTurnPage}
+			>
 				Go to Search
 			</button>
 		</>
