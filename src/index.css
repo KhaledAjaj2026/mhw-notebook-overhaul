@@ -27,6 +27,24 @@ body {
   animation: 1.7s slideUp ease-out;
 }
 
+@keyframes loadingRing {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.loading-animation {
+  align-self: center;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-right: 5px solid #6ce91e;
+  border-radius: 50%;
+  animation: 1.2s loadingRing linear infinite;
+}
+
 .flip-cover {
   transform: rotateY(-185deg);
   z-index: -1;
