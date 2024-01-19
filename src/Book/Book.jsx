@@ -3,6 +3,7 @@ import './Book.css';
 import Leaf from '../components/Leaf/Leaf';
 import SearchPage from '../pages/SearchPage/SearchPage';
 import TableOfContents from '../pages/TableOfContents/TableOfContents';
+import Result from '../pages/Result/Result';
 
 export default function Book() {
 	const [open, setOpen] = new useState(false);
@@ -40,6 +41,13 @@ export default function Book() {
 			></div>
 			<Leaf
 				open={open}
+				content={Result}
+				id={'result-page_container'}
+				flip={flip}
+				handler={handleFlipTrue}
+			/>
+			{/* <Leaf
+				open={open}
 				content={TableOfContents}
 				id={'toc-page_container'}
 				handler={handleFlipFalse}
@@ -50,7 +58,7 @@ export default function Book() {
 				id={'search-page_container'}
 				flip={flip}
 				handler={handleFlipTrue}
-			/>
+			/> */}
 		</div>
 	);
 }
