@@ -11,22 +11,34 @@ export default function Leaf({
 	handleSeekMonster,
 	handleFlip,
 }) {
+	const turnAndSeek = () => {
+		handleSeekMonster();
+		setTimeout(handleFlip, 2000);
+		handleSeekMonster();
+	};
+
 	return (
 		<>
 			<div
 				id={id}
 				className={`book-leaf${open ? '' : ' hidden'}${
-					turnPage ? ' flip-leaf_open' : ' flip-leaf_close'
-				}`}
+					seekMonster ? ' disappear' : ''
+				}${turnPage ? ' flip-leaf_open' : ' flip-leaf_close'}`}
 			>
-				{content(handleTurnPage, handleSeekMonster, handleFlip)}
-				<div className={`${seekMonster ? 'loading-animation' : ''}`}></div>
+				{content(
+					handleTurnPage,
+					handleSeekMonster,
+					handleFlip,
+					turnAndSeek,
+					seekMonster
+				)}
 			</div>
 			<div
 				className={`book-leaf-back${open ? '' : ' hidden'}${
-					turnPage ? ' flip-leaf_open_back' : ' flip-leaf_close'
-				}`}
+					seekMonster ? ' hidden' : ''
+				}${turnPage ? ' flip-leaf_open_back' : ' flip-leaf_close'}`}
 			></div>
+			<div className={`${seekMonster ? 'loading-animation' : 'hidden'}`}></div>
 		</>
 	);
 }

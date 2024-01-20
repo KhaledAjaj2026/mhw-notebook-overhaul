@@ -48,7 +48,8 @@ body {
     position: absolute;
     border-right: 5px solid #6ce91e;
     border-radius: 50%;
-    animation: 1.2s loadingRing linear infinite;
+    animation: 1.2s loadingRing linear;
+    animation-duration: 2s;
 }
 
 .flip-cover {
@@ -77,4 +78,18 @@ body {
 
 .hidden {
     opacity: 0;
+}
+
+@keyframes disappear {
+    from {
+        display: flex;
+    }
+
+    to {
+        display: none;
+    }
+}
+
+.disappear {
+    animation: disappear ease-in forwards;
 }

@@ -4,7 +4,8 @@ import './TableOfContents.css';
 export default function TableOfContents(
 	handleTurnPage,
 	handleSeekMonster,
-	handleFlip
+	handleFlip,
+	turnAndSeek
 ) {
 	return (
 		<>
@@ -16,7 +17,7 @@ export default function TableOfContents(
 			<div className='toc-list'>
 				<div className='toc-list-row_1'>
 					<ul>
-						<li onClick={handleFlip}>Great Jagras</li>
+						<li onClick={turnAndSeek}>Great Jagras</li>
 						<li>Kulu-Ya-Ku</li>
 						<li>Barroth</li>
 						<li>Jyuratodus</li>

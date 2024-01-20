@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Autofill from '../Autofill/Autofill';
 import './SearchBar.css';
 
-export default function Search({ handleSeekMonster }) {
+export default function SearchBar({ turnAndSeek }) {
 	const [show, setShow] = new useState(false);
 
 	const handleShow = (event) => {
@@ -12,7 +12,7 @@ export default function Search({ handleSeekMonster }) {
 	};
 
 	return (
-		<div>
+		<>
 			<form>
 				<label htmlFor='monster-search' className='search_label'>
 					Search for a monster below
@@ -26,11 +26,7 @@ export default function Search({ handleSeekMonster }) {
 						onChange={handleShow}
 						autoComplete='off'
 					/>
-					<button
-						type='button'
-						className='search_submit'
-						onClick={handleSeekMonster}
-					>
+					<button type='button' className='search_submit' onClick={turnAndSeek}>
 						<img
 							src='src/assets/misc/magnifying-glass-9.svg'
 							className='search_icon'
@@ -38,8 +34,8 @@ export default function Search({ handleSeekMonster }) {
 						/>
 					</button>
 				</div>
+				<Autofill show={show} />
 			</form>
-			<Autofill show={show} />
-		</div>
+		</>
 	);
 }

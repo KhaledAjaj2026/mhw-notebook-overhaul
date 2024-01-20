@@ -1,3 +1,7 @@
+#result-page_container {
+  box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5098039216);
+}
+
 .result-leaf_title {
   position: absolute;
   margin-top: 4rem;

@@ -42,29 +42,33 @@ export default function Book() {
 					open ? ' flip-cover_back' : ' hidden'
 				}`}
 			></div>
-			{/* <Leaf
+			<Leaf
 				open={open}
 				content={Result}
 				id={'result-page_container'}
 				handleTurnPage={handleTurnPage}
-			/> */}
+			/>
 			<FlipToPage flip={flip} />
-			{/* <Leaf
+			<Leaf
 				open={open}
 				content={TableOfContents}
 				id={'toc-page_container'}
 				handleTurnPage={handleTurnPage}
+				seekMonster={seekMonster}
+				handleSeekMonster={handleSeekMonster}
 				handleFlip={handleFlip}
 			/>
+
 			<Leaf
 				open={open}
 				content={SearchPage}
 				id={'search-page_container'}
-				turnPage={turnPage}
 				handleTurnPage={handleTurnPage}
 				seekMonster={seekMonster}
 				handleSeekMonster={handleSeekMonster}
-			/> */}
+				handleFlip={handleFlip}
+				turnPage={turnPage}
+			/>
 		</div>
 	);
 }

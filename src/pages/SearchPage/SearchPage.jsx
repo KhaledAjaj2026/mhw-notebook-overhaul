@@ -2,7 +2,12 @@ import React from 'react';
 import './SearchPage.css';
 import SearchBar from '../../components/SearchBar/SearchBar';
 
-export default function SearchPage(handleTurnPage, handleSeekMonster) {
+export default function SearchPage(
+	handleTurnPage,
+	handleSeekMonster,
+	handleFlip,
+	turnAndSeek
+) {
 	return (
 		<>
 			<h2 className='search-leaf_title'>
@@ -10,7 +15,7 @@ export default function SearchPage(handleTurnPage, handleSeekMonster) {
 				<br />
 				New World
 			</h2>
-			<SearchBar handleSeekMonster={handleSeekMonster} />
+			<SearchBar turnAndSeek={turnAndSeek} />
 			<button
 				type='button'
 				className='turn_leaf-button'
