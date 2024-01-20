@@ -47,6 +47,8 @@ export default function Book() {
 				content={Result}
 				id={'result-page_container'}
 				handleTurnPage={handleTurnPage}
+				handleSeekMonster={handleSeekMonster}
+				handleFlip={handleFlip}
 			/>
 			<FlipToPage flip={flip} />
 			<Leaf

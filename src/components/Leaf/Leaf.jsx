@@ -22,10 +22,12 @@ export default function Leaf({
 		}
 	};
 
-	// const undoTurnAndSeek = () => {
-	// 	handleSeekMonster();
-	// 	handleFlip();
-	// };
+	const undoTurnAndSeek = () => {
+		if (turnPage === undefined) {
+			handleFlip();
+			setTimeout(handleSeekMonster, 800);
+		}
+	};
 
 	return (
 		<>
@@ -39,8 +41,8 @@ export default function Leaf({
 					handleTurnPage,
 					handleSeekMonster,
 					handleFlip,
-					turnAndSeek
-					// undoTurnAndSeek
+					turnAndSeek,
+					undoTurnAndSeek
 				)}
 			</div>
 			<div
