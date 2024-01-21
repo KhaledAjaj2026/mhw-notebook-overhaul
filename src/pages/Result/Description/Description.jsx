@@ -43,7 +43,7 @@ export default function Description(
 			</p>
 			<button
 				type='button'
-				className='description-turn_leaf-button turn_leaf-button-right'
+				className='result-turn_leaf-button result-turn_leaf-button-right'
 			>
 				<img
 					src={rightCorner}
@@ -53,7 +53,7 @@ export default function Description(
 			</button>
 			<button
 				type='button'
-				className='description-turn_leaf-button turn_leaf-button-left'
+				className='result-turn_leaf-button result-turn_leaf-button-left'
 				onClick={undoTurnAndSeek}
 			>
 				<img src={leftCorner} alt='decorative corner' />

@@ -64,7 +64,7 @@
   margin: 1rem 2rem;
 }
 
-.description-turn_leaf-button {
+.result-turn_leaf-button {
   height: -moz-min-content;
   height: min-content;
   width: -moz-min-content;
@@ -76,23 +76,23 @@
   cursor: pointer;
   transition: transform 0.3s ease-in-out, transform 50ms linear;
 }
-.description-turn_leaf-button img {
+.result-turn_leaf-button img {
   width: 65px;
   height: 65px;
 }
-.description-turn_leaf-button:hover {
+.result-turn_leaf-button:hover {
   transform: scale(1.1);
 }
-.description-turn_leaf-button:active {
+.result-turn_leaf-button:active {
   transform: scale(0.95);
 }
 
-.turn_leaf-button-right {
+.result-turn_leaf-button-right {
   right: 7px;
   transform-origin: bottom right;
 }
 
-.turn_leaf-button-left {
+.result-turn_leaf-button-left {
   left: 7px;
   transform-origin: bottom left;
 }
