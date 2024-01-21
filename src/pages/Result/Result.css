@@ -1,16 +1,44 @@
 #result-page_container {
   box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5098039216);
+  flex-direction: column;
+  align-items: center;
 }
 
 .result-leaf_title {
   position: absolute;
-  margin-top: 4rem;
+  top: 1rem;
   text-align: center;
   font-size: 2.5rem;
-  font-family: "Nanum Myeongjo", serif;
-  letter-spacing: 3px;
+  font-family: "IM Fell Double Pica", serif;
+  font-weight: bold;
+  letter-spacing: 2px;
   text-transform: uppercase;
   line-height: 2.5rem;
+}
+
+.result-image_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-width: 35px;
+  border-style: solid;
+  -o-border-image: url("../../assets/misc/decorative-border.png") 100 round;
+     border-image: url("../../assets/misc/decorative-border.png") 100 round;
+}
+
+.result-monster_image {
+  height: 250px;
+  padding: 10px;
+  background: radial-gradient(ellipse at center, rgba(63, 24, 4, 0.7843137255) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+.result-monster_description {
+  font-size: 1.2rem;
+  font-family: "Kotta One", sans-serif;
+  color: #000;
+  text-align: center;
+  font-weight: bold;
+  margin: 1rem 2rem;
 }
 
 .result-turn_leaf-button-right {
@@ -70,7 +98,23 @@
     margin-top: 5rem;
   }
 }
+@media screen and (max-width: 1000px) {
+  .result-leaf_title {
+    font-size: 2rem;
+  }
+}
 @media screen and (max-width: 650px) {
+  .result-leaf_title {
+    top: 0;
+  }
+  .result-image_container {
+    margin-top: -2rem;
+    border-width: 20px;
+    border-image-slice: 80;
+  }
+  .result-monster_image {
+    height: 200px;
+  }
   .result-turn_leaf-button-left img,
   .result-turn_leaf-button-right img {
     width: 50px;
