@@ -32,6 +32,29 @@
   background: radial-gradient(ellipse at center, rgba(63, 24, 4, 0.7843137255) 0%, rgba(255, 255, 255, 0) 70%);
 }
 
+.description_stats-container {
+  margin: -0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.description_stats-subcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.description_stats-subcontainer h4,
+.description_stats-subcontainer p {
+  color: #000;
+  font-size: 0.9rem;
+  font-family: "Kite One", sans-serif;
+}
+.description_stats-subcontainer h4 {
+  font-family: "Hind", sans-serif;
+}
+
 .description-monster_description {
   font-size: 1.2rem;
   font-family: "Kotta One", sans-serif;

@@ -10,7 +10,9 @@ export default function Description(
 	handleSeekMonster,
 	handleFlip,
 	turnAndSeek,
-	undoTurnAndSeek
+	undoTurnAndSeek,
+	turnResult,
+	incrementTurnResult
 ) {
 	const monster = 'anjanath';
 
@@ -24,6 +26,16 @@ export default function Description(
 					alt={`image of ${monster}`}
 				/>
 			</div>
+			<div className='description_stats-container'>
+				<div className='description_stats-subcontainer'>
+					<h4>Species:</h4>
+					<p>Brute Wyvern</p>
+				</div>
+				<div className='description_stats-subcontainer'>
+					<h4>Location:</h4>
+					<p>Ancient Forest</p>
+				</div>
+			</div>
 			<p className='description-monster_description'>
 				The Anjanath patrols the Ancient Forest, looking for its favorite meal,
 				Aptonoth. This belligerent monster will attack anything without
@@ -33,7 +45,11 @@ export default function Description(
 				type='button'
 				className='description-turn_leaf-button turn_leaf-button-right'
 			>
-				<img src={rightCorner} alt='decorative corner' />
+				<img
+					src={rightCorner}
+					alt='decorative corner'
+					onClick={incrementTurnResult}
+				/>
 			</button>
 			<button
 				type='button'

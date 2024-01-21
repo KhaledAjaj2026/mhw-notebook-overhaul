@@ -5,6 +5,7 @@ import SearchPage from '../pages/SearchPage/SearchPage';
 import TableOfContents from '../pages/TableOfContents/TableOfContents';
 import FlipToPage from '../components/FlipToPage/FlipToPage';
 import Description from '../pages/Result/Description/Description';
+import Ecology from '../pages/Result/Ecology/Ecology';
 
 export default function Book() {
 	const [open, setOpen] = new useState(false);
@@ -56,8 +57,8 @@ export default function Book() {
 				handleTurnPage={handleTurnPage}
 				handleSeekMonster={handleSeekMonster}
 				handleFlip={handleFlip}
-			/>
-			<Leaf
+			/> */}
+			{/* <Leaf
 				open={open}
 				content={Description}
 				id={'description-page_container'}
@@ -68,8 +69,8 @@ export default function Book() {
 			/> */}
 			{/* <Leaf
 				open={open}
-				content={Description}
-				id={'description-page_container'}
+				content={Ecology}
+				id={'ecology-page_container'}
 				index={1}
 				turnResult={turnResult}
 				incrementTurnResult={incrementTurnResult}
@@ -86,6 +87,7 @@ export default function Book() {
 				incrementTurnResult={incrementTurnResult}
 				decrementTurnResult={decrementTurnResult}
 			/>
+			{/*
 			<FlipToPage flip={flip} />
 			<Leaf
 				open={open}
@@ -106,6 +108,7 @@ export default function Book() {
 				handleFlip={handleFlip}
 				turnPage={turnPage}
 			/>
+			*/}
 		</div>
 	);
 }
