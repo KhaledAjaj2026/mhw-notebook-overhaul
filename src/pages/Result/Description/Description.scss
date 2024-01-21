@@ -1,39 +1,37 @@
-#result-page_container {
+#description-page_container {
     box-shadow: 10px 5px 10px 5px #00000082;
     flex-direction: column;
     align-items: center;
-    // justify-content: space-evenly;
 }
 
-.result-leaf_title {
+.description-leaf_title {
     position: absolute;
     top: 1rem;
     text-align: center;
     font-size: 2.5rem;
     font-family: 'IM Fell Double Pica', serif;
     font-weight: bold;
-    // color: #000;
     letter-spacing: 2px;
     text-transform: uppercase;
     line-height: 2.5rem;
 }
 
-.result-image_container {
+.description-image_container {
     display: flex;
     justify-content: center;
     align-items: center;
     border-width: 35px;
     border-style: solid;
-    border-image: url('../../assets/misc/decorative-border.png') 100 round;
+    border-image: url('/src/assets/misc/decorative-border.png') 100 round;
 }
 
-.result-monster_image {
+.description-monster_image {
     height: 250px;
     padding: 10px;
     background: radial-gradient(ellipse at center, #3f1804c8 0%, #ffffff00 70%);
 }
 
-.result-monster_description {
+.description-monster_description {
     font-size: 1.2rem;
     font-family: 'Kotta One', sans-serif;
     color: #000;
@@ -42,17 +40,15 @@
     margin: 1rem 2rem;
 }
 
-.result-turn_leaf-button-right {
+.description-turn_leaf-button {
     height: min-content;
     width: min-content;
     background: none;
     border: none;
     position: absolute;
     bottom: 7px;
-    right: 7px;
     cursor: pointer;
     transition: transform 0.3s ease-in-out, transform 50ms linear;
-    transform-origin: bottom right;
 
     img {
         width: 65px;
@@ -68,34 +64,18 @@
     }
 }
 
-.result-turn_leaf-button-left {
-    height: min-content;
-    width: min-content;
-    background: none;
-    border: none;
-    position: absolute;
-    bottom: 7px;
+.turn_leaf-button-right {
+    right: 7px;
+    transform-origin: bottom right;
+}
+
+.turn_leaf-button-left {
     left: 7px;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out, transform 50ms linear;
     transform-origin: bottom left;
-
-    img {
-        width: 65px;
-        height: 65px;
-    }
-
-    &:hover {
-        transform: scale(1.1);
-    }
-
-    &:active {
-        transform: scale(0.95);
-    }
 }
 
 @media screen and (min-width: 1800px) {
-    .result-leaf_title {
+    .description-leaf_title {
         font-size: 4rem;
         line-height: 4rem;
         margin-top: 5rem;
@@ -103,28 +83,27 @@
 }
 
 @media screen and (max-width: 1000px) {
-    .result-leaf_title {
+    .description-leaf_title {
         font-size: 2rem;
     }
 }
 
 @media screen and (max-width: 650px) {
-    .result-leaf_title {
+    .description-leaf_title {
         top: 0;
     }
 
-    .result-image_container {
+    .description-image_container {
         margin-top: -2rem;
         border-width: 20px;
         border-image-slice: 80;
     }
 
-    .result-monster_image {
+    .description-monster_image {
         height: 200px;
     }
 
-    .result-turn_leaf-button-left,
-    .result-turn_leaf-button-right {
+    .description-turn_leaf-button {
         img {
             width: 50px;
             height: 50px;

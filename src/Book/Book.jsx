@@ -3,19 +3,25 @@ import './Book.css';
 import Leaf from '../components/Leaf/Leaf';
 import SearchPage from '../pages/SearchPage/SearchPage';
 import TableOfContents from '../pages/TableOfContents/TableOfContents';
-import Result from '../pages/Result/Result';
 import FlipToPage from '../components/FlipToPage/FlipToPage';
+import Description from '../pages/Result/Description/Description';
 
 export default function Book() {
 	const [open, setOpen] = new useState(false);
 	const [turnPage, setTurnPage] = new useState(false);
 	const [seekMonster, setSeekMonster] = new useState(false);
 	const [flip, setFlip] = new useState(false);
+	const [turnResult, setTurnResult] = new useState(0);
 
 	const handleOpen = () => setOpen(true);
 	const handleTurnPage = () => setTurnPage(!turnPage);
 	const handleSeekMonster = () => setSeekMonster(!seekMonster);
 	const handleFlip = () => setFlip(!flip);
+
+	const incrementTurnResult = () =>
+		turnResult < 3 ? setTurnResult(turnResult + 1) : '';
+	const decrementTurnResult = () =>
+		turnResult > 0 ? setTurnResult(turnResult - 1) : '';
 
 	return (
 		<div className='book-container'>
@@ -42,13 +48,43 @@ export default function Book() {
 					open ? ' flip-cover_back' : ' hidden'
 				}`}
 			></div>
-			<Leaf
+			{/* <Leaf
 				open={open}
-				content={Result}
-				id={'result-page_container'}
+				content={Description}
+				id={'description-page_container'}
+				index={3}
 				handleTurnPage={handleTurnPage}
 				handleSeekMonster={handleSeekMonster}
 				handleFlip={handleFlip}
+			/>
+			<Leaf
+				open={open}
+				content={Description}
+				id={'description-page_container'}
+				index={2}
+				handleTurnPage={handleTurnPage}
+				handleSeekMonster={handleSeekMonster}
+				handleFlip={handleFlip}
+			/> */}
+			{/* <Leaf
+				open={open}
+				content={Description}
+				id={'description-page_container'}
+				index={1}
+				turnResult={turnResult}
+				incrementTurnResult={incrementTurnResult}
+				decrementTurnResult={decrementTurnResult}
+			/> */}
+			<Leaf
+				open={open}
+				content={Description}
+				id={'description-page_container'}
+				index={0}
+				handleFlip={handleFlip}
+				turnResult={turnResult}
+				handleSeekMonster={handleSeekMonster}
+				incrementTurnResult={incrementTurnResult}
+				decrementTurnResult={decrementTurnResult}
 			/>
 			<FlipToPage flip={flip} />
 			<Leaf
@@ -60,7 +96,6 @@ export default function Book() {
 				handleSeekMonster={handleSeekMonster}
 				handleFlip={handleFlip}
 			/>
-
 			<Leaf
 				open={open}
 				content={SearchPage}
