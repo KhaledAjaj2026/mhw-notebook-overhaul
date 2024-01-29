@@ -1,8 +1,7 @@
 import React from 'react';
 import anjanath from '/src/assets/monsters-min/anjanath.webp';
 import rajang from '/src/assets/monsters-min/rajang.webp';
-import rightCorner from '/src/assets/misc/gold_corner-bottom_right.png';
-import leftCorner from '/src/assets/misc/gold_corner-bottom_left.png';
+import CornerButtons from '../../../components/CornerButtons/CornerButtons';
 import './Description.css';
 
 export default function Description(
@@ -41,23 +40,7 @@ export default function Description(
 				Aptonoth. This belligerent monster will attack anything without
 				hesitation.
 			</p>
-			<button
-				type='button'
-				className='result-turn_leaf-button result-turn_leaf-button-right'
-			>
-				<img
-					src={rightCorner}
-					alt='decorative corner'
-					onClick={incrementTurnResult}
-				/>
-			</button>
-			<button
-				type='button'
-				className='result-turn_leaf-button result-turn_leaf-button-left'
-				onClick={undoTurnAndSeek}
-			>
-				<img src={leftCorner} alt='decorative corner' />
-			</button>
+			<CornerButtons />
 		</>
 	);
 }

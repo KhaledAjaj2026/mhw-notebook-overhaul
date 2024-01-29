@@ -49,33 +49,24 @@ export default function Book() {
 					open ? ' flip-cover_back' : ' hidden'
 				}`}
 			></div>
-			<Leaf
+			{/* <Leaf
 				open={open}
 				content={Rewards}
 				id={'rewards-page_container'}
-				index={3}
-				handleTurnPage={handleTurnPage}
-				handleSeekMonster={handleSeekMonster}
-				handleFlip={handleFlip}
-			/>
-			<Leaf
-				open={open}
-				content={Description}
-				id={'description-page_container'}
 				index={2}
 				handleTurnPage={handleTurnPage}
 				handleSeekMonster={handleSeekMonster}
 				handleFlip={handleFlip}
-			/>
-			<Leaf
+			/> */}
+			{/* <Leaf
 				open={open}
 				content={Physiology}
-				id={'ecology-page_container'}
+				id={'physiology-page_container'}
 				index={1}
 				turnResult={turnResult}
 				incrementTurnResult={incrementTurnResult}
 				decrementTurnResult={decrementTurnResult}
-			/>
+			/> */}
 			<Leaf
 				open={open}
 				content={Description}
