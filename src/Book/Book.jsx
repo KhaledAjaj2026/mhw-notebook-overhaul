@@ -6,6 +6,7 @@ import TableOfContents from '../pages/TableOfContents/TableOfContents';
 import FlipToPage from '../components/FlipToPage/FlipToPage';
 import Description from '../pages/Result/Description/Description';
 import Physiology from '../pages/Result/Physiology/Physiology';
+import Rewards from '../pages/Result/Rewards/Rewards';
 
 export default function Book() {
 	const [open, setOpen] = new useState(false);
@@ -49,7 +50,7 @@ export default function Book() {
 					open ? ' flip-cover_back' : ' hidden'
 				}`}
 			></div>
-			{/* <Leaf
+			<Leaf
 				open={open}
 				content={Rewards}
 				id={'rewards-page_container'}
@@ -57,8 +58,8 @@ export default function Book() {
 				handleTurnPage={handleTurnPage}
 				handleSeekMonster={handleSeekMonster}
 				handleFlip={handleFlip}
-			/> */}
-			<Leaf
+			/>
+			{/* <Leaf
 				open={open}
 				content={Physiology}
 				id={'physiology-page_container'}
@@ -66,7 +67,7 @@ export default function Book() {
 				turnResult={turnResult}
 				incrementTurnResult={incrementTurnResult}
 				decrementTurnResult={decrementTurnResult}
-			/>
+			/> */}
 			{/* <Leaf
 				open={open}
 				content={Description}
