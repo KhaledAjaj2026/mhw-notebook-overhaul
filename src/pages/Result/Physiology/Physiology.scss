@@ -1,3 +1,10 @@
+$iconWater: url('/src/assets/icons/water.png');
+$iconDragon: url('/src/assets/icons/dragon.png');
+$iconFire: url('/src/assets/icons/fire.png');
+$iconIce: url('/src/assets/icons/ice.png');
+$iconPoison: url('/src/assets/icons/poison.png');
+$iconThunder: url('/src/assets/icons/thunder.png');
+
 #physiology-page_container {
     flex-direction: column;
     align-items: center;
@@ -13,6 +20,56 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     line-height: 2.5rem;
+}
+
+.physiology-containers {
+    margin-top: 4rem;
+}
+
+.physiology-weakness_container,
+.physiology-resistance_container {
+    width: 17rem;
+    height: 16rem;
+    background: #3d1d082b;
+    box-shadow: 0 0 5px 5px #3d1d082b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.physiology-resistance_container {
+    margin-top: 2rem;
+}
+
+.physiology-container_heading {
+    font-family: 'Junge', serif;
+    font-size: 1.7rem;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.physiology-weakness-list_container,
+.physiology-resistance-list_container {
+    margin: 0;
+    padding: 0;
+    font-size: 1.1rem;
+    list-style: none;
+
+    li {
+        font-family: 'Kite One', sans-serif;
+        margin: 5px 0 5px 10px;
+    }
+}
+
+.physiology-list_item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.physiology-list_item-icon {
+    width: 30px;
+    height: 30px;
 }
 
 @media screen and (min-width: 1800px) {
@@ -32,22 +89,5 @@
 @media screen and (max-width: 650px) {
     .physiology-leaf_title {
         top: 0;
-    }
-
-    .physiology-image_container {
-        margin-top: -2rem;
-        border-width: 20px;
-        border-image-slice: 80;
-    }
-
-    .physiology-monster_image {
-        height: 200px;
-    }
-
-    .physiology-turn_leaf-button {
-        img {
-            width: 50px;
-            height: 50px;
-        }
     }
 }

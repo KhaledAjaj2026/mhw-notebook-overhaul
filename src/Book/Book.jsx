@@ -58,7 +58,7 @@ export default function Book() {
 				handleSeekMonster={handleSeekMonster}
 				handleFlip={handleFlip}
 			/> */}
-			{/* <Leaf
+			<Leaf
 				open={open}
 				content={Physiology}
 				id={'physiology-page_container'}
@@ -66,8 +66,8 @@ export default function Book() {
 				turnResult={turnResult}
 				incrementTurnResult={incrementTurnResult}
 				decrementTurnResult={decrementTurnResult}
-			/> */}
-			<Leaf
+			/>
+			{/* <Leaf
 				open={open}
 				content={Description}
 				id={'description-page_container'}
@@ -77,9 +77,9 @@ export default function Book() {
 				handleSeekMonster={handleSeekMonster}
 				incrementTurnResult={incrementTurnResult}
 				decrementTurnResult={decrementTurnResult}
-			/>
+			/> */}
 
-			<FlipToPage flip={flip} />
+			{/* <FlipToPage flip={flip} />
 
 			<Leaf
 				open={open}
@@ -99,7 +99,7 @@ export default function Book() {
 				handleSeekMonster={handleSeekMonster}
 				handleFlip={handleFlip}
 				turnPage={turnPage}
-			/>
+			/> */}
 		</div>
 	);
 }
