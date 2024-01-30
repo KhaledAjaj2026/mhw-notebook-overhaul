@@ -40,7 +40,12 @@ export default function Description(
 				Aptonoth. This belligerent monster will attack anything without
 				hesitation.
 			</p>
-			<CornerButtons />
+			<CornerButtons
+				handleSeekMonster={handleSeekMonster}
+				undoTurnAndSeek={undoTurnAndSeek}
+				turnResult={turnResult}
+				incrementTurnResult={incrementTurnResult}
+			/>
 		</>
 	);
 }

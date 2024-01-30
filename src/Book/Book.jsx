@@ -20,10 +20,14 @@ export default function Book() {
 	const handleSeekMonster = () => setSeekMonster(!seekMonster);
 	const handleFlip = () => setFlip(!flip);
 
-	const incrementTurnResult = () =>
+	const incrementTurnResult = () => {
 		turnResult < 3 ? setTurnResult(turnResult + 1) : '';
-	const decrementTurnResult = () =>
+	};
+	const decrementTurnResult = () => {
 		turnResult > 0 ? setTurnResult(turnResult - 1) : '';
+	};
+
+	console.log('turnResult: ', turnResult);
 
 	return (
 		<div className='book-container'>
@@ -55,11 +59,11 @@ export default function Book() {
 				content={Rewards}
 				id={'rewards-page_container'}
 				index={2}
-				handleTurnPage={handleTurnPage}
-				handleSeekMonster={handleSeekMonster}
-				handleFlip={handleFlip}
+				turnResult={turnResult}
+				incrementTurnResult={incrementTurnResult}
+				decrementTurnResult={decrementTurnResult}
 			/>
-			{/* <Leaf
+			<Leaf
 				open={open}
 				content={Physiology}
 				id={'physiology-page_container'}
@@ -67,8 +71,8 @@ export default function Book() {
 				turnResult={turnResult}
 				incrementTurnResult={incrementTurnResult}
 				decrementTurnResult={decrementTurnResult}
-			/> */}
-			{/* <Leaf
+			/>
+			<Leaf
 				open={open}
 				content={Description}
 				id={'description-page_container'}
@@ -78,10 +82,8 @@ export default function Book() {
 				handleSeekMonster={handleSeekMonster}
 				incrementTurnResult={incrementTurnResult}
 				decrementTurnResult={decrementTurnResult}
-			/> */}
-
-			{/* <FlipToPage flip={flip} />
-
+			/>
+			<FlipToPage flip={flip} />
 			<Leaf
 				open={open}
 				content={TableOfContents}
@@ -100,7 +102,7 @@ export default function Book() {
 				handleSeekMonster={handleSeekMonster}
 				handleFlip={handleFlip}
 				turnPage={turnPage}
-			/> */}
+			/>
 		</div>
 	);
 }
