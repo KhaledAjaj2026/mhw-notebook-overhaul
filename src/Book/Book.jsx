@@ -27,8 +27,6 @@ export default function Book() {
 		turnResult > 0 ? setTurnResult(turnResult - 1) : '';
 	};
 
-	console.log('turnResult: ', turnResult);
-
 	return (
 		<div className='book-container'>
 			<div id='background'></div>

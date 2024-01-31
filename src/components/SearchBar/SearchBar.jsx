@@ -3,12 +3,17 @@ import Autofill from '../Autofill/Autofill';
 import './SearchBar.css';
 
 export default function SearchBar({ turnAndSeek }) {
-	const [show, setShow] = new useState(false);
+	// const [show, setShow] = new useState(false);
+	const [input, setInput] = new useState('');
 
-	const handleShow = (event) => {
+	const handleInput = (event) => {
 		const val = event.target.value;
-		if (val.length > 0) setShow(true);
-		else setShow(false);
+		if (val.length > 0) {
+			// setShow(true);
+			setInput(val);
+		} else {
+			setInput('');
+		}
 	};
 
 	return (
@@ -23,7 +28,7 @@ export default function SearchBar({ turnAndSeek }) {
 						name='monster-search'
 						id='monster-search'
 						placeholder='E.g. Anjanath'
-						onChange={handleShow}
+						onChange={handleInput}
 						autoComplete='off'
 					/>
 					<button type='button' className='search_submit' onClick={turnAndSeek}>
@@ -34,7 +39,7 @@ export default function SearchBar({ turnAndSeek }) {
 						/>
 					</button>
 				</div>
-				<Autofill show={show} />
+				<Autofill input={input} />
 			</form>
 		</>
 	);

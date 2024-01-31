@@ -1,17 +1,25 @@
 import React from 'react';
+import monsters from '../../data/monsters.json';
 import './Autofill.css';
 
-export default function Autofill({ show }) {
+export default function Autofill({ input }) {
+	const filteredMonsters = monsters.monsterNames.filter((m) =>
+		m.toUpperCase().includes(input.toUpperCase())
+	);
+
+	const autofillItems = filteredMonsters.map((m) => (
+		<li key={filteredMonsters.indexOf(m)}>{m}</li>
+	));
+
 	return (
 		<div
 			id='autofill-container'
-			style={{ display: `${show ? 'block' : 'none'}` }}
+			style={{
+				display: `${input ? 'block' : 'none'}`,
+				height: `${autofillItems.length > 4 ? '14rem' : 'max-content'}`,
+			}}
 		>
-			<p>Ancient Leshen</p>
-			<hr />
-			<p>Anjanath</p>
-			<hr />
-			<p>Azure Rathalos</p>
+			<ul>{autofillItems}</ul>
 		</div>
 	);
 }

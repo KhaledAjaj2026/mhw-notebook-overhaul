@@ -1,9 +1,20 @@
 #autofill-container {
     background-color: #f7f3db;
-    width: 18rem;
+    width: 17.5rem;
+    height: max-content;
     position: absolute;
+    z-index: 1;
+    overflow-y: scroll;
+    border: 3px inset goldenrod;
+    border-top: none;
 
-    p {
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        list-style: none;
         margin: 0;
         font-size: 1.5rem;
         letter-spacing: 2px;

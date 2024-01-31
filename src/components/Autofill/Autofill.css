@@ -1,9 +1,20 @@
 #autofill-container {
   background-color: #f7f3db;
-  width: 18rem;
+  width: 17.5rem;
+  height: -moz-max-content;
+  height: max-content;
   position: absolute;
+  z-index: 1;
+  overflow-y: scroll;
+  border: 3px inset goldenrod;
+  border-top: none;
 }
-#autofill-container p {
+#autofill-container ul {
+  margin: 0;
+  padding: 0;
+}
+#autofill-container li {
+  list-style: none;
   margin: 0;
   font-size: 1.5rem;
   letter-spacing: 2px;
@@ -13,11 +24,11 @@
   padding-top: 0.8rem;
   padding-bottom: 0.8rem;
 }
-#autofill-container p:hover {
+#autofill-container li:hover {
   cursor: pointer;
   background-color: #ebe7d0;
 }
-#autofill-container p:active {
+#autofill-container li:active {
   background-color: #e2ddc3;
 }
 #autofill-container hr {

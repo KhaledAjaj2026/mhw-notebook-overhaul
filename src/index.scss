@@ -1,3 +1,12 @@
+// font-family: 'Hind', sans-serif;
+// font-family: 'IM Fell Double Pica', serif;
+// font-family: 'Junge', cursive;
+// font-family: 'Kite One', sans-serif;
+// font-family: 'Kotta One', serif;
+// font-family: 'Libre Caslon Text', serif;
+// font-family: 'Linden Hill', serif;
+// font-family: 'Nanum Myeongjo', serif;
+
 :root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
@@ -9,12 +18,12 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow: hidden;
 }
 
 body {
     height: 100%;
     margin: 0;
+    overflow: hidden;
 }
 
 @keyframes slideUp {
