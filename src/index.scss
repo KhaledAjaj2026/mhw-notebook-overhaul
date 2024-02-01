@@ -26,20 +26,6 @@ body {
     overflow: hidden;
 }
 
-@keyframes slideUp {
-    0% {
-        transform: translateY(1500px) rotateZ(30deg);
-    }
-
-    100% {
-        transform: translateY(0px) rotateZ(0deg);
-    }
-}
-
-.slide-up {
-    animation: 1.7s slideUp ease-out;
-}
-
 @keyframes loadingRing {
     0% {
         transform: rotate(0deg);
@@ -66,44 +52,6 @@ body {
     animation: 2s loadingRing linear forwards;
 }
 
-.flip-cover {
-    transform: rotateY(-185deg);
-    z-index: -1;
-}
-
-.flip-cover_back {
-    transform: rotateY(-185deg);
-    z-index: 0;
-}
-
-.flip-leaf_open {
-    transform: rotateY(-185deg);
-    z-index: 2;
-}
-
-.flip-leaf_open_back {
-    transform: rotateY(-185deg);
-    z-index: 3;
-}
-
-.flip-leaf_close {
-    transform: rotateY(0deg);
-}
-
 .hidden {
     opacity: 0;
-}
-
-@keyframes disappear {
-    from {
-        display: flex;
-    }
-
-    to {
-        display: none;
-    }
-}
-
-.disappear {
-    animation: disappear ease-in forwards;
 }
