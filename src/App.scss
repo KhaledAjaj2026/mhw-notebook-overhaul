@@ -1,0 +1,11 @@
+#app-container {
+    // min-height: 50rem;
+    background:
+        linear-gradient(to bottom, #232B24A6 0%, #ccff001d 100%),
+        url('src/assets/biomes/astera.jpeg') no-repeat;
+    background-size: contain;
+}
+
+.main-header_container {
+    transition: 0.2s opacity ease-in-out, 0.4s display linear;
+}

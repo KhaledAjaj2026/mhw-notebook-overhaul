@@ -1,0 +1,16 @@
+#carousel_container {
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.carousel_slide {
+  width: 70vw;
+  margin-left: 15vw;
+}
+
+@media screen and (max-width: 600px) {
+  .carousel_slide {
+    width: 100vw;
+    margin-left: 0;
+  }
+}/*# sourceMappingURL=Carousel.css.map */
