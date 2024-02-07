@@ -1,11 +1,38 @@
+@use 'index';
+
 #app-container {
-    // min-height: 50rem;
+    min-height: 100vh;
     background:
         linear-gradient(to bottom, #232B24A6 0%, #ccff001d 100%),
         url('src/assets/biomes/astera.jpeg') no-repeat;
-    background-size: contain;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
 }
 
-.main-header_container {
+.main_header-container {
+    position: relative;
+    padding-top: 3rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: 0.2s opacity ease-in-out, 0.4s display linear;
+}
+
+.main_header-title {
+    margin: 0;
+    font-size: 3rem;
+    font-family: index.$mainHeaderFont;
+    text-transform: uppercase;
+}
+
+.main_header-title_sub {
+    font-size: 4rem;
+}
+
+.main_header-flare {
+    position: absolute;
+    width: 80%;
+    height: 2rem;
+    margin-bottom: 20px;
 }

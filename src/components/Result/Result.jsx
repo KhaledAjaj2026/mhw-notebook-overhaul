@@ -9,7 +9,7 @@ export default function Result({ input }) {
 	return (
 		<div
 			id='component_result-container'
-			className={`${input ? 'fade-appear' : 'fade-disappear'}`}
+			// className={`${input ? 'fade-appear' : 'fade-disappear'}`}
 		>
 			<header className='result_monster-name'>
 				<div className='result_section-heading_container'>

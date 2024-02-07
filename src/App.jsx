@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Search from './components/Search/Search';
 import Result from '/src/components/Result/Result';
 import Footer from '/src/components/Footer/Footer';
+import Carousel from '/src/components/Carousel/Carousel';
 import flare from '/src/assets/misc/lens-flare-green.png';
 import './App.css';
 
@@ -12,19 +13,20 @@ export default function App() {
 	return (
 		<div id='app-container'>
 			<header
-				className={`main-header_container${
+				className={`main_header-container${
 					input ? ' fade-disappear' : ' fade-appear'
 				}`}
 			>
-				<h1 className='main-header_title'>
-					Start your
+				<h1 className='main_header-title'>
+					Discover the
 					<br />
-					adventure
+					<span className='main_header-title_sub'>New World</span>
 				</h1>
-				<img className='main-header_flare' src={flare} alt='lens flare' />
+				<img className='main_header-flare' src={flare} alt='lens flare' />
 			</header>
-			<Search setInput={setInput} />
-			<Result input={input} />
+			{/* <Carousel /> */}
+			{/* <Search setInput={setInput} />
+			<Result input={input} /> */}
 			<Footer />
 		</div>
 	);

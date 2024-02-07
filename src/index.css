@@ -34,12 +34,10 @@ body {
 
 .fade-appear {
   opacity: 1;
-  display: block;
 }
 
 .fade-disappear {
   opacity: 0;
-  display: none;
 }
 
 .hidden {

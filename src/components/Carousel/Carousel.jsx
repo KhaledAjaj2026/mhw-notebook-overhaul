@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import './Carousel.css';
@@ -9,36 +9,36 @@ const slides = [
 		autoPlay
 		muted={true}
 		loop={true}
-		poster='src/assets/turf-wars/turf-war_poster-1.png'
+		poster='/src/assets/turf-wars/turf-war_poster-1.png'
 	>
-		<source src='src/assets/turf-wars/turf-war_1.mp4' type='video/mp4' />
+		<source src='/src/assets/turf-wars/turf-war_1.mp4' type='video/mp4' />
 	</video>,
 	<video
 		className='carousel_slide'
 		autoPlay
 		muted={true}
 		loop={true}
-		poster='src/assets/turf-wars/turf-war_poster-2.png'
+		poster='/src/assets/turf-wars/turf-war_poster-2.png'
 	>
-		<source src='src/assets/turf-wars/turf-war_2.mp4' type='video/mp4' />
+		<source src='/src/assets/turf-wars/turf-war_2.mp4' type='video/mp4' />
 	</video>,
 	<video
 		className='carousel_slide'
 		autoPlay
 		muted={true}
 		loop={true}
-		poster='src/assets/turf-wars/turf-war_poster-3.png'
+		poster='/src/assets/turf-wars/turf-war_poster-3.png'
 	>
-		<source src='src/assets/turf-wars/turf-war_3.mp4' type='video/mp4' />
+		<source src='/src/assets/turf-wars/turf-war_3.mp4' type='video/mp4' />
 	</video>,
 	<video
 		className='carousel_slide'
 		autoPlay
 		muted={true}
 		loop={true}
-		poster='src/assets/turf-wars/turf-war_poster-4.png'
+		poster='/src/assets/turf-wars/turf-war_poster-4.png'
 	>
-		<source src='src/assets/turf-wars/turf-war_4.mp4' type='video/mp4' />
+		<source src='/src/assets/turf-wars/turf-war_4.mp4' type='video/mp4' />
 	</video>,
 ];
 

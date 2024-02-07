@@ -1,5 +1,8 @@
 footer {
   background: #322423;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 
 .footer_title__navigation {
@@ -14,6 +17,7 @@ footer {
 .footer_title {
   font-size: 2.3rem;
   font-family: "Linden Hill", serif;
+  margin: 2rem 0 1rem 0;
 }
 
 .footer_navigation ul {
