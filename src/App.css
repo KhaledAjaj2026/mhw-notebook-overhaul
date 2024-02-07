@@ -44,11 +44,30 @@ body {
   opacity: 0;
 }
 
-#app-container {
+@keyframes buttonHover {
+  from {
+    background-color: #fff;
+    color: #000;
+  }
+  to {
+    background-color: rgb(76, 119, 33);
+    color: #fff;
+  }
+}
+.background-image {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 0;
   min-height: 100vh;
-  background: linear-gradient(to bottom, rgba(35, 43, 36, 0.6509803922) 0%, rgba(86, 108, 0, 0.3882352941) 100%), url("src/assets/biomes/astera.jpeg") no-repeat;
+  background: linear-gradient(to bottom, rgba(35, 43, 36, 0.6509803922) 0%, rgba(61, 76, 0, 0.3882352941) 100%), url("src/assets/biomes/astera.jpeg") no-repeat;
   background-size: 100vw 100vh;
   background-attachment: fixed;
+  filter: blur(5px);
+}
+
+.content-container {
+  position: relative;
 }
 
 .main_header-container {
@@ -76,4 +95,55 @@ body {
   width: 80%;
   height: 2rem;
   margin-bottom: 20px;
+}
+
+.hero-caption {
+  text-align: center;
+  font-family: "Libre Caslon Text", serif;
+  width: 60vw;
+  margin: 2rem 0 0 20vw;
+}
+
+.start-button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 160px;
+  margin: 2rem;
+  margin-left: calc(50% - 80px);
+  background-image: radial-gradient(100% 100% at 0 0, #bf6e50 0, #5d290f 100%);
+  border: 0;
+  border-radius: 3px;
+  box-shadow: rgba(58, 21, 5, 0.4) 0 2px 4px, rgba(20, 5, 1, 0.3019607843) 0 7px 13px -3px, rgba(27, 13, 1, 0.5019607843) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #f6e27a;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "Junge", cursive;
+  font-size: 1.2rem;
+  font-weight: 600;
+  height: 3rem;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding: 0 1.5rem;
+  position: relative;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+}
+.start-button:hover {
+  background-image: radial-gradient(100% 100% at 10% 10%, #bf6e50 0, #5d290f 100%);
+}
+.start-button:active {
+  background-image: radial-gradient(100% 100% at -5% -5%, #bf6e50 0, #5d290f 100%);
+  box-shadow: #2b1206 0 3px 7px inset;
 }/*# sourceMappingURL=App.css.map */

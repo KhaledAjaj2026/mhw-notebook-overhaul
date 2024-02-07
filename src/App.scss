@@ -1,16 +1,36 @@
 @use 'index';
 
-#app-container {
+@keyframes buttonHover {
+    from {
+        background-color: #fff;
+        color: #000;
+    }
+
+    to {
+        background-color: rgb(76, 119, 33);
+        color: #fff;
+    }
+}
+
+.background-image {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 0;
     min-height: 100vh;
     background:
-        linear-gradient(to bottom, #232B24A6 0%, #566c0063 100%),
+        linear-gradient(to bottom, #232B24A6 0%, #3d4c0063 100%),
         url('src/assets/biomes/astera.jpeg') no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
+    filter: blur(5px);
+}
+
+.content-container {
+    position: relative;
 }
 
 .main_header-container {
-    // position: relative;
     padding-top: 3rem;
     text-align: center;
     display: flex;
@@ -35,4 +55,78 @@
     width: 80%;
     height: 2rem;
     margin-bottom: 20px;
+}
+
+.hero-caption {
+    text-align: center;
+    font-family: index.$sectionSubheadingFont;
+    width: 60vw;
+    margin: 2rem 0 0 20vw;
+}
+
+// .start-button {
+//     background: #fff;
+//     border: none;
+//     padding: 15px 20px;
+//     display: inline-block;
+//     font-size: 1.2rem;
+//     font-weight: 600;
+//     font-family: index.$sectionHeadingFont;
+//     color: #000;
+//     width: 160px;
+//     margin: 2rem;
+//     margin-left: calc(50% - 80px);
+//     text-transform: uppercase;
+//     cursor: pointer;
+
+//     &:hover {
+//         animation: 0.3s buttonHover ease-out forwards;
+//     }
+
+//     &:active {
+
+//     }
+// }
+
+.start-button {
+    appearance: none;
+    width: 160px;
+    margin: 2rem;
+    margin-left: calc(50% - 80px);
+    background-image: radial-gradient(100% 100% at 0 0, #bf6e50 0, #5d290f 100%);
+    border: 0;
+    border-radius: 3px;
+    box-shadow: #3a150566 0 2px 4px, #1405014d 0 7px 13px -3px, #1b0d0180 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #f6e27a;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: index.$sectionHeadingFont;
+    font-size: 1.2rem;
+    font-weight: 600;
+    height: 3rem;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding: 0 1.5rem;
+    position: relative;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+
+    &:hover {
+        background-image: radial-gradient(100% 100% at 10% 10%, #bf6e50 0, #5d290f 100%);
+    }
+
+    &:active {
+        background-image: radial-gradient(100% 100% at -5% -5%, #bf6e50 0, #5d290f 100%);
+        box-shadow: #2b1206 0 3px 7px inset;
+    }
 }

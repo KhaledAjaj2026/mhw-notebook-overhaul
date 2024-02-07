@@ -42,9 +42,16 @@ const slides = [
 	</video>,
 ];
 
-export default function Carousel() {
+export default function Carousel({ showSearch }) {
 	return (
-		<div id='carousel-container'>
+		<div
+			id='carousel-container'
+			className={`${showSearch ? '' : ''}`}
+			data-aos='fade-down'
+			data-aos-duration='3000'
+			data-aos-delay='1000'
+			data-aos-once='true'
+		>
 			<AliceCarousel
 				items={slides}
 				disableDotsControls

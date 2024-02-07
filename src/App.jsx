@@ -1,33 +1,71 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 // use MaterialUI autofill API
 import Search from './components/Search/Search';
 import Result from '/src/components/Result/Result';
 import Footer from '/src/components/Footer/Footer';
 import Carousel from './components/Carousel/Carousel';
 import flare from '/src/assets/misc/lens-flare-green.png';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 import './App.css';
 
 export default function App() {
+	useEffect(() => {
+		Aos.init();
+	}, []);
+
 	const [input, setInput] = new useState(false);
+	const [showSearch, setShowSearch] = new useState(false);
+
+	const handleShowSearch = () => setShowSearch(!showSearch);
 
 	return (
-		<div id='app-container'>
-			<header
-				className={`main_header-container${
-					input ? ' fade-disappear' : ' fade-appear'
-				}`}
-			>
-				<h1 className='main_header-title'>
-					Discover the
-					<br />
-					<span className='main_header-title_sub'>New World</span>
-				</h1>
-				<img className='main_header-flare' src={flare} alt='lens flare' />
-			</header>
-			<Carousel />
-			{/* <Search setInput={setInput} />
+		<>
+			<div className='background-image'></div>
+			<div className='content-container'>
+				<header
+					className={`main_header-container${
+						input ? ' fade-disappear' : ' fade-appear'
+					}`}
+					data-aos='fade-down'
+					data-aos-duration='3000'
+					data-aos-once='true'
+				>
+					<h1 className='main_header-title'>
+						Discover the
+						<br />
+						<span className='main_header-title_sub'>New World</span>
+					</h1>
+					<img className='main_header-flare' src={flare} alt='lens flare' />
+				</header>
+				<Carousel showSearch={showSearch} />
+				<p
+					className='hero-caption'
+					data-aos='fade-in'
+					data-aos-duration='3000'
+					data-aos-delay='2000'
+					data-aos-offset='0'
+					data-aos-once='true'
+				>
+					Learn about monster ecology, physiology, and hunting rewards with this
+					Monster Hunter World® API tool
+				</p>
+				<button
+					type='button'
+					className='start-button'
+					onClick={handleShowSearch}
+					data-aos='fade-in'
+					data-aos-duration='3000'
+					data-aos-delay='2000'
+					data-aos-offset='0'
+					data-aos-once='true'
+				>
+					Explore
+				</button>
+				{/* <Search setInput={setInput} />
 			<Result input={input} /> */}
+			</div>
 			{/* <Footer /> */}
-		</div>
+		</>
 	);
 }
