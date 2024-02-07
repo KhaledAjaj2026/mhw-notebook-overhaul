@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Search from './components/Search/Search';
 import Result from '/src/components/Result/Result';
 import Footer from '/src/components/Footer/Footer';
-import Carousel from '/src/components/Carousel/Carousel';
+import Carousel from './components/Carousel/Carousel';
 import flare from '/src/assets/misc/lens-flare-green.png';
 import './App.css';
 
@@ -24,10 +24,10 @@ export default function App() {
 				</h1>
 				<img className='main_header-flare' src={flare} alt='lens flare' />
 			</header>
-			{/* <Carousel /> */}
+			<Carousel />
 			{/* <Search setInput={setInput} />
 			<Result input={input} /> */}
-			<Footer />
+			{/* <Footer /> */}
 		</div>
 	);
 }

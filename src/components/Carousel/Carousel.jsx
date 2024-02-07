@@ -50,7 +50,7 @@ export default function Carousel() {
 				disableDotsControls
 				disableButtonsControls
 				autoPlay='true'
-				autoPlayInterval={9500}
+				autoPlayInterval={9700}
 				autoPlayStrategy='none'
 				infinite
 			/>

@@ -3,14 +3,14 @@
 #app-container {
     min-height: 100vh;
     background:
-        linear-gradient(to bottom, #232B24A6 0%, #ccff001d 100%),
+        linear-gradient(to bottom, #232B24A6 0%, #566c0063 100%),
         url('src/assets/biomes/astera.jpeg') no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
 }
 
 .main_header-container {
-    position: relative;
+    // position: relative;
     padding-top: 3rem;
     text-align: center;
     display: flex;
