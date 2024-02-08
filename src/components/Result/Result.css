@@ -1,7 +1,7 @@
 #component_result-container {
+  position: relative;
   background-color: rgba(204, 176, 156, 0.8);
   box-shadow: 0px 0px 15px 20px rgba(204, 176, 156, 0.8);
-  margin: 12rem 2.5rem 0;
   padding: 1px;
   color: black;
   transition: 0.2s opacity ease-in-out, 0.4s display linear;

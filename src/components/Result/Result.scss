@@ -1,9 +1,7 @@
 #component_result-container {
+    position: relative;
     background-color: #CCB09CCC;
     box-shadow: 0px 0px 15px 20px #CCB09CCC;
-    // margin: 2.5rem;
-    // margin-top: 12rem;
-    margin: 12rem 2.5rem 0;
     padding: 1px;
     color: black;
     transition: 0.2s opacity ease-in-out, 0.4s display linear;

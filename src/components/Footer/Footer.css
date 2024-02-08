@@ -1,8 +1,8 @@
 footer {
   background: #322423;
-  position: absolute;
+  position: relative;
   width: 100%;
-  bottom: 0;
+  top: 0;
 }
 
 .footer_title__navigation {

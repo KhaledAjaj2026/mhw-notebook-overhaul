@@ -32,16 +32,16 @@ body {
   animation: 2s loadingRing linear infinite;
 }
 
-.fade-appear {
+.appear {
   opacity: 1;
+  transition: opacity 0.5s ease-out 0.5s;
 }
 
-.fade-disappear {
+.disappear {
   opacity: 0;
-}
-
-.hidden {
-  opacity: 0;
+  position: absolute;
+  visibility: hidden;
+  transition: opacity 0.5s ease-out, 0.2s visibility, 0.2s display;
 }
 
 @keyframes buttonHover {
@@ -54,6 +54,10 @@ body {
     color: #fff;
   }
 }
+#app-container {
+  min-height: 100vh;
+}
+
 .background-image {
   position: fixed;
   left: 0;

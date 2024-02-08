@@ -166,7 +166,7 @@ export default function Result({ input }) {
 			</section>
 			<button
 				type='button'
-				className='navigation-button'
+				className='start-button'
 				onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
 			>
 				Back to Top

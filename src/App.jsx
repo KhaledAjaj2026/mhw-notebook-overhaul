@@ -20,13 +20,11 @@ export default function App() {
 	const handleShowSearch = () => setShowSearch(!showSearch);
 
 	return (
-		<>
+		<div id='app-container'>
 			<div className='background-image'></div>
-			<div className='content-container'>
+			{/* <div className={`content-container${showSearch ? ' disappear' : ''}`}>
 				<header
-					className={`main_header-container${
-						input ? ' fade-disappear' : ' fade-appear'
-					}`}
+					className='main_header-container'
 					data-aos='fade-down'
 					data-aos-duration='3000'
 					data-aos-once='true'
@@ -53,7 +51,7 @@ export default function App() {
 				<button
 					type='button'
 					className='start-button'
-					onClick={handleShowSearch}
+					// onClick={handleShowSearch}
 					data-aos='fade-in'
 					data-aos-duration='3000'
 					data-aos-delay='2000'
@@ -62,10 +60,10 @@ export default function App() {
 				>
 					Explore
 				</button>
-				{/* <Search setInput={setInput} />
-			<Result input={input} /> */}
-			</div>
-			{/* <Footer /> */}
-		</>
+			</div> */}
+			{/* <Search showSearch={showSearch} /> */}
+			<Result input={input} />
+			<Footer />
+		</div>
 	);
 }
