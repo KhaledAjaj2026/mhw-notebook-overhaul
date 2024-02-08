@@ -96,4 +96,43 @@ body {
   position: absolute;
   visibility: hidden;
   transition: opacity 0.5s ease-out, 0.2s visibility, 0.2s display;
-}/*# sourceMappingURL=index.css.map */
+}
+
+.content-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.main_header-container {
+  padding-top: 1.5rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s opacity ease-in-out, 0.4s display linear;
+}
+
+.main_header-title {
+  margin: 0;
+  font-size: 3rem;
+  font-family: "IM Fell Double Pica", serif;
+  text-transform: uppercase;
+}
+
+.main_header-title_sub {
+  font-size: 4rem;
+}
+
+.main_header-flare {
+  position: absolute;
+  width: 80%;
+  height: 2rem;
+  margin-bottom: 20px;
+}
+
+.hero-caption {
+  text-align: center;
+  font-family: "Libre Caslon Text", serif;
+  width: 60vw;
+  margin: 2rem 0 0 20vw;
+}/*# sourceMappingURL=Hero.css.map */

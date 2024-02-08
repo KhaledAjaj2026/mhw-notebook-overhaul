@@ -3,6 +3,7 @@ footer {
   position: relative;
   width: 100%;
   top: 0;
+  margin-top: 5rem;
 }
 
 .footer_title__navigation {
