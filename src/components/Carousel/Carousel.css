@@ -1,11 +1,12 @@
 #carousel-container {
-  height: -moz-min-content;
-  height: min-content;
+  background: linear-gradient(to right, rgba(102, 102, 102, 0) 0%, rgb(20, 20, 20) 40%, rgb(0, 0, 0) 50%, rgb(4, 4, 4) 60%, rgba(19, 19, 19, 0) 100%);
 }
 
 .carousel_slide {
-  width: 70vw;
-  margin-left: 15vw;
+  width: 65vw;
+  height: -moz-min-content;
+  height: min-content;
+  margin-left: 17.5vw;
 }
 
 @media screen and (max-width: 600px) {

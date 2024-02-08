@@ -47,7 +47,7 @@ export default function Carousel({ showSearch }) {
 		<div
 			id='carousel-container'
 			className={`${showSearch ? '' : ''}`}
-			data-aos='fade-down'
+			data-aos='fade-in'
 			data-aos-duration='3000'
 			data-aos-delay='1000'
 			data-aos-once='true'
@@ -57,8 +57,9 @@ export default function Carousel({ showSearch }) {
 				disableDotsControls
 				disableButtonsControls
 				autoPlay='true'
-				autoPlayInterval={9700}
+				autoPlayInterval={9300}
 				autoPlayStrategy='none'
+				animationType='fadeout'
 				infinite
 			/>
 		</div>

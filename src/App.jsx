@@ -22,10 +22,10 @@ export default function App() {
 	return (
 		<div id='app-container'>
 			<div className='background-image'></div>
-			{/* <div className={`content-container${showSearch ? ' disappear' : ''}`}>
+			<div className={`content-container${showSearch ? ' disappear' : ''}`}>
 				<header
 					className='main_header-container'
-					data-aos='fade-down'
+					data-aos='fade-in'
 					data-aos-duration='3000'
 					data-aos-once='true'
 				>
@@ -60,9 +60,9 @@ export default function App() {
 				>
 					Explore
 				</button>
-			</div> */}
+			</div>
 			{/* <Search showSearch={showSearch} /> */}
-			<Result input={input} />
+			{/* <Result input={input} /> */}
 			<Footer />
 		</div>
 	);
