@@ -14,7 +14,7 @@ export default function App() {
 	}, []);
 
 	const [input, setInput] = new useState(false);
-	const [showSearch, setShowSearch] = new useState(true);
+	const [showSearch, setShowSearch] = new useState(false);
 	const [result, setResult] = new useState(false);
 
 	const handleShowSearch = () => setShowSearch(!showSearch);
@@ -24,7 +24,11 @@ export default function App() {
 	return (
 		<div id='app-container'>
 			<div className='background-image'></div>
-			<Hero showSearch={showSearch} />
+			<Hero
+				showSearch={showSearch}
+				handleShowSearch={handleShowSearch}
+				result={result}
+			/>
 			<Search
 				showSearch={showSearch}
 				input={input}
@@ -32,7 +36,7 @@ export default function App() {
 				result={result}
 				handleResult={handleResult}
 			/>
-			{/* <Result input={input} /> */}
+			<Result input={input} result={result} />
 			<Footer />
 		</div>
 	);

@@ -92,4 +92,12 @@ body {
 
 .disappear {
   opacity: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
 }/*# sourceMappingURL=index.css.map */

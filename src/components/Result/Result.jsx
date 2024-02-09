@@ -5,11 +5,11 @@ import topCorner from '../../assets/misc/corner-design-topleft.png';
 import bottomCorner from '../../assets/misc/corner-design-bottomright.png';
 import './Result.css';
 
-export default function Result({ input }) {
+export default function Result({ result }) {
 	return (
 		<div
 			id='component_result-container'
-			// className={`${input ? 'fade-appear' : 'fade-disappear'}`}
+			className={`${result ? 'show' : 'hide'}`}
 		>
 			<header className='result_monster-name'>
 				<div className='result_section-heading_container'>
@@ -166,7 +166,7 @@ export default function Result({ input }) {
 			</section>
 			<button
 				type='button'
-				className='start-button'
+				className='nav-button'
 				onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
 			>
 				Back to Top
