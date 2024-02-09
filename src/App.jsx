@@ -9,10 +9,7 @@ import 'aos/dist/aos.css';
 import './App.css';
 
 export default function App() {
-	useEffect(() => {
-		Aos.init();
-	}, []);
-
+	const [loading, setLoading] = new useState(true);
 	const [input, setInput] = new useState(false);
 	const [showSearch, setShowSearch] = new useState(false);
 	const [result, setResult] = new useState(false);
@@ -21,14 +18,38 @@ export default function App() {
 	const handleInput = (e) => setInput(e.target.value);
 	const handleResult = () => setResult(!result);
 
+	useEffect(() => {
+		Aos.init();
+
+		const onPageLoad = () => {
+			setLoading(false);
+		};
+
+		if (document.readyState === 'complete') {
+			onPageLoad();
+		} else {
+			window.addEventListener('load', onPageLoad, false);
+			return () => window.removeEventListener('load', onPageLoad);
+		}
+	}, []);
+
 	return (
 		<div id='app-container'>
 			<div className='background-image'></div>
-			<Hero
-				showSearch={showSearch}
-				handleShowSearch={handleShowSearch}
-				result={result}
-			/>
+			{loading ? (
+				<div className='loading_screen'>
+					<div className='loading_screen-animation'>
+						<div className='loading-animation'></div>
+						<p>Loading...</p>
+					</div>
+				</div>
+			) : (
+				<Hero
+					showSearch={showSearch}
+					handleShowSearch={handleShowSearch}
+					result={result}
+				/>
+			)}
 			<Search
 				showSearch={showSearch}
 				input={input}
@@ -37,7 +58,7 @@ export default function App() {
 				handleResult={handleResult}
 			/>
 			<Result input={input} result={result} />
-			<Footer />
+			{loading ? null : <Footer />}
 		</div>
 	);
 }

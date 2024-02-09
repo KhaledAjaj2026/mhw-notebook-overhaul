@@ -1,5 +1,35 @@
+@use 'index';
+
 #app-container {
     height: 100vh;
+}
+
+.loading_screen {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #151b16 0%, #1c1f0f 100%);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+}
+
+.loading_screen-animation {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        font-family: index.$sectionHeadingFont;
+        font-size: 1.2rem;
+    }
 }
 
 .background-image {

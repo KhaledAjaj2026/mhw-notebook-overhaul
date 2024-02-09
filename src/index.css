@@ -82,7 +82,8 @@ body {
   height: 150px;
   position: absolute;
   border-right: 5px solid #6ce91e;
-  border-radius: 50%;
+  border-radius: 100%;
+  box-shadow: -5px 0px 8px -5px #6ce91e inset;
   animation: 2s loadingRing linear infinite;
 }
 
