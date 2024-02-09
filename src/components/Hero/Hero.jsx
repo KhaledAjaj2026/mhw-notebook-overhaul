@@ -5,11 +5,13 @@ import './Hero.css';
 
 export default function Hero({ showSearch }) {
 	return (
-		<div className={`content-container${showSearch ? ' disappear' : ''}`}>
+		<div
+			className={`content-container${showSearch ? ' disappear' : ' appear'}`}
+		>
 			<header
 				className='main_header-container'
 				data-aos='fade-in'
-				data-aos-duration='3000'
+				data-aos-duration='2000'
 				data-aos-once='true'
 			>
 				<h1 className='main_header-title'>
@@ -23,7 +25,7 @@ export default function Hero({ showSearch }) {
 			<p
 				className='hero-caption'
 				data-aos='fade-in'
-				data-aos-duration='3000'
+				data-aos-duration='2000'
 				data-aos-delay='2000'
 				data-aos-offset='0'
 				data-aos-once='true'
@@ -36,7 +38,7 @@ export default function Hero({ showSearch }) {
 				className='nav-button'
 				// onClick={handleShowSearch}
 				data-aos='fade-in'
-				data-aos-duration='3000'
+				data-aos-duration='2000'
 				data-aos-delay='2000'
 				data-aos-offset='0'
 				data-aos-once='true'

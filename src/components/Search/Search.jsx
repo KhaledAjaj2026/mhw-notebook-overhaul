@@ -1,45 +1,47 @@
-import React, { useState } from 'react';
-// import Autofill from '../../components/Autofill/Autofill';
-import flare from '../../assets/misc/lens-flare-green.png';
+import React from 'react';
 import './Search.css';
 
-export default function Search({ showSearch }) {
+export default function Search({
+	showSearch,
+	input,
+	handleInput,
+	result,
+	handleResult,
+}) {
+	const checkInput = () => {
+		if (input.length > 0) {
+			handleResult();
+		} else {
+			alert('NO INPUT');
+		}
+	};
+
 	return (
-		<div id='page_search-container'>
-			{/* <header
-				className='main_header-container'
-				data-aos='fade-down'
-				data-aos-duration='3000'
-				data-aos-once='true'
-			>
-				<h1 className='main_header-title'>
-					Discover the
-					<br />
-					<span className='main_header-title_sub'>New World</span>
-				</h1>
-				<img className='main_header-flare' src={flare} alt='lens flare' />
-			</header> */}
-			<form className={`${showSearch ? 'appear' : 'disappear'}`}>
-				<label htmlFor='monster-search' className='search_label'>
-					Search for a monster below
-				</label>
-				<div className='search_input__icon'>
-					<input
-						type='text'
-						name='monster-search'
-						id='monster-search'
-						placeholder='E.g. Anjanath'
+		<form
+			className={`${showSearch ? 'appear' : 'disappear'}${
+				result ? ' raise_search' : ''
+			}`}
+		>
+			<label htmlFor='monster-search' className='search_label'>
+				Search for a monster below
+			</label>
+			<div className='search_input__icon'>
+				<input
+					type='text'
+					name='monster-search'
+					id='monster-search'
+					placeholder='E.g. Anjanath'
+					onInput={handleInput}
+				/>
+				<button type='button' className='search_submit' onClick={checkInput}>
+					<img
+						src='src/assets/misc/magnifying-glass-9.svg'
+						className='search_icon'
+						alt='magnifying glass'
 					/>
-					<button type='button' className='search_submit'>
-						<img
-							src='src/assets/misc/magnifying-glass-9.svg'
-							className='search_icon'
-							alt='magnifying glass'
-						/>
-					</button>
-				</div>
-				{/* <Autofill /> */}
-			</form>
-		</div>
+				</button>
+			</div>
+			{/* <Autofill /> */}
+		</form>
 	);
 }

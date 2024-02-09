@@ -3,6 +3,7 @@
 .content-container {
     position: relative;
     min-height: 100vh;
+    transition: 0.5s opacity ease-out;
 }
 
 .main_header-container {

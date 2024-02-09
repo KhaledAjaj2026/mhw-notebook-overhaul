@@ -88,19 +88,16 @@ body {
 
 .appear {
   opacity: 1;
-  transition: opacity 0.5s ease-out 0.5s;
 }
 
 .disappear {
   opacity: 0;
-  position: absolute;
-  visibility: hidden;
-  transition: opacity 0.5s ease-out, 0.2s visibility, 0.2s display;
 }
 
 .content-container {
   position: relative;
   min-height: 100vh;
+  transition: 0.5s opacity ease-out;
 }
 
 .main_header-container {

@@ -14,15 +14,24 @@ export default function App() {
 	}, []);
 
 	const [input, setInput] = new useState(false);
-	const [showSearch, setShowSearch] = new useState(false);
+	const [showSearch, setShowSearch] = new useState(true);
+	const [result, setResult] = new useState(false);
 
 	const handleShowSearch = () => setShowSearch(!showSearch);
+	const handleInput = (e) => setInput(e.target.value);
+	const handleResult = () => setResult(!result);
 
 	return (
 		<div id='app-container'>
 			<div className='background-image'></div>
-			<Hero />
-			{/* <Search showSearch={showSearch} /> */}
+			<Hero showSearch={showSearch} />
+			<Search
+				showSearch={showSearch}
+				input={input}
+				handleInput={handleInput}
+				result={result}
+				handleResult={handleResult}
+			/>
 			{/* <Result input={input} /> */}
 			<Footer />
 		</div>
