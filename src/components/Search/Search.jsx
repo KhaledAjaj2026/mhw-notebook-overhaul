@@ -7,6 +7,7 @@ export default function Search({
 	handleInput,
 	result,
 	handleResult,
+	disabled,
 }) {
 	const checkInput = () => {
 		if (input.length > 0) {
@@ -31,7 +32,8 @@ export default function Search({
 					name='monster-search'
 					id='monster-search'
 					placeholder='E.g. Anjanath'
-					onInput={handleInput}
+					disabled={disabled}
+					onChange={handleInput}
 				/>
 				<button type='button' className='search_submit' onClick={checkInput}>
 					<img

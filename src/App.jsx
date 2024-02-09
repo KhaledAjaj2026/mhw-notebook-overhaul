@@ -10,12 +10,14 @@ import './App.css';
 
 export default function App() {
 	const [loading, setLoading] = new useState(true);
+	const [disabled, setDisabled] = new useState(true);
 	const [input, setInput] = new useState(false);
 	const [showSearch, setShowSearch] = new useState(false);
 	const [result, setResult] = new useState(false);
 
-	const handleShowSearch = () => setShowSearch(!showSearch);
+	const handleDisabled = () => setDisabled(false);
 	const handleInput = (e) => setInput(e.target.value);
+	const handleShowSearch = () => setShowSearch(!showSearch);
 	const handleResult = () => setResult(!result);
 
 	useEffect(() => {
@@ -48,6 +50,7 @@ export default function App() {
 					showSearch={showSearch}
 					handleShowSearch={handleShowSearch}
 					result={result}
+					handleDisabled={handleDisabled}
 				/>
 			)}
 			<Search
@@ -56,6 +59,7 @@ export default function App() {
 				handleInput={handleInput}
 				result={result}
 				handleResult={handleResult}
+				disabled={disabled}
 			/>
 			<Result input={input} result={result} />
 			{loading ? null : <Footer />}
