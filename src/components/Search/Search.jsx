@@ -1,52 +1,94 @@
 import React, { useState } from 'react';
-import Box from '@mui/material/Box';
 import Autocomplete from '@mui/material/Autocomplete';
-import Input from '@mui/material/Input';
+import Box from '@mui/material/Box';
 import './Search.css';
+const monsterIconsLocation = '/src/assets/monster-icons/';
 
 const monsters = [
-	{ label: 'Great Jagras' },
-	{ label: 'Kulu-Ya-Ku' },
-	{ label: 'Pukei-Pukei' },
-	{ label: 'Barroth' },
-	{ label: 'Jyuratodus' },
-	{ label: 'Tobi-Kadachi' },
-	{ label: 'Anjanath' },
-	{ label: 'Azure Rathalos' },
-	{ label: 'Bazelgeuse' },
-	{ label: 'Behemoth' },
-	{ label: 'Deviljho' },
-	{ label: 'Diablos' },
-	{ label: 'Black Diablos' },
-	{ label: 'Dodogama' },
-	{ label: 'Great Girros' },
-	{ label: 'Kirin' },
-	{ label: 'Kulve Taroth' },
-	{ label: 'Kushala Daora' },
-	{ label: 'Lavasioth' },
-	{ label: 'Legiana' },
-	{ label: 'Lunastra' },
-	{ label: 'Nergigante' },
-	{ label: 'Odogaron' },
-	{ label: 'Paolumu' },
-	{ label: 'Radobaan' },
-	{ label: 'Rathalos' },
-	{ label: 'Rathian' },
-	{ label: 'Pink Rathian' },
-	{ label: 'Teostra' },
-	{ label: 'Tzitzi-Ya-Ku' },
-	{ label: 'Uragaan' },
-	{ label: 'Vaal Hazak' },
-	{ label: "Xeno'jiiva" },
-	{ label: 'Zorah Magdaros' },
-	{ label: 'Leshen' },
-	{ label: 'Ancient Leshen' },
-	{ label: "Safi'jiiva" },
-	{ label: 'Stygian Zinogre' },
-	{ label: 'Rajang' },
-	{ label: 'Viper Tobi-Kadachi' },
-	{ label: 'Namielle' },
-	{ label: 'Zinogre' },
+	{
+		label: 'Great Jagras',
+		icon: monsterIconsLocation + 'Great_Jagras_Icon.webp',
+	},
+	{ label: 'Kulu-Ya-Ku', icon: monsterIconsLocation + 'Kulu-Ya-Ku_Icon.webp' },
+	{
+		label: 'Pukei-Pukei',
+		icon: monsterIconsLocation + 'Pukei-Pukei_Icon.webp',
+	},
+	{ label: 'Barroth', icon: monsterIconsLocation + 'Barroth_Icon.webp' },
+	{ label: 'Jyuratodus', icon: monsterIconsLocation + 'Jyuratodus_Icon.webp' },
+	{
+		label: 'Tobi-Kadachi',
+		icon: monsterIconsLocation + 'Tobi-Kadachi_Icon.webp',
+	},
+	{ label: 'Anjanath', icon: monsterIconsLocation + 'Anjanath_Icon.webp' },
+	{
+		label: 'Azure Rathalos',
+		icon: monsterIconsLocation + 'Azure_Rathalos_Icon.webp',
+	},
+	{ label: 'Bazelgeuse', icon: monsterIconsLocation + 'Bazelgeuse_Icon.webp' },
+	{ label: 'Behemoth', icon: monsterIconsLocation + 'Behemoth_Icon.webp' },
+	{ label: 'Deviljho', icon: monsterIconsLocation + 'Deviljho_Icon.webp' },
+	{ label: 'Diablos', icon: monsterIconsLocation + 'Diablos_Icon.webp' },
+	{
+		label: 'Black Diablos',
+		icon: monsterIconsLocation + 'Black_Diablos_Icon.webp',
+	},
+	{ label: 'Dodogama', icon: monsterIconsLocation + 'Dodogama_Icon.webp' },
+	{
+		label: 'Great Girros',
+		icon: monsterIconsLocation + 'Great_Girros_Icon.webp',
+	},
+	{ label: 'Kirin', icon: monsterIconsLocation + 'Kirin_Icon.webp' },
+	{
+		label: 'Kulve Taroth',
+		icon: monsterIconsLocation + 'Kulve_Taroth_Icon.webp',
+	},
+	{
+		label: 'Kushala Daora',
+		icon: monsterIconsLocation + 'Kushala_Daora_Icon.webp',
+	},
+	{ label: 'Lavasioth', icon: monsterIconsLocation + 'Lavasioth_Icon.webp' },
+	{ label: 'Legiana', icon: monsterIconsLocation + 'Legiana_Icon.webp' },
+	{ label: 'Lunastra', icon: monsterIconsLocation + 'Lunastra_Icon.webp' },
+	{ label: 'Nergigante', icon: monsterIconsLocation + 'Nergigante_Icon.webp' },
+	{ label: 'Odogaron', icon: monsterIconsLocation + 'Odogaron_Icon.webp' },
+	{ label: 'Paolumu', icon: monsterIconsLocation + 'Paolumu_Icon.webp' },
+	{ label: 'Radobaan', icon: monsterIconsLocation + 'Radobaan_Icon.webp' },
+	{ label: 'Rathalos', icon: monsterIconsLocation + 'Rathalos_Icon.webp' },
+	{ label: 'Rathian', icon: monsterIconsLocation + 'Rathian_Icon.webp' },
+	{
+		label: 'Pink Rathian',
+		icon: monsterIconsLocation + 'Pink_Rathian_Icon.webp',
+	},
+	{ label: 'Teostra', icon: monsterIconsLocation + 'Teostra_Icon.webp' },
+	{
+		label: 'Tzitzi-Ya-Ku',
+		icon: monsterIconsLocation + 'Tzitzi-Ya-Ku_Icon.webp',
+	},
+	{ label: 'Uragaan', icon: monsterIconsLocation + 'Uragaan_Icon.webp' },
+	{ label: 'Vaal Hazak', icon: monsterIconsLocation + 'Vaal_Hazak_Icon.webp' },
+	{ label: "Xeno'jiiva", icon: monsterIconsLocation + 'Xenojiiva_Icon.webp' },
+	{
+		label: 'Zorah Magdaros',
+		icon: monsterIconsLocation + 'Zorah_Magdaros_Icon.webp',
+	},
+	{ label: 'Leshen', icon: monsterIconsLocation + 'Leshen_Icon.webp' },
+	{
+		label: 'Ancient Leshen',
+		icon: monsterIconsLocation + 'Ancient_Leshen_Icon.webp',
+	},
+	{ label: "Safi'jiiva", icon: monsterIconsLocation + 'Safijiiva_Icon.webp' },
+	{
+		label: 'Stygian Zinogre',
+		icon: monsterIconsLocation + 'Stygian_Zinogre_Icon.webp',
+	},
+	{ label: 'Rajang', icon: monsterIconsLocation + 'Rajang_Icon.webp' },
+	{
+		label: 'Viper Tobi-Kadachi',
+		icon: monsterIconsLocation + 'Viper_Tobi-Kadachi_Icon.webp',
+	},
+	{ label: 'Namielle', icon: monsterIconsLocation + 'Namielle_Icon.webp' },
+	{ label: 'Zinogre', icon: monsterIconsLocation + 'Zinogre_Icon.webp' },
 ];
 
 export default function Search({
@@ -87,8 +129,8 @@ export default function Search({
 						id='monster-search'
 						options={monsters}
 						disabled={disabled}
-						onChange={(event, value) => handleInput(value.label)}
-						onInput={() => handleInput(event.target.value)}
+						onChange={(event, value) => (value ? handleInput(value.label) : '')}
+						onInput={(e) => handleInput(e.target.value)}
 						freeSolo={true}
 						onFocus={handleFocus}
 						onBlur={handleFocus}
@@ -106,6 +148,12 @@ export default function Search({
 								}}
 								{...props}
 							>
+								<img
+									src={option.icon}
+									alt=''
+									className='autocomplete-monster_icon'
+									loading='lazy'
+								/>
 								{option.label}
 							</Box>
 						)}
@@ -129,7 +177,6 @@ export default function Search({
 						/>
 					</button>
 				</div>
-				{/* <Autofill /> */}
 			</form>
 		</>
 	);
