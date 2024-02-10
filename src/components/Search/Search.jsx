@@ -1,5 +1,52 @@
 import React, { useState } from 'react';
+import Box from '@mui/material/Box';
+import Autocomplete from '@mui/material/Autocomplete';
 import './Search.css';
+
+const monsters = [
+	{ label: 'Great Jagras' },
+	{ label: 'Kulu-Ya-Ku' },
+	{ label: 'Pukei-Pukei' },
+	{ label: 'Barroth' },
+	{ label: 'Jyuratodus' },
+	{ label: 'Tobi-Kadachi' },
+	{ label: 'Anjanath' },
+	{ label: 'Azure Rathalos' },
+	{ label: 'Bazelgeuse' },
+	{ label: 'Behemoth' },
+	{ label: 'Deviljho' },
+	{ label: 'Diablos' },
+	{ label: 'Black Diablos' },
+	{ label: 'Dodogama' },
+	{ label: 'Great Girros' },
+	{ label: 'Kirin' },
+	{ label: 'Kulve Taroth' },
+	{ label: 'Kushala Daora' },
+	{ label: 'Lavasioth' },
+	{ label: 'Legiana' },
+	{ label: 'Lunastra' },
+	{ label: 'Nergigante' },
+	{ label: 'Odogaron' },
+	{ label: 'Paolumu' },
+	{ label: 'Radobaan' },
+	{ label: 'Rathalos' },
+	{ label: 'Rathian' },
+	{ label: 'Pink Rathian' },
+	{ label: 'Teostra' },
+	{ label: 'Tzitzi-Ya-Ku' },
+	{ label: 'Uragaan' },
+	{ label: 'Vaal Hazak' },
+	{ label: "Xeno'jiiva" },
+	{ label: 'Zorah Magdaros' },
+	{ label: 'Leshen' },
+	{ label: 'Ancient Leshen' },
+	{ label: "Safi'jiiva" },
+	{ label: 'Stygian Zinogre' },
+	{ label: 'Rajang' },
+	{ label: 'Viper Tobi-Kadachi' },
+	{ label: 'Namielle' },
+	{ label: 'Zinogre' },
+];
 
 export default function Search({
 	showSearch,
@@ -34,16 +81,37 @@ export default function Search({
 					Search for a monster below
 				</label>
 				<div className='search_input__icon'>
-					<input
-						type='text'
-						name='monster-search'
+					<Autocomplete
 						id='monster-search'
-						placeholder='E.g. Anjanath'
-						autoComplete='off'
+						options={monsters}
 						disabled={disabled}
 						onChange={handleInput}
 						onFocus={handleFocus}
 						onBlur={handleFocus}
+						renderOption={(props, option) => (
+							<Box
+								component='li'
+								sx={{
+									fontFamily: "'Linden Hill', serif",
+									fontSize: '1.5rem',
+									letterSpacing: '2px',
+								}}
+								{...props}
+							>
+								{option.label}
+							</Box>
+						)}
+						renderInput={(params) => (
+							<div ref={params.InputProps.ref}>
+								<input
+									type='text'
+									name='monster-search'
+									placeholder='E.g. Anjanath'
+									autoComplete='off'
+									{...params.inputProps}
+								/>
+							</div>
+						)}
 					/>
 					<button type='button' className='search_submit' onClick={checkInput}>
 						<img

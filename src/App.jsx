@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-// use MaterialUI autofill API
 import Hero from './components/Hero/Hero';
 import Search from './components/Search/Search';
 import Result from '/src/components/Result/Result';
