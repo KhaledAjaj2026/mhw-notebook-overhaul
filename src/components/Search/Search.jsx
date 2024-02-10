@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import Autocomplete from '@mui/material/Autocomplete';
 import Box from '@mui/material/Box';
+import { createFilterOptions } from '@mui/material/Autocomplete';
 import './Search.css';
+
 const monsterIconsLocation = '/src/assets/monster-icons/';
 
 const monsters = [
@@ -91,6 +93,11 @@ const monsters = [
 	{ label: 'Zinogre', icon: monsterIconsLocation + 'Zinogre_Icon.webp' },
 ];
 
+const filterOptions = createFilterOptions({
+	matchFrom: 'start',
+	stringify: (option) => option.label,
+});
+
 export default function Search({
 	showSearch,
 	input,
@@ -131,7 +138,8 @@ export default function Search({
 						disabled={disabled}
 						onChange={(event, value) => (value ? handleInput(value.label) : '')}
 						onInput={(e) => handleInput(e.target.value)}
-						freeSolo={true}
+						// freeSolo={true}
+						filterOptions={filterOptions}
 						onFocus={handleFocus}
 						onBlur={handleFocus}
 						getOptionLabel={(option) => option.label}
