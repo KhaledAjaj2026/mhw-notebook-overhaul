@@ -10,12 +10,12 @@ import './App.css';
 export default function App() {
 	const [loading, setLoading] = new useState(true);
 	const [disabled, setDisabled] = new useState(true);
-	const [input, setInput] = new useState(false);
+	const [input, setInput] = new useState('');
 	const [showSearch, setShowSearch] = new useState(false);
 	const [result, setResult] = new useState(false);
 
 	const handleDisabled = () => setDisabled(false);
-	const handleInput = (e) => setInput(e.target.value);
+	const handleInput = (val) => setInput(val);
 	const handleShowSearch = () => setShowSearch(!showSearch);
 	const handleResult = () => setResult(!result);
 

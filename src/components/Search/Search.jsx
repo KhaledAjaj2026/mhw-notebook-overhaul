@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Autocomplete from '@mui/material/Autocomplete';
+import Input from '@mui/material/Input';
 import './Search.css';
 
 const monsters = [
@@ -62,6 +63,7 @@ export default function Search({
 	const checkInput = () => {
 		if (input.length > 0) {
 			handleResult();
+			handleInput('');
 		} else {
 			alert('NO INPUT');
 		}
@@ -85,9 +87,15 @@ export default function Search({
 						id='monster-search'
 						options={monsters}
 						disabled={disabled}
-						onChange={handleInput}
+						onChange={(event, value) => handleInput(value.label)}
+						onInput={() => handleInput(event.target.value)}
+						freeSolo={true}
 						onFocus={handleFocus}
 						onBlur={handleFocus}
+						getOptionLabel={(option) => option.label}
+						isOptionEqualToValue={(option, value) =>
+							option.label === value.label
+						}
 						renderOption={(props, option) => (
 							<Box
 								component='li'
