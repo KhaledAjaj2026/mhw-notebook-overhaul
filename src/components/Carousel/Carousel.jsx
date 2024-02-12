@@ -3,6 +3,7 @@ import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import './Carousel.css';
 
+/** Contents for AliceCarousel video carousel. */
 const slides = [
 	<video
 		className='carousel_slide'

@@ -8,14 +8,16 @@ import './Result.css';
 export default function Result({ result }) {
 	return (
 		<>
-			{/*
-			<div className='loading_screen-result'>
-				<div className='loading_screen-animation'>
-					<div className='loading-animation'></div>
-					<p>Loading...</p>
+			{/* {result ? (
+				<div className='loading_screen-result'>
+					<div className='loading_screen-animation'>
+						<div className='loading-animation'></div>
+						<p>Loading...</p>
+					</div>
 				</div>
-			</div>
-			 */}
+			) : (
+				''
+			)} */}
 			<div
 				id='component_result-container'
 				className={`${result ? 'show' : 'hide'}`}

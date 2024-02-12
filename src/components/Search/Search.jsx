@@ -4,8 +4,13 @@ import Box from '@mui/material/Box';
 import { createFilterOptions } from '@mui/material/Autocomplete';
 import './Search.css';
 
+/** Location of directory for monster icon images. */
 const monsterIconsLocation = '/src/assets/monster-icons/';
 
+/** MUI Autocomplete options
+ * @property {string} label - monster name
+ * @property {string} icon - monsterIconsLocation concatenated with monster-specific filename.
+ */
 const monsters = [
 	{
 		label: 'Great Jagras',
@@ -93,6 +98,7 @@ const monsters = [
 	{ label: 'Zinogre', icon: monsterIconsLocation + 'Zinogre_Icon.webp' },
 ];
 
+// MUI Autocomplete filter options - matches query only from start.
 const filterOptions = createFilterOptions({
 	matchFrom: 'start',
 	stringify: (option) => option.label,
@@ -106,9 +112,11 @@ export default function Search({
 	handleResult,
 	disabled,
 }) {
+	/** focus - check if Search component is focused or blurred. */
 	const [focus, setFocus] = new useState(false);
 	const handleFocus = () => setFocus(!focus);
 
+	/** Measure input length; show result if > 0, alert if <= 0. */
 	const checkInput = () => {
 		if (input.length > 0) {
 			handleResult();
@@ -131,14 +139,13 @@ export default function Search({
 				<label htmlFor='monster-search' className='search_label'>
 					Search for a monster below
 				</label>
-				<div className='search_input__icon'>
+				<div className='search-container'>
 					<Autocomplete
 						id='monster-search'
 						options={monsters}
 						disabled={disabled}
 						onChange={(event, value) => (value ? handleInput(value.label) : '')}
 						onInput={(e) => handleInput(e.target.value)}
-						// freeSolo={true}
 						filterOptions={filterOptions}
 						onFocus={handleFocus}
 						onBlur={handleFocus}
