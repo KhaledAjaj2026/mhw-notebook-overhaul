@@ -20,7 +20,7 @@ export default function Result({ result }) {
 			)} */}
 			<div
 				id='component_result-container'
-				className={`${result ? 'show' : 'hide'}`}
+				className={`${result.name === null ? 'hide' : 'show'}`}
 			>
 				<header className='result_monster-name'>
 					<div className='result_section-heading_container'>

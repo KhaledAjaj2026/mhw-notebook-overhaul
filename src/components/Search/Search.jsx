@@ -119,7 +119,7 @@ export default function Search({
 	/** Measure input length; show result if > 0, alert if <= 0. */
 	const checkInput = () => {
 		if (input.length > 0) {
-			handleResult();
+			handleResult(input);
 			handleInput('');
 		} else {
 			alert('NO INPUT');
@@ -133,7 +133,7 @@ export default function Search({
 			></div>
 			<form
 				className={`${showSearch ? 'appear' : 'disappear'}${
-					result ? ' raise_search' : ''
+					result.name === null ? '' : ' raise_search'
 				}`}
 			>
 				<label htmlFor='monster-search' className='search_label'>

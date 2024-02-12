@@ -20,12 +20,30 @@ export default function App() {
 	const [disabled, setDisabled] = new useState(true);
 	const [input, setInput] = new useState('');
 	const [showSearch, setShowSearch] = new useState(false);
-	const [result, setResult] = new useState(false);
+	const [result, setResult] = new useState({
+		name: null,
+		species: null,
+		location: null,
+		ailments: null,
+	});
 
 	const handleDisabled = () => setDisabled(false);
 	const handleInput = (val) => setInput(val);
 	const handleShowSearch = () => setShowSearch(!showSearch);
-	const handleResult = () => setResult(!result);
+	const handleResult = () => {
+		axios
+			.get('https://mhw-db.com/monsters')
+			.then((response) => {
+				setResult({
+					name: response.data[22].name,
+					species: response.data[22].species,
+					location: response.data[22].locations[0].name,
+					ailments: response.data[22].ailments[0].name,
+				});
+			})
+			.catch((err) => console.error(err));
+	};
+	console.log(result.name);
 
 	// Side effect - website's initial load.
 	useEffect(() => {
@@ -46,16 +64,8 @@ export default function App() {
 
 	// Side effect - fetching data from MHW API.
 	useEffect(() => {
-		axios.get('https://mhw-db.com/monsters').then((response) => {
-			const anjanathData = {
-				name: response.data[22].name,
-				species: response.data[22].species,
-				location: response.data[22].locations[0].name,
-				ailments: response.data[22].ailments[0].name,
-			};
-			console.log(anjanathData);
-		});
-	}, [result]);
+		handleResult;
+	}, []);
 
 	return (
 		<div id='app-container'>
