@@ -6,6 +6,22 @@ import bottomCorner from '../../assets/misc/corner-design-bottomright.png';
 import './Result.css';
 
 export default function Result({ result }) {
+	const renderWeaknessList = () => {
+		return Object.values(result.weaknesses).map((weakness, i) => {
+			// console.log(weakness.element);
+			return <li key={i}>{weakness.element}</li>;
+		});
+	};
+
+	// console.log(Object.values(result));
+
+	const renderResistanceList = () => {
+		return Object.values(result.resistances).map((resistance, i) => {
+			// console.log(resistance.element);
+			return <li key={i}>{resistance.element}</li>;
+		});
+	};
+
 	return (
 		<>
 			{/* {result ? (
@@ -20,7 +36,7 @@ export default function Result({ result }) {
 			)} */}
 			<div
 				id='component_result-container'
-				className={`${result.name === null ? 'hide' : 'show'}`}
+				className={`${result.name === '' ? 'hide' : 'show'}`}
 			>
 				<header className='result_monster-name'>
 					<div className='result_section-heading_container'>
@@ -29,7 +45,9 @@ export default function Result({ result }) {
 							className='decorative-corner-header'
 							alt='decorative corner'
 						/>
-						<h2 className='result_section-heading monster-name'>Anjanath</h2>
+						<h2 className='result_section-heading monster-name'>
+							{result.name}
+						</h2>
 						<img
 							src={bottomCorner}
 							className='decorative-corner-header decorative-corner_bottom-header'
@@ -49,20 +67,16 @@ export default function Result({ result }) {
 					<div className='result_section-monster_description'>
 						<div className='monster_attribute'>
 							<h4>Species: </h4>
-							<p>Brute Wyvern</p>
+							<p>{result.species}</p>
 						</div>
 						<div className='monster_attribute'>
 							<h4>Habitat: </h4>
-							<p>Ancient Forest</p>
+							<p>{result.location}</p>
 						</div>
 						<div className='monster_attribute'>
 							<h4>Description: </h4>
 						</div>
-						<p className='monster-main_description'>
-							The Anjanath patrols the Ancient Forest, looking for its favorite
-							meal, Aptonoth. This belligerent monster will attack anything
-							without hesitation.
-						</p>
+						<p className='monster-main_description'>{result.description}</p>
 					</div>
 				</section>
 				<section className='result_section-ailments'>
@@ -83,7 +97,9 @@ export default function Result({ result }) {
 					</div>
 					<div className='result_section-ailment' id='ailment-1'>
 						<div className='result_section-ailment_name__icon'>
-							<p className='result_section-ailment_name'>Fireblight</p>
+							<p className='result_section-ailment_name'>
+								{result.ailments?.name}
+							</p>
 							<img
 								src='src/assets/icons/fireblight.png'
 								className='result_section-ailment_icon'
@@ -91,8 +107,7 @@ export default function Result({ result }) {
 							/>
 						</div>
 						<p className='result_section-ailment_description'>
-							Fireblight causes damage over time, and negates regular health
-							recovery.
+							{result.ailments?.description}
 						</p>
 					</div>
 				</section>
@@ -113,9 +128,8 @@ export default function Result({ result }) {
 								alt='decorative corner'
 							/>
 						</div>
-						<ul>
-							<li>Fire</li>
-						</ul>
+						{/* render JSX in outer function upon result update. */}
+						<ul>{renderResistanceList()}</ul>
 					</div>
 					<div className='result_section-weaknesses'>
 						<div className='result_section-heading_container section_subheading-weakness'>
@@ -133,13 +147,15 @@ export default function Result({ result }) {
 								alt='decorative corner'
 							/>
 						</div>
-						<ul>
+						{/* render JSX in outer function upon result update. */}
+						{/* <ul>
 							<li>Water</li>
 							<li>Thunder</li>
 							<li>Ice</li>
 							<li>Dragon</li>
 							<li>Poison</li>
-						</ul>
+						</ul> */}
+						<ul>{renderWeaknessList()}</ul>
 					</div>
 				</section>
 				<section className='result_section-rewards'>

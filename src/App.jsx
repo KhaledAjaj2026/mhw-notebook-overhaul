@@ -21,10 +21,13 @@ export default function App() {
 	const [input, setInput] = new useState('');
 	const [showSearch, setShowSearch] = new useState(false);
 	const [result, setResult] = new useState({
-		name: null,
-		species: null,
-		location: null,
-		ailments: null,
+		name: '',
+		species: '',
+		location: '',
+		description: '',
+		ailments: '',
+		weaknesses: '',
+		resistances: '',
 	});
 
 	const handleDisabled = () => setDisabled(false);
@@ -35,15 +38,17 @@ export default function App() {
 			.get('https://mhw-db.com/monsters')
 			.then((response) => {
 				setResult({
-					name: response.data[22].name,
-					species: response.data[22].species,
-					location: response.data[22].locations[0].name,
-					ailments: response.data[22].ailments[0].name,
+					name: response.data[21].name,
+					species: response.data[21].species,
+					location: response.data[21].locations[0].name,
+					description: response.data[21].description,
+					ailments: response.data[21].ailments[0],
+					weaknesses: response.data[21].weaknesses,
+					resistances: response.data[21].resistances,
 				});
 			})
 			.catch((err) => console.error(err));
 	};
-	console.log(result.name);
 
 	// Side effect - website's initial load.
 	useEffect(() => {

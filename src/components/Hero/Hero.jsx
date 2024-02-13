@@ -12,7 +12,7 @@ export default function Hero({
 	return (
 		<div
 			className={`content-container${showSearch ? ' disappear' : ' appear'}${
-				result.name === null ? ' show' : ' hide'
+				result.name === '' ? ' show' : ' hide'
 			}`}
 		>
 			<header

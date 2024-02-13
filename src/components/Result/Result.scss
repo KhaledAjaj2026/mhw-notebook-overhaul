@@ -14,7 +14,7 @@
 
 .result_section-heading_container {
     position: relative;
-    width: min-content;
+    width: max-content;
     margin: auto;
 }
 
@@ -184,10 +184,12 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        overflow: scroll;
     }
 
     li {
-        font-size: 1.8rem;
+        position: relative;
+        font-size: 1.2rem;
         font-family: 'Kite One', sans-serif;
         text-transform: uppercase;
         letter-spacing: 2px;

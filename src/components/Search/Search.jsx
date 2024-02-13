@@ -133,7 +133,7 @@ export default function Search({
 			></div>
 			<form
 				className={`${showSearch ? 'appear' : 'disappear'}${
-					result.name === null ? '' : ' raise_search'
+					result.name === '' ? '' : ' raise_search'
 				}`}
 			>
 				<label htmlFor='monster-search' className='search_label'>
