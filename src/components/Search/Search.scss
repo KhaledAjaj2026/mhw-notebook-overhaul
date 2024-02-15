@@ -1,3 +1,5 @@
+@use '../../index';
+
 .dark_background {
     position: fixed;
     top: 0;
@@ -27,7 +29,7 @@ form {
 }
 
 .search_label {
-    font-family: 'Kotta One', serif;
+    font-family: index.$labelFont;
     font-size: 1.2rem;
 }
 
@@ -37,7 +39,7 @@ form {
     border: none;
     border-radius: 8px 0 0 0;
     background-color: #ededed;
-    font-family: 'Linden Hill', serif;
+    font-family: index.$inputAndRewardsFont;
     font-size: 1.5rem;
     letter-spacing: 2px;
     color: #000000;

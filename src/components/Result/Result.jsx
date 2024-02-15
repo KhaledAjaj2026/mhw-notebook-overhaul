@@ -126,7 +126,7 @@ export default function Result({ result }) {
 							alt='decorative corner'
 						/>
 						<h3 className='result_section-heading section_subheading'>
-							Ailments
+							Ailment
 						</h3>
 						<img
 							src={bottomCorner}
@@ -135,16 +135,14 @@ export default function Result({ result }) {
 						/>
 					</div>
 					<div className='result_section-ailment' id='ailment-1'>
-						<div className='result_section-ailment_name__icon'>
-							<p className='result_section-ailment_name'>
-								{result.ailments?.name}
-							</p>
-							<img
-								src={`src/assets/icons/blights/${result.ailments?.name}.png`}
-								className='result_section-ailment_icon'
-								alt={result.ailments?.name}
-							/>
-						</div>
+						<p className='result_section-ailment_name'>
+							{result.ailments?.name}
+						</p>
+						<img
+							src={`src/assets/icons/blights/${result.ailments?.name}.png`}
+							className='result_section-ailment_icon'
+							alt={result.ailments?.name}
+						/>
 						<p className='result_section-ailment_description'>
 							{result.ailments?.description}
 						</p>

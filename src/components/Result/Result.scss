@@ -1,3 +1,5 @@
+@use '../../index';
+
 #component_result-container {
     position: relative;
     background-color: #CCB09CCC;
@@ -21,7 +23,7 @@
 .result_section-heading {
     padding: 0 2rem;
     background-color: #FFFFFF52;
-    font-family: 'Junge', cursive;
+    font-family: index.$sectionHeadingFont;
     font-size: 3rem;
     text-transform: uppercase;
     text-align: center;
@@ -60,7 +62,8 @@
     align-items: center;
 
     p {
-        font-family: 'Kite One', sans-serif;
+        font-family: index.$paragraphFont;
+        font-weight: 700;
         letter-spacing: 2px;
     }
 }
@@ -110,7 +113,7 @@
     align-items: center;
 
     h4 {
-        font-family: 'Libre Caslon Text', serif;
+        font-family: index.$sectionSubheadingFont;
         text-transform: uppercase;
     }
 
@@ -125,6 +128,7 @@
 
 .result_section-ailment {
     padding: 1rem;
+    padding-left: 3rem;
     border: 1px solid black;
     background: #9165444D;
     display: flex;
@@ -132,16 +136,10 @@
     align-items: center;
 }
 
-.result_section-ailment_name__icon {
-    display: flex;
-    align-items: center;
-}
-
 .result_section-ailment_name {
-    font-family: 'Libre Caslon Text', serif;
+    font-family: index.$sectionSubheadingFont;
     font-size: 1.6rem;
     text-transform: uppercase;
-    text-decoration: underline;
     letter-spacing: 3px;
 }
 
@@ -151,7 +149,8 @@
 
 .result_section-ailment_description {
     width: 50%;
-    font-family: 'Kite One', sans-serif;
+    font-family: index.$paragraphFont;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -190,7 +189,8 @@
     li {
         position: relative;
         font-size: 1.2rem;
-        font-family: 'Kite One', sans-serif;
+        font-family: index.$paragraphFont;
+        font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 2px;
         list-style-image: url('src/assets/icons/fire.png');
@@ -219,7 +219,7 @@
     li {
         margin-left: 8px;
         font-size: 1.2rem;
-        font-family: 'Linden Hill', serif;
+        font-family: index.$inputAndRewardsFont;
         text-transform: uppercase;
         letter-spacing: 2px;
         list-style-position: inside;
