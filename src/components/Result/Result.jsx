@@ -1,25 +1,65 @@
 import React from 'react';
-import anjanath from '../../assets/monsters-min/anjanath.webp';
-import border from '../../assets/misc/fancy-border.png';
-import topCorner from '../../assets/misc/corner-design-topleft.png';
-import bottomCorner from '../../assets/misc/corner-design-bottomright.png';
+import border from '/src/assets/misc/fancy-border.png';
+import topCorner from '/src/assets/misc/corner-design-topleft.png';
+import bottomCorner from '/src/assets/misc/corner-design-bottomright.png';
 import './Result.css';
+const monsterImgLocation = '/src/assets/monsters-min/';
 
 export default function Result({ result }) {
+	console.log(result);
+	/** Translates monster name retrieved from API into hyphen format used by asset files. */
+	const monsterName = () => {
+		let name = [];
+		for (let i = 0; i < result.name.length; i++) {
+			if (result.name[i] === ' ') {
+				name.push('-');
+			} else {
+				name.push(result.name[i].toLowerCase());
+			}
+		}
+		return name.join('');
+	};
+
+	/** Render list-items for monster's elemental weaknesses. */
 	const renderWeaknessList = () => {
 		return Object.values(result.weaknesses).map((weakness, i) => {
-			// console.log(weakness.element);
 			return <li key={i}>{weakness.element}</li>;
 		});
 	};
 
-	// console.log(Object.values(result));
-
+	/** Render list-items for monster's elemental resistances. */
 	const renderResistanceList = () => {
 		return Object.values(result.resistances).map((resistance, i) => {
-			// console.log(resistance.element);
 			return <li key={i}>{resistance.element}</li>;
 		});
+	};
+
+	/** Render list-items for reach reward. Render default list if no data for rewards. */
+	const renderRewardList = () => {
+		if (result.rewards.length > 0) {
+			return result.rewards.map((reward, i) => {
+				return <li key={i}>{reward.item.name}</li>;
+			});
+		} else {
+			return (
+				<>
+					<li>Monster Bone L</li>
+					<li>Monster Keenbone</li>
+					<li>Flame Sac</li>
+					<li>Inferno Sac</li>
+					<li>{result.name} Scale</li>
+					<li>{result.name} Pelt</li>
+					<li>{result.name} Fang</li>
+					<li>{result.name} Tail</li>
+					<li>{result.name} Plate</li>
+					<li>{result.name} Scale+</li>
+					<li>{result.name} Pelt+</li>
+					<li>{result.name} Fang+</li>
+					<li>{result.name} Gem</li>
+					<li>Wyvern Tear</li>
+				</>
+			);
+		}
 	};
 
 	return (
@@ -59,8 +99,8 @@ export default function Result({ result }) {
 					<div className='result_section-monster_image-container'>
 						<img src={border} className='result_section-image_border' alt='' />
 						<img
-							src={anjanath}
-							alt='Anjanath'
+							src={monsterImgLocation + monsterName() + '.webp'}
+							alt={result.name}
 							className='result_section-monster_image'
 						/>
 					</div>
@@ -174,24 +214,7 @@ export default function Result({ result }) {
 							alt='decorative corner'
 						/>
 					</div>
-					<ul>
-						<li>Monster Bone L</li>
-						<li>Monster Keenbone</li>
-						<li>Flame Sac</li>
-						<li>Inferno Sac</li>
-						<li>Anjanath Scale</li>
-						<li>Anjanath Pelt</li>
-						<li>Anjanath Fang</li>
-						<li>Anjanath Nosebone</li>
-						<li>Anjanath Tail</li>
-						<li>Anjanath Plate</li>
-						<li>Anjanath Scale+</li>
-						<li>Anjanath Pelt+</li>
-						<li>Anjanath Fang+</li>
-						<li>Anjanath Nosebone+</li>
-						<li>Anjanath Gem</li>
-						<li>Wyvern Tear</li>
-					</ul>
+					<ul>{renderRewardList()}</ul>
 				</section>
 				<button
 					type='button'

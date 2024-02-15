@@ -28,6 +28,7 @@ export default function App() {
 		ailments: '',
 		weaknesses: '',
 		resistances: '',
+		rewards: '',
 	});
 
 	const handleDisabled = () => setDisabled(false);
@@ -38,13 +39,14 @@ export default function App() {
 			.get('https://mhw-db.com/monsters')
 			.then((response) => {
 				setResult({
-					name: response.data[21].name,
-					species: response.data[21].species,
-					location: response.data[21].locations[0].name,
-					description: response.data[21].description,
-					ailments: response.data[21].ailments[0],
-					weaknesses: response.data[21].weaknesses,
-					resistances: response.data[21].resistances,
+					name: response.data[23].name,
+					species: response.data[23].species,
+					location: response.data[23].locations[0].name,
+					description: response.data[23].description,
+					ailments: response.data[23].ailments[0],
+					weaknesses: response.data[23].weaknesses,
+					resistances: response.data[23].resistances,
+					rewards: response.data[23].rewards,
 				});
 			})
 			.catch((err) => console.error(err));
