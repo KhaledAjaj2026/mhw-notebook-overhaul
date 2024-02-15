@@ -6,7 +6,8 @@ import './Result.css';
 const monsterImgLocation = '/src/assets/monsters-min/';
 
 export default function Result({ result }) {
-	console.log(result);
+	// console.log(result);
+
 	/** Translates monster name retrieved from API into hyphen format used by asset files. */
 	const monsterName = () => {
 		let name = [];
@@ -45,8 +46,6 @@ export default function Result({ result }) {
 				<>
 					<li>Monster Bone L</li>
 					<li>Monster Keenbone</li>
-					<li>Flame Sac</li>
-					<li>Inferno Sac</li>
 					<li>{result.name} Scale</li>
 					<li>{result.name} Pelt</li>
 					<li>{result.name} Fang</li>
@@ -141,9 +140,9 @@ export default function Result({ result }) {
 								{result.ailments?.name}
 							</p>
 							<img
-								src='src/assets/icons/fireblight.png'
+								src={`src/assets/icons/blights/${result.ailments?.name}.png`}
 								className='result_section-ailment_icon'
-								alt='fireblight'
+								alt={result.ailments?.name}
 							/>
 						</div>
 						<p className='result_section-ailment_description'>
