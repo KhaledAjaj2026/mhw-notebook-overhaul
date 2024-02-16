@@ -122,7 +122,7 @@ export default function Search({
 			handleResult(input);
 			handleInput('');
 		} else {
-			alert('NO INPUT');
+			alert('Please enter monster name before submitting');
 		}
 	};
 

@@ -41,16 +41,20 @@ export default function App() {
 				const monster = response.data.filter(
 					(monster) => monster.name === input
 				);
-				setResult({
-					name: monster[0].name,
-					species: monster[0].species,
-					location: monster[0].locations[0].name,
-					description: monster[0].description,
-					ailments: monster[0].ailments,
-					weaknesses: monster[0].weaknesses,
-					resistances: monster[0].resistances,
-					rewards: monster[0].rewards,
-				});
+				if (monster) {
+					setResult({
+						name: monster[0].name,
+						species: monster[0].species,
+						location: monster[0].locations[0].name,
+						description: monster[0].description,
+						ailments: monster[0].ailments,
+						weaknesses: monster[0].weaknesses,
+						resistances: monster[0].resistances,
+						rewards: monster[0].rewards,
+					});
+				} else {
+					alert('Monster not found, or incorrect input');
+				}
 			})
 			.catch((err) => console.error(err));
 	};

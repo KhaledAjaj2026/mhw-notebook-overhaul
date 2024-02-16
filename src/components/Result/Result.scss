@@ -7,7 +7,7 @@
     padding: 1px;
     margin-top: 12rem;
     color: black;
-    transition: 0.2s opacity ease-in-out, 0.4s display linear;
+    transition: 0.2s opacity ease-in-out;
 
     section {
         margin: 3rem auto 8rem;
@@ -214,6 +214,7 @@
 
 .result_section-rewards {
     ul {
+        margin: 2rem 4rem;
         padding: 1rem;
         display: flex;
         gap: 1rem;
