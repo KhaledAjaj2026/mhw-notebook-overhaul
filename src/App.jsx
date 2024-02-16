@@ -39,14 +39,14 @@ export default function App() {
 			.get('https://mhw-db.com/monsters')
 			.then((response) => {
 				setResult({
-					name: response.data[54].name,
-					species: response.data[54].species,
-					location: response.data[54].locations[0].name,
-					description: response.data[54].description,
-					ailments: response.data[54].ailments,
-					weaknesses: response.data[54].weaknesses,
-					resistances: response.data[54].resistances,
-					rewards: response.data[54].rewards,
+					name: response.data[26].name,
+					species: response.data[26].species,
+					location: response.data[26].locations[0].name,
+					description: response.data[26].description,
+					ailments: response.data[26].ailments,
+					weaknesses: response.data[26].weaknesses,
+					resistances: response.data[26].resistances,
+					rewards: response.data[26].rewards,
 				});
 			})
 			.catch((err) => console.error(err));

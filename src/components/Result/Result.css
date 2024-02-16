@@ -274,28 +274,34 @@ body {
   width: 350px;
   height: 280px;
   margin-top: 0;
-  padding: 0;
+  padding: 1rem 0;
   background: rgba(145, 101, 68, 0.3019607843);
-  display: flex;
-  flex-direction: column;
+  display: grid;
   justify-content: center;
   align-items: center;
   overflow: scroll;
 }
-.result_section-resistances li,
-.result_section-weaknesses li {
+
+.resistance_item-container,
+.weakness_item-container {
+  display: flex;
+}
+
+.weakness-element_icon {
+  width: 30px;
+  height: 30px;
+  margin: 10px 5px 0 0;
+}
+
+.weakness-item {
   position: relative;
+  margin: 10px 0;
   font-size: 1.2rem;
   font-family: "Nanum Myeongjo", serif;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  list-style-image: url("src/assets/icons/fire.png");
-  list-style-position: inside;
-}
-list-s .result_section-resistances li::marker,
-list-s .result_section-weaknesses li::marker {
-  width: 5px;
+  list-style: none;
 }
 
 .result_section-rewards ul {

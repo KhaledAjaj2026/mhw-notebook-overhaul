@@ -8,7 +8,7 @@ const monsterImgLocation = '/src/assets/monsters-min/';
 export default function Result({ result }) {
 	console.log(result);
 
-	/** Translates monster name retrieved from API into hyphen format used by asset files. */
+	/** Formats monster name retrieved from API into hyphen format used by image files. */
 	const monsterName = () => {
 		let name = [];
 		for (let i = 0; i < result.name.length; i++) {
@@ -24,11 +24,13 @@ export default function Result({ result }) {
 	/** Render ailments as JSX elements. */
 	const renderAilmentList = () => {
 		return result.ailments.map((ailment, i) => {
+			const ailmentName = ailment.name.replace(/\s+/g, '');
+
 			return (
 				<div className='result_section-ailment' key={'ailment-' + i}>
 					<p className='result_section-ailment_name'>{ailment.name}</p>
 					<img
-						src={`src/assets/icons/blights/${ailment.name}.png`}
+						src={`src/assets/icons/${ailmentName}.png`}
 						className='result_section-ailment_icon'
 						alt={ailment.name}
 					/>
@@ -42,16 +44,54 @@ export default function Result({ result }) {
 
 	/** Render list-items for monster's elemental weaknesses. */
 	const renderWeaknessList = () => {
-		return Object.values(result.weaknesses).map((weakness, i) => {
-			return <li key={i}>{weakness.element}</li>;
-		});
+		if (Object.values(result.weaknesses).length > 0) {
+			return Object.values(result.weaknesses).map((weakness, i) => {
+				const weaknessName = weakness.element.replace(/\s+/g, '');
+
+				return (
+					<div key={i} className='weakness_item-container'>
+						<img
+							src={`src/assets/icons/${weaknessName}.png`}
+							alt={weakness.element}
+							className='weakness-element_icon'
+						/>
+						<li className='weakness-item'>{weakness.element}</li>
+					</div>
+				);
+			});
+		} else {
+			return (
+				<div className='weakness_item-container'>
+					<li className='weakness-item'>No Weaknesses</li>
+				</div>
+			);
+		}
 	};
 
 	/** Render list-items for monster's elemental resistances. */
 	const renderResistanceList = () => {
-		return Object.values(result.resistances).map((resistance, i) => {
-			return <li key={i}>{resistance.element}</li>;
-		});
+		if (Object.values(result.resistances).length > 0) {
+			return Object.values(result.resistances).map((resistance, i) => {
+				const resistanceName = resistance.element.replace(/\s+/g, '');
+
+				return (
+					<div className='resistance_item-container'>
+						<img
+							src={`src/assets/icons/${resistanceName}.png`}
+							alt={resistance.element}
+							className='resistance-element_icon'
+						/>
+						<li key={i}>{resistance.element}</li>
+					</div>
+				);
+			});
+		} else {
+			return (
+				<div className='weakness_item-container'>
+					<li className='weakness-item'>No Resistances</li>
+				</div>
+			);
+		}
 	};
 
 	/** Render list-items for reach reward. Render default list if no data for rewards. */
