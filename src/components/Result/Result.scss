@@ -85,7 +85,7 @@
 }
 
 .result_section-monster_image {
-    width: 280px;
+    width: 100%;
     filter: drop-shadow(13px 10px 2px #222);
     -webkit-filter: drop-shadow(13px 10px 2px #00000059);
 }
@@ -127,6 +127,7 @@
 }
 
 .result_section-ailment {
+    margin-top: 2rem;
     padding: 1rem;
     padding-left: 3rem;
     border: 1px solid black;

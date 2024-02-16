@@ -6,7 +6,7 @@ import './Result.css';
 const monsterImgLocation = '/src/assets/monsters-min/';
 
 export default function Result({ result }) {
-	// console.log(result);
+	console.log(result);
 
 	/** Translates monster name retrieved from API into hyphen format used by asset files. */
 	const monsterName = () => {
@@ -19,6 +19,25 @@ export default function Result({ result }) {
 			}
 		}
 		return name.join('');
+	};
+
+	/** Render ailments as JSX elements. */
+	const renderAilmentList = () => {
+		return result.ailments.map((ailment, i) => {
+			return (
+				<div className='result_section-ailment' key={'ailment-' + i}>
+					<p className='result_section-ailment_name'>{ailment.name}</p>
+					<img
+						src={`src/assets/icons/blights/${ailment.name}.png`}
+						className='result_section-ailment_icon'
+						alt={ailment.name}
+					/>
+					<p className='result_section-ailment_description'>
+						{ailment.description}
+					</p>
+				</div>
+			);
+		});
 	};
 
 	/** Render list-items for monster's elemental weaknesses. */
@@ -126,7 +145,7 @@ export default function Result({ result }) {
 							alt='decorative corner'
 						/>
 						<h3 className='result_section-heading section_subheading'>
-							Ailment
+							Ailments
 						</h3>
 						<img
 							src={bottomCorner}
@@ -134,19 +153,7 @@ export default function Result({ result }) {
 							alt='decorative corner'
 						/>
 					</div>
-					<div className='result_section-ailment' id='ailment-1'>
-						<p className='result_section-ailment_name'>
-							{result.ailments?.name}
-						</p>
-						<img
-							src={`src/assets/icons/blights/${result.ailments?.name}.png`}
-							className='result_section-ailment_icon'
-							alt={result.ailments?.name}
-						/>
-						<p className='result_section-ailment_description'>
-							{result.ailments?.description}
-						</p>
-					</div>
+					{renderAilmentList()}
 				</section>
 				<section className='result_section-resistances__weaknesses'>
 					<div className='result_section-resistances'>
@@ -165,7 +172,6 @@ export default function Result({ result }) {
 								alt='decorative corner'
 							/>
 						</div>
-						{/* render JSX in outer function upon result update. */}
 						<ul>{renderResistanceList()}</ul>
 					</div>
 					<div className='result_section-weaknesses'>
@@ -184,14 +190,6 @@ export default function Result({ result }) {
 								alt='decorative corner'
 							/>
 						</div>
-						{/* render JSX in outer function upon result update. */}
-						{/* <ul>
-							<li>Water</li>
-							<li>Thunder</li>
-							<li>Ice</li>
-							<li>Dragon</li>
-							<li>Poison</li>
-						</ul> */}
 						<ul>{renderWeaknessList()}</ul>
 					</div>
 				</section>
