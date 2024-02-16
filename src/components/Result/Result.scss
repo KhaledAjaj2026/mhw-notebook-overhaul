@@ -85,7 +85,7 @@
 }
 
 .result_section-monster_image {
-    width: 100%;
+    width: 90%;
     filter: drop-shadow(13px 10px 2px #222);
     -webkit-filter: drop-shadow(13px 10px 2px #00000059);
 }
@@ -192,12 +192,14 @@
     display: flex;
 }
 
+.resistance-element_icon,
 .weakness-element_icon {
     width: 30px;
     height: 30px;
     margin: 10px 5px 0 0;
 }
 
+.resistance-item,
 .weakness-item {
     position: relative;
     margin: 10px 0;

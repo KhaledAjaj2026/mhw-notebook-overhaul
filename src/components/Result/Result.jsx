@@ -6,8 +6,6 @@ import './Result.css';
 const monsterImgLocation = '/src/assets/monsters-min/';
 
 export default function Result({ result }) {
-	console.log(result);
-
 	/** Formats monster name retrieved from API into hyphen format used by image files. */
 	const monsterName = () => {
 		let name = [];
@@ -49,7 +47,7 @@ export default function Result({ result }) {
 				const weaknessName = weakness.element.replace(/\s+/g, '');
 
 				return (
-					<div key={i} className='weakness_item-container'>
+					<div key={'weakness-' + i} className='weakness_item-container'>
 						<img
 							src={`src/assets/icons/${weaknessName}.png`}
 							alt={weakness.element}
@@ -75,20 +73,20 @@ export default function Result({ result }) {
 				const resistanceName = resistance.element.replace(/\s+/g, '');
 
 				return (
-					<div className='resistance_item-container'>
+					<div key={'resistance-' + i} className='resistance_item-container'>
 						<img
 							src={`src/assets/icons/${resistanceName}.png`}
 							alt={resistance.element}
 							className='resistance-element_icon'
 						/>
-						<li key={i}>{resistance.element}</li>
+						<li className='resistance-item'>{resistance.element}</li>
 					</div>
 				);
 			});
 		} else {
 			return (
-				<div className='weakness_item-container'>
-					<li className='weakness-item'>No Resistances</li>
+				<div className='resistance_item-container'>
+					<li className='resistance-item'>No Resistances</li>
 				</div>
 			);
 		}

@@ -38,15 +38,18 @@ export default function App() {
 		axios
 			.get('https://mhw-db.com/monsters')
 			.then((response) => {
+				const monster = response.data.filter(
+					(monster) => monster.name === input
+				);
 				setResult({
-					name: response.data[26].name,
-					species: response.data[26].species,
-					location: response.data[26].locations[0].name,
-					description: response.data[26].description,
-					ailments: response.data[26].ailments,
-					weaknesses: response.data[26].weaknesses,
-					resistances: response.data[26].resistances,
-					rewards: response.data[26].rewards,
+					name: monster[0].name,
+					species: monster[0].species,
+					location: monster[0].locations[0].name,
+					description: monster[0].description,
+					ailments: monster[0].ailments,
+					weaknesses: monster[0].weaknesses,
+					resistances: monster[0].resistances,
+					rewards: monster[0].rewards,
 				});
 			})
 			.catch((err) => console.error(err));
