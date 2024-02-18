@@ -2,22 +2,13 @@ import React from 'react';
 import border from '/src/assets/misc/fancy-border.png';
 import topCorner from '/src/assets/misc/corner-design-topleft.png';
 import bottomCorner from '/src/assets/misc/corner-design-bottomright.png';
+import nameToHyphen from '../../utils/hyphen';
 import './Result.css';
 const monsterImgLocation = '/src/assets/monsters-min/';
 
 export default function Result({ result }) {
-	/** Formats monster name retrieved from API into hyphen format used by image files. */
-	const monsterName = () => {
-		let name = [];
-		for (let i = 0; i < result.name.length; i++) {
-			if (result.name[i] === ' ') {
-				name.push('-');
-			} else {
-				name.push(result.name[i].toLowerCase());
-			}
-		}
-		return name.join('');
-	};
+	/** Use nameToHyphen util to convert retrieved monster name into hyphen format. */
+	const monsterName = nameToHyphen(result.name);
 
 	/** Render ailments as JSX elements. */
 	const renderAilmentList = () => {
@@ -138,7 +129,7 @@ export default function Result({ result }) {
 					<div className='result_section-monster_image-container'>
 						<img src={border} className='result_section-image_border' alt='' />
 						<img
-							src={monsterImgLocation + monsterName() + '.webp'}
+							src={monsterImgLocation + monsterName + '.webp'}
 							alt={result.name}
 							className='result_section-monster_image'
 						/>
