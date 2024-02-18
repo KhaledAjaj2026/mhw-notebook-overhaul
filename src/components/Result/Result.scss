@@ -187,20 +187,17 @@
     }
 }
 
-.resistance_item-container,
-.weakness_item-container {
+.element_item-container {
     display: flex;
 }
 
-.resistance-element_icon,
-.weakness-element_icon {
+.element_icon {
     width: 30px;
     height: 30px;
     margin: 10px 5px 0 0;
 }
 
-.resistance-item,
-.weakness-item {
+.element-item {
     position: relative;
     margin: 10px 0;
     font-size: 1.2rem;

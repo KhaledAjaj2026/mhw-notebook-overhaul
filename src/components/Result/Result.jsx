@@ -40,53 +40,36 @@ export default function Result({ result }) {
 		});
 	};
 
-	/** Render list-items for monster's elemental weaknesses. */
-	const renderWeaknessList = () => {
-		if (Object.values(result.weaknesses).length > 0) {
-			return Object.values(result.weaknesses).map((weakness, i) => {
-				const weaknessName = weakness.element.replace(/\s+/g, '');
-
-				return (
-					<div key={'weakness-' + i} className='weakness_item-container'>
-						<img
-							src={`src/assets/icons/${weaknessName}.png`}
-							alt={weakness.element}
-							className='weakness-element_icon'
-						/>
-						<li className='weakness-item'>{weakness.element}</li>
-					</div>
-				);
-			});
+	/** Render list-items for monster's elemental weaknesses or resistances.
+	 * @param {string} category - choose category of elements, weaknesses or resistances.
+	 */
+	const renderElementList = (category) => {
+		let elementList;
+		if (category === 'weaknesses') {
+			elementList = Object.values(result.weaknesses);
 		} else {
-			return (
-				<div className='weakness_item-container'>
-					<li className='weakness-item'>No Weaknesses</li>
-				</div>
-			);
+			elementList = Object.values(result.resistances);
 		}
-	};
 
-	/** Render list-items for monster's elemental resistances. */
-	const renderResistanceList = () => {
-		if (Object.values(result.resistances).length > 0) {
-			return Object.values(result.resistances).map((resistance, i) => {
-				const resistanceName = resistance.element.replace(/\s+/g, '');
+		if (elementList.length > 0) {
+			return elementList.map((item, i) => {
+				const itemName = item.element.replace(/\s+/g, '');
 
 				return (
-					<div key={'resistance-' + i} className='resistance_item-container'>
+					<div key={`element-${i}`} className={`element_item-container`}>
 						<img
-							src={`src/assets/icons/${resistanceName}.png`}
-							alt={resistance.element}
-							className='resistance-element_icon'
+							src={`src/assets/icons/${itemName}.png`}
+							alt={item.element}
+							className={`element_icon`}
 						/>
-						<li className='resistance-item'>{resistance.element}</li>
+						<li className={`element-item`}>{item.element}</li>
 					</div>
 				);
 			});
 		} else {
 			return (
-				<div className='resistance_item-container'>
-					<li className='resistance-item'>No Resistances</li>
+				<div className={`element_item-container`}>
+					<li className='element-item'>None</li>
 				</div>
 			);
 		}
@@ -210,7 +193,7 @@ export default function Result({ result }) {
 								alt='decorative corner'
 							/>
 						</div>
-						<ul>{renderResistanceList()}</ul>
+						<ul>{renderElementList('resistances')}</ul>
 					</div>
 					<div className='result_section-weaknesses'>
 						<div className='result_section-heading_container section_subheading-weakness'>
@@ -228,7 +211,7 @@ export default function Result({ result }) {
 								alt='decorative corner'
 							/>
 						</div>
-						<ul>{renderWeaknessList()}</ul>
+						<ul>{renderElementList('weaknesses')}</ul>
 					</div>
 				</section>
 				<section className='result_section-rewards'>
