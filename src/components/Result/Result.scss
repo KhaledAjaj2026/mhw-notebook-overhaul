@@ -101,6 +101,10 @@
     background-color: #81670E4D;
 }
 
+.theme-rotten_vale-image_background {
+    background-image: linear-gradient(to bottom, #635333, #8E8747);
+}
+
 // Secluded Valley
 .theme-secluded_valley-main_background {
     background-color: #AF9289CC;
@@ -186,7 +190,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom, #7D6049BF 0%, #5D7043BF 100%);
+    // background: linear-gradient(to bottom, #7D6049BF 0%, #5D7043BF 100%);
 }
 
 .result_section-image_border {

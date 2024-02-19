@@ -3,70 +3,15 @@ import border from '/src/assets/misc/fancy-border.png';
 import topCorner from '/src/assets/misc/corner-design-topleft.png';
 import bottomCorner from '/src/assets/misc/corner-design-bottomright.png';
 import nameToHyphen from '../../utils/hyphen';
+import {
+	biomeThemeImage,
+	biomeThemeMain,
+	biomeThemeSection,
+} from '../../utils/themes';
 import './Result.css';
 const monsterImgLocation = '/src/assets/monsters-min/';
 
 export default function Result({ result, biome }) {
-	/** Change main color theme based on current biome. */
-	const biomeThemeMain = () => {
-		switch (biome) {
-			case 'ancient-forest':
-				return 'theme-ancient_forest-main_background';
-			case 'wildspire-waste':
-				return 'theme-wildspire_waste-main_background';
-			case 'coral-highlands':
-				return 'theme-coral_highlands-main_background';
-			case 'elders-recess':
-				return 'theme-elders_recess-main_background';
-			case 'caverns-of-el-dorado':
-				return 'theme-caverns-main_background';
-			case 'confluence-of-fates':
-				return 'theme-confluence-main_background';
-			case 'great-ravine':
-				return 'theme-great_ravine-main_background';
-			case 'guiding-lands':
-				return 'theme-guiding_lands-main_background';
-			case 'hoarfrost-reach':
-				return 'theme-hoarfrost_reach-main_background';
-			case 'rotten-vale':
-				return 'theme-rotten_vale-main_background';
-			case 'secluded-valley':
-				return 'theme-secluded_valley-main_background';
-			default:
-				return 'theme-ancient_forest-main_background';
-		}
-	};
-
-	/** Change section color theme based on current biome. */
-	const biomeThemeSection = () => {
-		switch (biome) {
-			case 'ancient-forest':
-				return 'theme-ancient_forest-section_background';
-			case 'wildspire-waste':
-				return 'theme-wildspire_waste-section_background';
-			case 'coral-highlands':
-				return 'theme-coral_highlands-section_background';
-			case 'elders-recess':
-				return 'theme-elders_recess-section_background';
-			case 'caverns-of-el-dorado':
-				return 'theme-caverns-section_background';
-			case 'confluence-of-fates':
-				return 'theme-confluence-section_background';
-			case 'great-ravine':
-				return 'theme-great_ravine-section_background';
-			case 'guiding-lands':
-				return 'theme-guiding_lands-section_background';
-			case 'hoarfrost-reach':
-				return 'theme-hoarfrost_reach-section_background';
-			case 'rotten-vale':
-				return 'theme-rotten_vale-section_background';
-			case 'secluded-valley':
-				return 'theme-secluded_valley-section_background';
-			default:
-				return 'theme-ancient_forest-section_background';
-		}
-	};
-
 	/** Use nameToHyphen util to convert retrieved monster name into hyphen format. */
 	const monsterName = nameToHyphen(result.name);
 
@@ -77,7 +22,7 @@ export default function Result({ result, biome }) {
 
 			return (
 				<div
-					className={`result_section-ailment ${biomeThemeSection()}`}
+					className={`result_section-ailment ${biomeThemeSection(biome)}`}
 					key={'ailment-' + i}
 				>
 					<p className='result_section-ailment_name'>{ailment.name}</p>
@@ -170,7 +115,7 @@ export default function Result({ result, biome }) {
 			<div
 				id='component_result-container'
 				className={`${
-					result.name === '' ? 'hide' : 'show ' + biomeThemeMain()
+					result.name === '' ? 'hide' : 'show ' + biomeThemeMain(biome)
 				}`}
 			>
 				<header className='result_monster-name'>
@@ -191,7 +136,11 @@ export default function Result({ result, biome }) {
 					</div>
 				</header>
 				<section className='result_section-image__description'>
-					<div className='result_section-monster_image-container'>
+					<div
+						className={`result_section-monster_image-container ${biomeThemeImage(
+							biome
+						)}`}
+					>
 						<img src={border} className='result_section-image_border' alt='' />
 						<img
 							src={monsterImgLocation + monsterName + '.webp'}
@@ -200,7 +149,9 @@ export default function Result({ result, biome }) {
 						/>
 					</div>
 					<div
-						className={`result_section-monster_description ${biomeThemeSection()}`}
+						className={`result_section-monster_description ${biomeThemeSection(
+							biome
+						)}`}
 					>
 						<div className='monster_attribute'>
 							<h4>Species: </h4>
@@ -251,7 +202,7 @@ export default function Result({ result, biome }) {
 								alt='decorative corner'
 							/>
 						</div>
-						<ul className={biomeThemeSection()}>
+						<ul className={biomeThemeSection(biome)}>
 							{renderElementList('resistances')}
 						</ul>
 					</div>
@@ -271,7 +222,7 @@ export default function Result({ result, biome }) {
 								alt='decorative corner'
 							/>
 						</div>
-						<ul className={biomeThemeSection()}>
+						<ul className={biomeThemeSection(biome)}>
 							{renderElementList('weaknesses')}
 						</ul>
 					</div>
