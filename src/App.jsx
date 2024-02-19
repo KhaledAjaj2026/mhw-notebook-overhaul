@@ -120,7 +120,7 @@ export default function App() {
 				handleResult={handleResult}
 				disabled={disabled}
 			/>
-			<Result result={result} />
+			<Result result={result} biome={biome} />
 			{loading ? null : <Footer />}
 		</div>
 	);

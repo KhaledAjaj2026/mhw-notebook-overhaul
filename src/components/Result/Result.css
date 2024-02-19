@@ -104,14 +104,113 @@ body {
   display: block;
 }
 
-#component_result-container {
-  position: relative;
+/* BIOME THEMES */
+.theme-ancient_forest-main_background {
   background-color: rgba(204, 176, 156, 0.8);
   box-shadow: 0px 0px 10px 20px rgba(204, 176, 156, 0.8);
+}
+
+.theme-ancient_forest-section_background {
+  background-color: rgba(182, 128, 87, 0.3019607843);
+}
+
+.theme-wildspire_waste-main_background {
+  background-color: rgba(192, 150, 120, 0.8);
+  box-shadow: 0px 0px 10px 20px rgba(192, 150, 120, 0.8);
+}
+
+.theme-wildspire_waste-section_background {
+  background-color: rgba(140, 75, 38, 0.3019607843);
+}
+
+.theme-coral_highlands-main_background {
+  background-color: rgba(167, 152, 169, 0.8);
+  box-shadow: 0px 0px 10px 20px rgba(167, 152, 169, 0.8);
+}
+
+.theme-coral_highlands-section_background {
+  background-color: rgba(56, 89, 140, 0.3019607843);
+}
+
+.theme-elders_recess-main_background {
+  background-color: rgba(191, 126, 111, 0.8);
+  box-shadow: 0px 0px 10px 20px rgba(191, 126, 111, 0.8);
+}
+
+.theme-elders_recess-section_background {
+  background-color: rgba(124, 41, 30, 0.3019607843);
+}
+
+.theme-caverns-main_background {
+  background-color: rgba(191, 167, 106, 0.8);
+  box-shadow: 0px 0px 10px 20px rgba(191, 167, 106, 0.8);
+}
+
+.theme-caverns-section_background {
+  background-color: rgba(127, 92, 24, 0.3019607843);
+}
+
+.theme-confluence-main_background {
+  background-color: rgba(175, 146, 137, 0.8);
+  box-shadow: 0px 0px 10px 20px rgba(175, 146, 137, 0.8);
+}
+
+.theme-confluence-section_background {
+  background-color: rgba(134, 60, 28, 0.3019607843);
+}
+
+.theme-great_ravine-main_background {
+  background-color: rgba(165, 129, 131, 0.8);
+  box-shadow: 0px 0px 10px 20px rgba(165, 129, 131, 0.8);
+}
+
+.theme-great_ravine-section_background {
+  background-color: rgba(206, 137, 156, 0.3019607843);
+}
+
+.theme-guiding_lands-main_background {
+  background-color: rgba(147, 173, 165, 0.8);
+  box-shadow: 0px 0px 10px 20px rgba(147, 173, 165, 0.8);
+}
+
+.theme-guiding_lands-section_background {
+  background-color: rgba(47, 111, 88, 0.3019607843);
+}
+
+.theme-hoarfrost_reach-main_background {
+  background-color: rgba(146, 182, 197, 0.8);
+  box-shadow: 0px 0px 10px 20px rgba(146, 182, 197, 0.8);
+}
+
+.theme-hoarfrost_reach-section_background {
+  background-color: rgba(14, 94, 129, 0.3019607843);
+}
+
+.theme-rotten_vale-main_background {
+  background-color: rgba(191, 188, 161, 0.8);
+  box-shadow: 0px 0px 10px 20px rgba(191, 188, 161, 0.8);
+}
+
+.theme-rotten_vale-section_background {
+  background-color: rgba(129, 103, 14, 0.3019607843);
+}
+
+.theme-secluded_valley-main_background {
+  background-color: rgba(175, 146, 137, 0.8);
+  box-shadow: 0px 0px 10px 20px rgba(175, 146, 137, 0.8);
+}
+
+.theme-secluded_valley-section_background {
+  background-color: rgba(134, 60, 28, 0.3019607843);
+}
+
+/* MAIN STYLING */
+#component_result-container {
+  position: relative;
   padding: 1px;
   margin-top: 12rem;
   color: black;
-  transition: 0.2s opacity ease-in-out;
+  transition: 0.2s opacity ease-in-out, 1s background-color ease-in-out, 1s box-shadow ease-in-out;
 }
 #component_result-container section {
   margin: 3rem auto 8rem;
@@ -196,7 +295,6 @@ body {
 .result_section-monster_description {
   width: 400px;
   height: 400px;
-  background-color: rgba(145, 101, 68, 0.3019607843);
   border: 1px solid black;
 }
 .result_section-monster_description p {
@@ -230,7 +328,6 @@ body {
   padding: 1rem;
   padding-left: 3rem;
   border: 1px solid black;
-  background: rgba(145, 101, 68, 0.3019607843);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -275,7 +372,6 @@ body {
   height: 280px;
   margin-top: 0;
   padding: 1rem 0;
-  background: rgba(145, 101, 68, 0.3019607843);
   display: grid;
   justify-content: center;
   align-items: center;
