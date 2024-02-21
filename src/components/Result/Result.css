@@ -114,6 +114,10 @@ body {
   background-color: rgba(182, 128, 87, 0.3019607843);
 }
 
+.theme-ancient_forest-image_background {
+  background-image: linear-gradient(to bottom, rgba(125, 96, 73, 0.7490196078), rgba(93, 112, 67, 0.7490196078));
+}
+
 .theme-wildspire_waste-main_background {
   background-color: rgba(192, 150, 120, 0.8);
   box-shadow: 0px 0px 10px 20px rgba(192, 150, 120, 0.8);
@@ -121,6 +125,10 @@ body {
 
 .theme-wildspire_waste-section_background {
   background-color: rgba(140, 75, 38, 0.3019607843);
+}
+
+.theme-wildspire_waste-image_background {
+  background-image: linear-gradient(to bottom, rgba(88, 61, 47, 0.7490196078), rgba(200, 125, 81, 0.7490196078));
 }
 
 .theme-coral_highlands-main_background {
@@ -132,6 +140,10 @@ body {
   background-color: rgba(56, 89, 140, 0.3019607843);
 }
 
+.theme-coral_highlands-image_background {
+  background-image: linear-gradient(to bottom, rgba(81, 51, 99, 0.7490196078), rgba(26, 91, 150, 0.7490196078));
+}
+
 .theme-elders_recess-main_background {
   background-color: rgba(191, 126, 111, 0.8);
   box-shadow: 0px 0px 10px 20px rgba(191, 126, 111, 0.8);
@@ -139,6 +151,10 @@ body {
 
 .theme-elders_recess-section_background {
   background-color: rgba(124, 41, 30, 0.3019607843);
+}
+
+.theme-elders_recess-image_background {
+  background-image: linear-gradient(to bottom, rgba(82, 24, 24, 0.7490196078), rgba(196, 90, 56, 0.7490196078));
 }
 
 .theme-caverns-main_background {
@@ -150,13 +166,21 @@ body {
   background-color: rgba(127, 92, 24, 0.3019607843);
 }
 
+.theme-caverns-image_background {
+  background-image: linear-gradient(to bottom, rgba(107, 64, 40, 0.7490196078), rgba(195, 157, 26, 0.7490196078));
+}
+
 .theme-confluence-main_background {
-  background-color: rgba(175, 146, 137, 0.8);
-  box-shadow: 0px 0px 10px 20px rgba(175, 146, 137, 0.8);
+  background-color: rgba(141, 164, 186, 0.8);
+  box-shadow: 0px 0px 10px 20px rgba(141, 164, 186, 0.8);
 }
 
 .theme-confluence-section_background {
-  background-color: rgba(134, 60, 28, 0.3019607843);
+  background-color: rgba(23, 82, 107, 0.3019607843);
+}
+
+.theme-confluence-image_background {
+  background-image: linear-gradient(to bottom, rgba(124, 91, 124, 0.7490196078), rgba(38, 60, 138, 0.7490196078));
 }
 
 .theme-great_ravine-main_background {
@@ -168,6 +192,10 @@ body {
   background-color: rgba(206, 137, 156, 0.3019607843);
 }
 
+.theme-great_ravine-image_background {
+  background-image: linear-gradient(to bottom, rgba(177, 141, 158, 0.7490196078), rgba(65, 50, 79, 0.7490196078));
+}
+
 .theme-guiding_lands-main_background {
   background-color: rgba(147, 173, 165, 0.8);
   box-shadow: 0px 0px 10px 20px rgba(147, 173, 165, 0.8);
@@ -177,6 +205,10 @@ body {
   background-color: rgba(47, 111, 88, 0.3019607843);
 }
 
+.theme-guiding_lands-image_background {
+  background-image: linear-gradient(to bottom, rgba(88, 142, 103, 0.7490196078), rgba(73, 161, 156, 0.7490196078));
+}
+
 .theme-hoarfrost_reach-main_background {
   background-color: rgba(146, 182, 197, 0.8);
   box-shadow: 0px 0px 10px 20px rgba(146, 182, 197, 0.8);
@@ -184,6 +216,10 @@ body {
 
 .theme-hoarfrost_reach-section_background {
   background-color: rgba(14, 94, 129, 0.3019607843);
+}
+
+.theme-hoarfrost_reach-image_background {
+  background-image: linear-gradient(to bottom, rgba(62, 72, 127, 0.7490196078), rgba(85, 173, 192, 0.7490196078));
 }
 
 .theme-rotten_vale-main_background {
@@ -196,7 +232,7 @@ body {
 }
 
 .theme-rotten_vale-image_background {
-  background-image: linear-gradient(to bottom, #635333, #8E8747);
+  background-image: linear-gradient(to bottom, rgba(99, 83, 51, 0.7490196078), rgba(142, 135, 71, 0.7490196078));
 }
 
 .theme-secluded_valley-main_background {
@@ -208,13 +244,17 @@ body {
   background-color: rgba(134, 60, 28, 0.3019607843);
 }
 
+.theme-secluded_valley-image_background {
+  background-image: linear-gradient(to bottom, rgba(93, 49, 39, 0.7490196078), rgba(169, 126, 76, 0.7490196078));
+}
+
 /* MAIN STYLING */
 #component_result-container {
   position: relative;
   padding: 1px;
   margin-top: 12rem;
   color: black;
-  transition: 0.2s opacity ease-in-out, 1s background-color ease-in-out, 1s box-shadow ease-in-out;
+  transition: 0.2s opacity ease-in-out, 1s background-color ease-in-out, 1s box-shadow ease-in-out, 1s background-image ease-in-out;
 }
 #component_result-container section {
   margin: 3rem auto 8rem;

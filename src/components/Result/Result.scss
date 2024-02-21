@@ -11,6 +11,10 @@
     background-color: #b680574d;
 }
 
+.theme-ancient_forest-image_background {
+    background-image: linear-gradient(to bottom, #7D6049bf, #5D7043BF);
+}
+
 // Wildspire Waste
 .theme-wildspire_waste-main_background {
     background-color: #c09678cc;
@@ -19,6 +23,10 @@
 
 .theme-wildspire_waste-section_background {
     background-color: #8C4B264D;
+}
+
+.theme-wildspire_waste-image_background {
+    background-image: linear-gradient(to bottom, #583d2fbf, #c87d51bf);
 }
 
 // Coral Highlands
@@ -31,6 +39,10 @@
     background-color: #38598C4D;
 }
 
+.theme-coral_highlands-image_background {
+    background-image: linear-gradient(to bottom, #513363bf, #1A5B96bf);
+}
+
 // Elders Recess
 .theme-elders_recess-main_background {
     background-color: #BF7E6FCC;
@@ -39,6 +51,10 @@
 
 .theme-elders_recess-section_background {
     background-color: #7C291E4D;
+}
+
+.theme-elders_recess-image_background {
+    background-image: linear-gradient(to bottom, #521818bf, #C45A38bf);
 }
 
 // Caverns of El Dorado
@@ -51,14 +67,22 @@
     background-color: #7F5C184D;
 }
 
+.theme-caverns-image_background {
+    background-image: linear-gradient(to bottom, #6B4028bf, #C39D1Abf);
+}
+
 // Confluence of Fates
 .theme-confluence-main_background {
-    background-color: #AF9289CC;
-    box-shadow: 0px 0px 10px 20px #AF9289CC;
+    background-color: #8DA4BACC;
+    box-shadow: 0px 0px 10px 20px #8DA4BACC;
 }
 
 .theme-confluence-section_background {
-    background-color: #863C1C4D;
+    background-color: #17526B4D;
+}
+
+.theme-confluence-image_background {
+    background-image: linear-gradient(to bottom, #7C5B7Cbf, #263C8Abf);
 }
 
 // Great Ravine
@@ -71,6 +95,10 @@
     background-color: #ce899c4d;
 }
 
+.theme-great_ravine-image_background {
+    background-image: linear-gradient(to bottom, #B18D9EBF, #41324FBF);
+}
+
 // Guiding Lands
 .theme-guiding_lands-main_background {
     background-color: #93ADA5CC;
@@ -81,6 +109,10 @@
     background-color: #2F6F584D;
 }
 
+.theme-guiding_lands-image_background {
+    background-image: linear-gradient(to bottom, #588E67BF, #49A19CBF);
+}
+
 // Hoarfrost Reach
 .theme-hoarfrost_reach-main_background {
     background-color: #92B6C5CC;
@@ -89,6 +121,10 @@
 
 .theme-hoarfrost_reach-section_background {
     background-color: #0E5E814D;
+}
+
+.theme-hoarfrost_reach-image_background {
+    background-image: linear-gradient(to bottom, #3E487FBF, #55ADC0BF);
 }
 
 // Rotten Vale
@@ -102,7 +138,7 @@
 }
 
 .theme-rotten_vale-image_background {
-    background-image: linear-gradient(to bottom, #635333, #8E8747);
+    background-image: linear-gradient(to bottom, #635333BF, #8E8747BF);
 }
 
 // Secluded Valley
@@ -115,13 +151,21 @@
     background-color: #863C1C4D;
 }
 
+.theme-secluded_valley-image_background {
+    background-image: linear-gradient(to bottom, #5D3127BF, #A97E4CBF);
+}
+
 /* MAIN STYLING */
 #component_result-container {
     position: relative;
     padding: 1px;
     margin-top: 12rem;
     color: black;
-    transition: 0.2s opacity ease-in-out, 1s background-color ease-in-out, 1s box-shadow ease-in-out;
+    transition:
+        0.2s opacity ease-in-out,
+        1s background-color ease-in-out,
+        1s box-shadow ease-in-out,
+        1s background-image ease-in-out;
 
     section {
         margin: 3rem auto 8rem;
@@ -190,7 +234,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // background: linear-gradient(to bottom, #7D6049BF 0%, #5D7043BF 100%);
 }
 
 .result_section-image_border {
