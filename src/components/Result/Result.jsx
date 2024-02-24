@@ -23,26 +23,30 @@ export default function Result({
 
 	/** Render ailments as JSX elements. */
 	const renderAilmentList = () => {
-		return result.ailments.map((ailment, i) => {
-			const ailmentName = ailment.name.replace(/\s+/g, '');
+		if (result.ailments.length > 0) {
+			return result.ailments.map((ailment, i) => {
+				const ailmentName = ailment.name.replace(/\s+/g, '');
 
-			return (
-				<div
-					className={`result_section-ailment ${biomeThemeSection(biome)}`}
-					key={'ailment-' + i}
-				>
-					<p className='result_section-ailment_name'>{ailment.name}</p>
-					<img
-						src={`src/assets/icons/${ailmentName}.png`}
-						className='result_section-ailment_icon'
-						alt={ailment.name}
-					/>
-					<p className='result_section-ailment_description'>
-						{ailment.description}
-					</p>
-				</div>
-			);
-		});
+				return (
+					<div
+						className={`result_section-ailment ${biomeThemeSection(biome)}`}
+						key={'ailment-' + i}
+					>
+						<p className='result_section-ailment_name'>{ailment.name}</p>
+						<img
+							src={`src/assets/icons/${ailmentName}.png`}
+							className='result_section-ailment_icon'
+							alt={ailment.name}
+						/>
+						<p className='result_section-ailment_description'>
+							{ailment.description}
+						</p>
+					</div>
+				);
+			});
+		} else {
+			return <p className='result_section-no_ailments'>No Ailments</p>;
+		}
 	};
 
 	/** Render list-items for monster's elemental weaknesses or resistances.

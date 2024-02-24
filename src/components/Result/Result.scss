@@ -286,6 +286,15 @@
     width: 70vw;
 }
 
+.result_section-no_ailments {
+    font-family: index.$paragraphFont;
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
 .result_section-ailment {
     margin-top: 2rem;
     padding: 1rem;

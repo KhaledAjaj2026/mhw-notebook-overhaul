@@ -104,12 +104,9 @@ body {
   display: block;
 }
 
-.brighten {
-  filter: brightness(1);
-}
-
 .dim {
   filter: brightness(0.75);
+  transition: filter 0.3s ease-in-out;
 }
 
 /* BIOME THEMES */
@@ -377,6 +374,15 @@ body {
 
 .result_section-ailments {
   width: 70vw;
+}
+
+.result_section-no_ailments {
+  font-family: "Nanum Myeongjo", serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
 }
 
 .result_section-ailment {
