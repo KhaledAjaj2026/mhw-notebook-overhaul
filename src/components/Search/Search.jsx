@@ -111,11 +111,8 @@ export default function Search({
 	result,
 	handleResult,
 	disabled,
+	handleFocus,
 }) {
-	/** focus - check if Search component is focused or blurred. */
-	const [focus, setFocus] = new useState(false);
-	const handleFocus = () => setFocus(!focus);
-
 	/** Measure input length; show result if > 0, alert if <= 0. */
 	const checkInput = () => {
 		if (input.length > 0) {
@@ -128,9 +125,6 @@ export default function Search({
 
 	return (
 		<>
-			<div
-				className={`dark_background${focus ? ' appear' : ' disappear'}`}
-			></div>
 			<form
 				className={`${showSearch ? 'appear' : 'disappear'}${
 					result.name === '' ? '' : ' raise_search'

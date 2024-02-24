@@ -11,7 +11,7 @@ import {
 import './Result.css';
 const monsterImgLocation = '/src/assets/monsters-min/';
 
-export default function Result({ result, biome }) {
+export default function Result({ result, biome, focus }) {
 	/** Use nameToHyphen util to convert retrieved monster name into hyphen format. */
 	const monsterName = nameToHyphen(result.name);
 
@@ -116,7 +116,7 @@ export default function Result({ result, biome }) {
 				id='component_result-container'
 				className={`${
 					result.name === '' ? 'hide' : 'show ' + biomeThemeMain(biome)
-				}`}
+				}${focus ? ' dim' : ''}`}
 			>
 				<header className='result_monster-name'>
 					<div className='result_section-heading_container'>

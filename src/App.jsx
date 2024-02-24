@@ -16,6 +16,7 @@ export default function App() {
 	 * input - capture user input, or selected Autocomplete value.
 	 * showSearch - show Search component, toggle upon clicking "Explore" btn.
 	 * biome - determine which background image to display based on monster's biome.
+	 * focus - check if Search component is focused or blurred.
 	 * result - determine whether search query results in API fetch or not.
 	 */
 	const [loading, setLoading] = new useState(true);
@@ -23,6 +24,7 @@ export default function App() {
 	const [input, setInput] = new useState('');
 	const [showSearch, setShowSearch] = new useState(false);
 	const [biome, setBiome] = new useState('astera');
+	const [focus, setFocus] = new useState(false);
 	const [result, setResult] = new useState({
 		name: '',
 		species: '',
@@ -41,6 +43,7 @@ export default function App() {
 		const biomeName = nameToHyphen(location);
 		setBiome(biomeName);
 	};
+	const handleFocus = () => setFocus(!focus);
 	const handleResult = () => {
 		axios
 			.get('https://mhw-db.com/monsters')
@@ -119,8 +122,9 @@ export default function App() {
 				result={result}
 				handleResult={handleResult}
 				disabled={disabled}
+				handleFocus={handleFocus}
 			/>
-			<Result result={result} biome={biome} />
+			<Result result={result} biome={biome} focus={focus} />
 			{loading ? null : <Footer />}
 		</div>
 	);

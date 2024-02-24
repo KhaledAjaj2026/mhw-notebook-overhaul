@@ -104,18 +104,9 @@ body {
   display: block;
 }
 
-.dark_background {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  min-height: 100vh;
-  background: rgba(0, 0, 0, 0.3450980392);
-  background-size: 100vw 100vh;
-  background-attachment: fixed;
-  transition: opacity 0.3s ease-in-out;
+.dim {
+  filter: brightness(0.75);
+  transition: filter 0.3s ease-in-out;
 }
 
 form {
