@@ -11,7 +11,13 @@ import {
 import './Result.css';
 const monsterImgLocation = '/src/assets/monsters-min/';
 
-export default function Result({ result, biome, focus }) {
+export default function Result({
+	result,
+	biome,
+	focus,
+	loading,
+	handleLoading,
+}) {
 	/** Use nameToHyphen util to convert retrieved monster name into hyphen format. */
 	const monsterName = nameToHyphen(result.name);
 
@@ -102,7 +108,7 @@ export default function Result({ result, biome, focus }) {
 
 	return (
 		<>
-			{/* {result ? (
+			{loading ? (
 				<div className='loading_screen-result'>
 					<div className='loading_screen-animation'>
 						<div className='loading-animation'></div>
@@ -111,12 +117,13 @@ export default function Result({ result, biome, focus }) {
 				</div>
 			) : (
 				''
-			)} */}
+			)}
 			<div
 				id='component_result-container'
 				className={`${
 					result.name === '' ? 'hide' : 'show ' + biomeThemeMain(biome)
 				}${focus ? ' dim' : ''}`}
+				onLoad={() => handleLoading(false)}
 			>
 				<header className='result_monster-name'>
 					<div className='result_section-heading_container'>

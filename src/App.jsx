@@ -36,6 +36,7 @@ export default function App() {
 		rewards: [],
 	});
 
+	const handleLoading = (val) => setLoading(val);
 	const handleDisabled = () => setDisabled(false);
 	const handleInput = (val) => setInput(val);
 	const handleShowSearch = () => setShowSearch(!showSearch);
@@ -123,8 +124,15 @@ export default function App() {
 				handleResult={handleResult}
 				disabled={disabled}
 				handleFocus={handleFocus}
+				handleLoading={handleLoading}
 			/>
-			<Result result={result} biome={biome} focus={focus} />
+			<Result
+				result={result}
+				biome={biome}
+				focus={focus}
+				loading={loading}
+				handleLoading={handleLoading}
+			/>
 			{loading ? null : <Footer />}
 		</div>
 	);

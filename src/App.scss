@@ -15,7 +15,7 @@
     right: 0;
     z-index: 0;
     min-height: 100vh;
-    background: linear-gradient(to bottom, #151b16 0%, #1c1f0f 100%);
+    background: linear-gradient(to bottom, #151b164D 0%, #1c1f0f4D 100%);
     background-size: 100vw 100vh;
     background-attachment: fixed;
 }
@@ -41,6 +41,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 100px;
 
     p {
         font-family: index.$sectionHeadingFont;

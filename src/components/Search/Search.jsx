@@ -112,12 +112,14 @@ export default function Search({
 	handleResult,
 	disabled,
 	handleFocus,
+	handleLoading,
 }) {
 	/** Measure input length; show result if > 0, alert if <= 0. */
 	const checkInput = () => {
 		if (input.length > 0) {
 			handleResult(input);
 			handleInput('');
+			handleLoading(true);
 		} else {
 			alert('Please enter monster name before submitting');
 		}
