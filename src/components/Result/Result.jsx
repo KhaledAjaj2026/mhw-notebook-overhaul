@@ -129,7 +129,7 @@ export default function Result({
 				}${focus ? ' dim' : ''}`}
 				onLoad={() => handleLoading(false)}
 			>
-				<header className='result_monster-name'>
+				<header>
 					<div className='result_section-heading_container'>
 						<img
 							src={topCorner}
@@ -146,7 +146,7 @@ export default function Result({
 						/>
 					</div>
 				</header>
-				<section className='result_section-image__description'>
+				<section className='result_section-image_and_description-container'>
 					<div
 						className={`result_section-monster_image-container ${biomeThemeImage(
 							biome
@@ -160,7 +160,7 @@ export default function Result({
 						/>
 					</div>
 					<div
-						className={`result_section-monster_description ${biomeThemeSection(
+						className={`result_section-monster_description-container ${biomeThemeSection(
 							biome
 						)}`}
 					>

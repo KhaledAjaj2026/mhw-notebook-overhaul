@@ -273,6 +273,8 @@ body {
 }
 
 .result_section-heading {
+  max-width: 80vw;
+  margin: 2rem 0 0 0;
   padding: 0 2rem;
   background-color: rgba(255, 255, 255, 0.3215686275);
   font-family: "Junge", cursive;
@@ -295,12 +297,12 @@ body {
 }
 
 .decorative-corner_bottom {
-  top: 20px;
+  bottom: 0;
   left: calc(100% - 30px);
 }
 
 .decorative-corner_bottom-header {
-  top: 34px;
+  bottom: 0;
   left: calc(100% - 40px);
 }
 
@@ -308,15 +310,10 @@ body {
   font-size: 2rem;
 }
 
-.result_section-image__description {
+.result_section-image_and_description-container {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-}
-.result_section-image__description p {
-  font-family: "Nanum Myeongjo", serif;
-  font-weight: 700;
-  letter-spacing: 2px;
 }
 
 .result_section-monster_image-container {
@@ -344,17 +341,24 @@ body {
   -webkit-filter: drop-shadow(13px 10px 2px rgba(0, 0, 0, 0.3490196078));
 }
 
-.result_section-monster_description {
+.result_section-monster_description-container {
   width: 400px;
   height: 400px;
   border: 1px solid black;
   overflow: scroll;
 }
-.result_section-monster_description p {
-  margin: 1.5rem;
+.result_section-monster_description-container h4 {
+  margin: 0;
+}
+.result_section-monster_description-container p {
+  margin: 0;
+  font-family: "Nanum Myeongjo", serif;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
-.monster-main_description {
+p.monster-main_description {
+  margin: 1.5rem;
   font-size: 1.2rem;
 }
 
@@ -485,7 +489,6 @@ body {
 @media screen and (max-width: 930px) {
   .decorative-corner_bottom {
     left: calc(100% - 30px);
-    top: 16px;
   }
   .result_section-monster_image-container {
     width: 275px;
@@ -498,12 +501,18 @@ body {
     width: 200px;
     height: 200px;
   }
-  .result_section-monster_description {
+  .result_section-monster_description-container {
     width: 300px;
     height: 300px;
   }
+  .result_section-monster_description-container h4 {
+    font-size: 0.9rem;
+  }
+  .result_section-monster_description-container p {
+    font-size: 0.9rem;
+  }
   p.monster-main_description {
-    font-size: 1rem;
+    margin: 1rem;
     margin-top: -1rem;
   }
   .result_section-ailments {
@@ -527,7 +536,7 @@ body {
   }
 }
 @media screen and (max-width: 715px) {
-  .result_section-image__description {
+  .result_section-image_and_description-container {
     flex-direction: column;
   }
   .result_section-monster_image-container {
@@ -568,7 +577,6 @@ body {
     left: calc(100% - 20px);
   }
   .decorative-corner_bottom-header {
-    top: 20px;
     left: calc(100% - 30px);
   }
   .result_section-ailment {
