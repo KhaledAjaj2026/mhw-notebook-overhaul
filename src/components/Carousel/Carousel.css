@@ -9,10 +9,23 @@
   margin-left: 17.5vw;
 }
 
+@media screen and (min-height: 800px) {
+  #carousel-container {
+    margin: 6rem 0;
+  }
+}
+@media screen and (max-width: 930px) {
+  #carousel-container {
+    margin: 4rem 0;
+  }
+  .carousel_slide {
+    width: 80vw;
+    margin-left: 10vw;
+  }
+}
 @media screen and (max-width: 600px) {
   #carousel-container {
     background: none;
-    margin: 4rem 0;
   }
   .carousel_slide {
     width: 100vw;

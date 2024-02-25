@@ -149,6 +149,16 @@ body {
   margin: 2rem 0 0 20vw;
 }
 
+@media screen and (min-height: 800px) {
+  .main_header-container {
+    margin-top: 6rem;
+  }
+}
+@media screen and (max-width: 930px) {
+  .main_header-container {
+    margin-top: 4rem;
+  }
+}
 @media screen and (max-width: 600px) {
   .main_header-container {
     margin-top: 4rem;
