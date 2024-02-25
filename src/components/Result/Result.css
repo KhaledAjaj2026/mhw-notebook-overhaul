@@ -391,8 +391,7 @@ p.monster-main_description {
 
 .result_section-ailment {
   margin-top: 2rem;
-  padding: 1rem;
-  padding-left: 3rem;
+  padding: 1rem 2rem;
   border: 1px solid black;
   display: flex;
   justify-content: space-evenly;
@@ -416,6 +415,7 @@ p.monster-main_description {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
+  text-align: center;
 }
 
 .result_section-resistances__weaknesses {
@@ -530,10 +530,6 @@ p.monster-main_description {
     width: 300px;
     height: 250px;
   }
-  .result_section-resistances li,
-  .result_section-weaknesses li {
-    font-size: 1.5rem;
-  }
 }
 @media screen and (max-width: 715px) {
   .result_section-image_and_description-container {
@@ -555,6 +551,11 @@ p.monster-main_description {
   }
   .result_section-rewards li {
     font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .result_section-rewards ul :first-of-type::marker {
+    content: unset;
   }
 }
 @media screen and (max-width: 500px) {
