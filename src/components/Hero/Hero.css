@@ -104,6 +104,11 @@ body {
   display: block;
 }
 
+.dim {
+  filter: brightness(0.75);
+  transition: filter 0.3s ease-in-out;
+}
+
 .content-container {
   position: relative;
   min-height: 100vh;
@@ -142,4 +147,25 @@ body {
   font-family: "Libre Caslon Text", serif;
   width: 60vw;
   margin: 2rem 0 0 20vw;
+}
+
+@media screen and (max-width: 600px) {
+  .main_header-container {
+    margin-top: 4rem;
+  }
+  .main_header-title {
+    font-size: 2rem;
+  }
+  .main_header-title_sub {
+    font-size: 3rem;
+  }
+  .hero-caption {
+    width: 80vw;
+    margin: auto;
+  }
+}
+@media screen and (max-height: 700px) {
+  .main_header-container {
+    margin: 2.5rem 0;
+  }
 }/*# sourceMappingURL=Hero.css.map */

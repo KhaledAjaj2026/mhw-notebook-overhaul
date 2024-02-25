@@ -10,8 +10,17 @@
 }
 
 @media screen and (max-width: 600px) {
+  #carousel-container {
+    background: none;
+    margin: 4rem 0;
+  }
   .carousel_slide {
     width: 100vw;
     margin-left: 0;
+  }
+}
+@media screen and (max-height: 700px) {
+  #carousel-container {
+    margin: 2rem 0;
   }
 }/*# sourceMappingURL=Carousel.css.map */
