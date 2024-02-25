@@ -115,7 +115,7 @@ form {
   top: 15rem;
   left: calc(25vw - 1.5rem);
   width: calc(60vw + 3rem);
-  transition: opacity 0.5s ease-out, top 0.4s ease-out;
+  transition: opacity 0.5s ease-out, top 0.4s 0.2s ease-out;
 }
 
 .search-container {
@@ -170,4 +170,14 @@ form {
 
 .raise_search {
   top: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  form {
+    left: calc(10.5vw - 1.5rem);
+    width: calc(80vw + 3rem);
+  }
+  #monster-search {
+    width: calc(80vw - 1.5rem);
+  }
 }/*# sourceMappingURL=Search.css.map */
