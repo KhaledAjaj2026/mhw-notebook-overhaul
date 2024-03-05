@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Autocomplete from '@mui/material/Autocomplete';
 import Box from '@mui/material/Box';
 import { createFilterOptions } from '@mui/material/Autocomplete';
@@ -125,6 +125,12 @@ export default function Search({
 		}
 	};
 
+	let viewportWidth = window.innerWidth;
+
+	useEffect(() => {
+		viewportWidth = window.innerWidth;
+	}, []);
+
 	return (
 		<>
 			<form
@@ -154,7 +160,7 @@ export default function Search({
 								component='li'
 								sx={{
 									fontFamily: "'Linden Hill', serif",
-									fontSize: '1.5rem',
+									fontSize: `${viewportWidth >= 1600 ? '2.5rem' : '1.5rem'}`,
 									letterSpacing: '2px',
 								}}
 								{...props}

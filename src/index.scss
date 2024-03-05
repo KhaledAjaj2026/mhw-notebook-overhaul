@@ -120,3 +120,13 @@ body {
     filter: brightness(0.75);
     transition: filter 0.3s ease-in-out;
 }
+
+@media screen and (min-height: 1050px) {
+    .nav-button {
+        width: 250px;
+        height: 70px;
+        font-size: 2rem;
+        margin: 3rem;
+        margin-left: calc(50% - 125px);
+    }
+}

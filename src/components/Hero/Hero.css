@@ -109,6 +109,15 @@ body {
   transition: filter 0.3s ease-in-out;
 }
 
+@media screen and (min-height: 1050px) {
+  .nav-button {
+    width: 250px;
+    height: 70px;
+    font-size: 2rem;
+    margin: 3rem;
+    margin-left: calc(50% - 125px);
+  }
+}
 .content-container {
   position: relative;
   min-height: 100vh;
@@ -149,12 +158,26 @@ body {
   margin: 2rem 0 0 20vw;
 }
 
-@media screen and (min-height: 800px) {
-  .main_header-container {
-    margin-top: 6rem;
+@media screen and (orientation: portrait) {
+  .content-container {
+    margin-top: 20%;
   }
 }
-@media screen and (max-width: 930px) {
+@media screen and (min-width: 901px) {
+  .main_header-container {
+    margin-top: 2rem;
+  }
+  .main_header-title {
+    font-size: 3.5rem;
+  }
+  .main_header-title_sub {
+    font-size: 4.5rem;
+  }
+  .hero-caption {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 900px) {
   .main_header-container {
     margin-top: 4rem;
   }
@@ -172,10 +195,5 @@ body {
   .hero-caption {
     width: 80vw;
     margin: auto;
-  }
-}
-@media screen and (max-height: 700px) {
-  .main_header-container {
-    margin: 2.5rem 0;
   }
 }/*# sourceMappingURL=Hero.css.map */

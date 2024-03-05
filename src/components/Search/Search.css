@@ -109,6 +109,15 @@ body {
   transition: filter 0.3s ease-in-out;
 }
 
+@media screen and (min-height: 1050px) {
+  .nav-button {
+    width: 250px;
+    height: 70px;
+    font-size: 2rem;
+    margin: 3rem;
+    margin-left: calc(50% - 125px);
+  }
+}
 form {
   position: absolute;
   z-index: 2;
@@ -172,6 +181,32 @@ form {
   top: 2rem;
 }
 
+@media screen and (min-width: 1600px) {
+  .search-container {
+    height: 5rem;
+  }
+  #monster-search {
+    height: 5rem;
+    font-size: 2.5rem;
+    border-radius: 12px 0 0 0;
+    padding-left: 2.5rem;
+  }
+  .search_label {
+    font-size: 2rem;
+  }
+  .search_submit {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 0 0 12px 0;
+  }
+  .search_icon {
+    height: 3rem;
+  }
+  .autocomplete-monster_icon {
+    width: 50px;
+    margin: 6px 40px 6px 20px;
+  }
+}
 @media screen and (max-width: 600px) {
   form {
     left: calc(10.5vw - 1.5rem);
