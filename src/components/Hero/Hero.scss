@@ -36,6 +36,7 @@
 .hero-caption {
     text-align: center;
     font-family: index.$sectionSubheadingFont;
+    font-size: 1.2rem;
     width: 60vw;
     margin: 2rem 0 0 20vw;
 }
@@ -46,7 +47,7 @@
     }
 }
 
-@media screen and (min-width: 901px) {
+@media screen and (min-width: 1600px) {
     .main_header-container {
         margin-top: 2rem;
     }
@@ -61,12 +62,6 @@
 
     .hero-caption {
         font-size: 1.7rem;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .main_header-container {
-        margin-top: 4rem;
     }
 }
 

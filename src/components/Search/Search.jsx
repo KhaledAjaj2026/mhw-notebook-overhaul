@@ -137,6 +137,7 @@ export default function Search({
 				className={`${showSearch ? 'appear' : 'disappear'}${
 					result.name === '' ? '' : ' raise_search'
 				}`}
+				onSubmit={(e) => e.preventDefault()}
 			>
 				<label htmlFor='monster-search' className='search_label'>
 					Search for a monster below
@@ -151,6 +152,7 @@ export default function Search({
 						filterOptions={filterOptions}
 						onFocus={handleFocus}
 						onBlur={handleFocus}
+						openOnFocus={true}
 						getOptionLabel={(option) => option.label}
 						isOptionEqualToValue={(option, value) =>
 							option.label === value.label

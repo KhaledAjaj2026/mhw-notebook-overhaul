@@ -154,6 +154,7 @@ body {
 .hero-caption {
   text-align: center;
   font-family: "Libre Caslon Text", serif;
+  font-size: 1.2rem;
   width: 60vw;
   margin: 2rem 0 0 20vw;
 }
@@ -163,7 +164,7 @@ body {
     margin-top: 20%;
   }
 }
-@media screen and (min-width: 901px) {
+@media screen and (min-width: 1600px) {
   .main_header-container {
     margin-top: 2rem;
   }
@@ -175,11 +176,6 @@ body {
   }
   .hero-caption {
     font-size: 1.7rem;
-  }
-}
-@media screen and (max-width: 900px) {
-  .main_header-container {
-    margin-top: 4rem;
   }
 }
 @media screen and (max-width: 600px) {
