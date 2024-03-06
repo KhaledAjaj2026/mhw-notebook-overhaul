@@ -3,15 +3,15 @@ import './Footer.css';
 
 export default function Footer() {
 	return (
-		<footer className='footer-container'>
-			<div className='footer_title__navigation'>
+		<footer>
+			<div className='footer-title_container'>
 				<h4 className='footer_title'>
 					Monster Hunter World
 					<br />
 					Hunters Notes
 				</h4>
 			</div>
-			<div className='footer_disclaimer__copyright'>
+			<div className='footer-disclaimer_and_copyright'>
 				<p className='footer_disclaimer'>
 					DISCLAIMER: Monster Hunter, Monster Hunter World, and all assets from
 					the Monster Hunter franchise and their rights all belong to Capcom.

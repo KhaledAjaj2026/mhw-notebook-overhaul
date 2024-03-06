@@ -6,7 +6,7 @@ footer {
   margin-top: 5rem;
 }
 
-.footer_title__navigation {
+.footer-title_container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,12 +21,6 @@ footer {
   margin: 2rem 0 1rem 0;
 }
 
-.footer_navigation ul {
-  list-style-type: none;
-  display: flex;
-  padding: 0;
-}
-
 .footer_navigation-link {
   text-decoration: none;
   margin: auto 3rem;
@@ -34,31 +28,7 @@ footer {
   font-family: "Nanum Myengjo", serif;
 }
 
-.hover-underline-animation {
-  display: inline-block;
-  position: relative;
-  color: #ffffff;
-}
-
-.hover-underline-animation::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #70bc66;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.hover-underline-animation:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-.footer_disclaimer__copyright {
+.footer-disclaimer_and_copyright {
   text-align: center;
   font-size: 0.7rem;
   font-family: "Nanum Myengjo", serif;

@@ -142,7 +142,7 @@ export default function Search({
 				<label htmlFor='monster-search' className='search_label'>
 					Search for a monster below
 				</label>
-				<div className='search-container'>
+				<div className='search_container'>
 					<Autocomplete
 						id='monster-search'
 						options={monsters}

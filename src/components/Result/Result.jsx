@@ -71,14 +71,14 @@ export default function Result({
 							alt={item.element}
 							className={`element_icon`}
 						/>
-						<li className={`element-item`}>{item.element}</li>
+						<li className={`element_item`}>{item.element}</li>
 					</div>
 				);
 			});
 		} else {
 			return (
 				<div className={`element_item-container`}>
-					<li className='element-item'>None</li>
+					<li className='element_item'>None</li>
 				</div>
 			);
 		}
@@ -113,7 +113,7 @@ export default function Result({
 	return (
 		<>
 			{loading ? (
-				<div className='loading_screen-result'>
+				<div className='loading_screen loading_screen-result'>
 					<div className='loading_screen-animation'>
 						<div className='loading-animation'></div>
 						<p>Loading...</p>

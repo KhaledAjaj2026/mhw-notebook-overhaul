@@ -127,7 +127,7 @@ form {
   transition: opacity 0.5s ease-out, top 0.4s 0.2s ease-out;
 }
 
-.search-container {
+.search_container {
   display: flex;
   height: 3rem;
 }
