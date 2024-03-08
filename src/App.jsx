@@ -19,7 +19,7 @@ export default function App() {
 	 * focus - check if Search component is focused or blurred.
 	 * result - determine whether search query results in API fetch or not.
 	 */
-	const [loading, setLoading] = new useState(true);
+	const [loading, setLoading] = new useState(false);
 	const [disabled, setDisabled] = new useState(true);
 	const [input, setInput] = new useState('');
 	const [showSearch, setShowSearch] = new useState(false);
@@ -46,29 +46,32 @@ export default function App() {
 	};
 	const handleFocus = () => setFocus(!focus);
 	const handleResult = () => {
-		axios
-			.get('https://mhw-db.com/monsters')
-			.then((response) => {
-				const monster = response.data.filter(
-					(monster) => monster.name === input
-				);
-				if (monster) {
-					setResult({
-						name: monster[0].name,
-						species: monster[0].species,
-						location: monster[0].locations[0].name,
-						description: monster[0].description,
-						ailments: monster[0].ailments,
-						weaknesses: monster[0].weaknesses,
-						resistances: monster[0].resistances,
-						rewards: monster[0].rewards,
-					});
-					handleBiome(monster[0].locations[0].name);
-				} else {
-					alert('Monster not found, or incorrect input');
-				}
-			})
-			.catch((err) => console.error(err));
+		if (input.toLowerCase() !== result.name.toLowerCase()) {
+			axios
+				.get('https://mhw-db.com/monsters')
+				.then((response) => {
+					const monster = response.data.filter(
+						(monster) => monster.name.toLowerCase() === input.toLowerCase()
+					);
+					if (monster.length > 0) {
+						setResult({
+							name: monster[0].name,
+							species: monster[0].species,
+							location: monster[0].locations[0].name,
+							description: monster[0].description,
+							ailments: monster[0].ailments,
+							weaknesses: monster[0].weaknesses,
+							resistances: monster[0].resistances,
+							rewards: monster[0].rewards,
+						});
+						handleBiome(monster[0].locations[0].name);
+					} else {
+						alert('Monster not found, or incorrect input');
+						setLoading(false);
+					}
+				})
+				.catch((err) => console.error(err));
+		}
 	};
 
 	// Side effect - website's initial load.

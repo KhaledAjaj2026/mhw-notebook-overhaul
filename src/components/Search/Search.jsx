@@ -114,22 +114,27 @@ export default function Search({
 	handleFocus,
 	handleLoading,
 }) {
-	/** Measure input length; show result if > 0, alert if <= 0. */
-	const checkInput = () => {
-		if (input.length > 0) {
-			handleResult(input);
-			handleInput('');
-			handleLoading(true);
-		} else {
-			alert('Please enter monster name before submitting');
-		}
-	};
-
+	/** Measure viewport width to set font-size of autocomplete options. */
 	let viewportWidth = window.innerWidth;
 
 	useEffect(() => {
 		viewportWidth = window.innerWidth;
 	}, []);
+
+	/** Measure input length; show result if > 0, alert if <= 0. */
+	const checkInput = () => {
+		if (input.toLowerCase() === result.name.toLowerCase()) {
+			alert('Duplicate name entered');
+			handleLoading(false);
+		} else if (input.length > 0) {
+			console.log('checking input');
+			handleResult(input);
+			handleLoading(true);
+		} else {
+			alert('Please enter monster name before submitting');
+			handleLoading(false);
+		}
+	};
 
 	return (
 		<>
@@ -147,13 +152,19 @@ export default function Search({
 						id='monster-search'
 						options={monsters}
 						disabled={disabled}
-						onChange={(event, value) => (value ? handleInput(value.label) : '')}
-						onInput={(e) => handleInput(e.target.value)}
+						freeSolo
+						onChange={(event, value) => {
+							if (value && value.label !== input) {
+								handleInput(value.label);
+							}
+						}}
+						onInputChange={(event, value) => {
+							handleInput(value);
+						}}
 						filterOptions={filterOptions}
 						onFocus={handleFocus}
 						onBlur={handleFocus}
 						openOnFocus={true}
-						getOptionLabel={(option) => option.label}
 						isOptionEqualToValue={(option, value) =>
 							option.label === value.label
 						}
@@ -179,7 +190,7 @@ export default function Search({
 						renderInput={(params) => (
 							<div ref={params.InputProps.ref}>
 								<input
-									type='text'
+									type='search'
 									name='monster-search'
 									placeholder='E.g. Anjanath'
 									autoComplete='off'
