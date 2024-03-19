@@ -1,0 +1,18 @@
+.error_message-container {
+    position: fixed;
+    top: 50px;
+    left: 10vw;
+    z-index: 3;
+    margin: auto;
+    width: 80vw;
+    border: 3px solid rgb(220, 40, 40);
+    border-radius: 10px;
+    background-color: rgba(61, 20, 20, 0.449);
+}
+
+.error_message-text {
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(242, 78, 78);
+    text-align: center;
+}

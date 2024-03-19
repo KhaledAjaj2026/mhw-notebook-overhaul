@@ -3,6 +3,7 @@ import Autocomplete from '@mui/material/Autocomplete';
 import Box from '@mui/material/Box';
 import { createFilterOptions } from '@mui/material/Autocomplete';
 import './Search.css';
+import ErrorMessage from '../ErrorMessage/ErrorMessage';
 
 /** Location of directory for monster icon images. */
 const monsterIconsLocation = '/src/assets/monster-icons/';
@@ -113,6 +114,7 @@ export default function Search({
 	disabled,
 	handleFocus,
 	handleLoading,
+	error,
 }) {
 	/** Measure viewport width to set font-size of autocomplete options. */
 	let viewportWidth = window.innerWidth;
@@ -138,6 +140,8 @@ export default function Search({
 
 	return (
 		<>
+			{/* {error ? <ErrorMessage /> : ''} */}
+			<ErrorMessage />
 			<form
 				className={`${showSearch ? 'appear' : 'disappear'}${
 					result.name === '' ? '' : ' raise_search'
