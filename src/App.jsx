@@ -23,7 +23,7 @@ export default function App() {
 	const [disabled, setDisabled] = new useState(true);
 	const [input, setInput] = new useState('');
 	const [showSearch, setShowSearch] = new useState(false);
-	const [error, setError] = new useState(false);
+	const [error, setError] = new useState('');
 	const [biome, setBiome] = new useState('astera');
 	const [focus, setFocus] = new useState(false);
 	const [result, setResult] = new useState({
@@ -41,6 +41,7 @@ export default function App() {
 	const handleDisabled = () => setDisabled(false);
 	const handleInput = (val) => setInput(val);
 	const handleShowSearch = () => setShowSearch(!showSearch);
+	const handleError = (err) => setError(err);
 	const handleBiome = (location) => {
 		const biomeName = nameToHyphen(location);
 		setBiome(biomeName);
@@ -67,9 +68,8 @@ export default function App() {
 						});
 						handleBiome(monster[0].locations[0].name);
 					} else {
-						// alert('Monster not found, or incorrect input');
-						setError(true);
-						setTimeout(() => setError(false), 3000);
+						setError('Monster not found, or incorrect input');
+						setTimeout(() => setError(''), 3000);
 						setLoading(false);
 					}
 				})
@@ -132,6 +132,7 @@ export default function App() {
 				handleFocus={handleFocus}
 				handleLoading={handleLoading}
 				error={error}
+				handleError={handleError}
 			/>
 			<Result
 				result={result}

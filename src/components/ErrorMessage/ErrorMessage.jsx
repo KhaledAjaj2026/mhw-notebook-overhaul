@@ -1,12 +1,10 @@
 import React from 'react';
 import './ErrorMessage.css';
 
-export default function ErrorMessage() {
+export default function ErrorMessage({ error }) {
 	return (
 		<div className='error_message-container'>
-			<p className='error_message-text'>
-				Error: No monster found or incorrect input
-			</p>
+			<p className='error_message-text'>{error}</p>
 		</div>
 	);
 }

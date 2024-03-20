@@ -115,6 +115,7 @@ export default function Search({
 	handleFocus,
 	handleLoading,
 	error,
+	handleError,
 }) {
 	/** Measure viewport width to set font-size of autocomplete options. */
 	let viewportWidth = window.innerWidth;
@@ -126,21 +127,22 @@ export default function Search({
 	/** Measure input length; show result if > 0, alert if <= 0. */
 	const checkInput = () => {
 		if (input.toLowerCase() === result.name.toLowerCase()) {
-			alert('Duplicate name entered');
+			handleError('Please enter a new name to search');
+			setTimeout(() => handleError(''), 3000);
 			handleLoading(false);
 		} else if (input.length > 0) {
-			console.log('checking input');
 			handleResult(input);
 			handleLoading(true);
 		} else {
-			alert('Please enter monster name before submitting');
+			handleError('Please enter monster name before submitting');
+			setTimeout(() => handleError(''), 3000);
 			handleLoading(false);
 		}
 	};
 
 	return (
 		<>
-			{error ? <ErrorMessage /> : ''}
+			{error ? <ErrorMessage error={error} /> : ''}
 			<form
 				className={`${showSearch ? 'appear' : 'disappear'}${
 					result.name === '' ? '' : ' raise_search'
