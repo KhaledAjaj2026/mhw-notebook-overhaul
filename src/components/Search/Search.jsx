@@ -140,8 +140,7 @@ export default function Search({
 
 	return (
 		<>
-			{/* {error ? <ErrorMessage /> : ''} */}
-			<ErrorMessage />
+			{error ? <ErrorMessage /> : ''}
 			<form
 				className={`${showSearch ? 'appear' : 'disappear'}${
 					result.name === '' ? '' : ' raise_search'

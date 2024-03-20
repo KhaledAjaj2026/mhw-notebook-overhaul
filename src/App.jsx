@@ -69,7 +69,7 @@ export default function App() {
 					} else {
 						// alert('Monster not found, or incorrect input');
 						setError(true);
-						setTimeout(() => setError(false), 5000);
+						setTimeout(() => setError(false), 3000);
 						setLoading(false);
 					}
 				})
