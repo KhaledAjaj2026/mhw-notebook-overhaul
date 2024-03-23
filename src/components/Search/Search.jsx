@@ -150,7 +150,7 @@ export default function Search({
 				onSubmit={(e) => e.preventDefault()}
 			>
 				<label htmlFor='monster-search' className='search_label'>
-					Search for a monster below
+					Search for a monster
 				</label>
 				<div className='search_container'>
 					<Autocomplete
