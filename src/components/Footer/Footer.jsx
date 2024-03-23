@@ -5,11 +5,11 @@ export default function Footer() {
 	return (
 		<footer>
 			<div className='footer-title_container'>
-				<h4 className='footer_title'>
+				<h2 className='footer_title'>
 					Monster Hunter World
 					<br />
 					Hunters Notes
-				</h4>
+				</h2>
 			</div>
 			<div className='footer-disclaimer_and_copyright'>
 				<p className='footer_disclaimer'>
