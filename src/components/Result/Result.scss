@@ -405,6 +405,101 @@ p.monster-main_description {
     }
 }
 
+@media screen and (min-width: 1600px) {
+    #component_result-container {
+        margin-top: 15rem;
+    }
+
+    .monster-name {
+        font-size: 4rem;
+        margin: 4rem 0 6rem;
+    }
+
+    .section_subheading {
+        font-size: 3rem;
+    }
+
+    .result_section-monster_image-container,
+    .result_section-monster_description-container {
+        width: 600px;
+        height: 600px;
+    }
+
+    .result_section-image_border {
+        width: 665px;
+    }
+
+    .result_section-monster_image {
+        width: 85%;
+        height: 85%;
+    }
+
+    .monster_attribute {
+        height: 60px;
+
+        h4 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1.8rem;
+        }
+    }
+
+    p.monster-main_description {
+        font-size: 1.8rem;
+    }
+
+    .result_section-ailment_name {
+        font-size: 2.5rem;
+    }
+
+    .result_section-ailment_icon {
+        width: 125px;
+    }
+
+    .result_section-ailment_description {
+        font-size: 1.7rem;
+    }
+
+    .result_section-resistances__weaknesses {
+        .result_section-heading {
+            margin-bottom: 0;
+            padding: 0;
+            width: 600px;
+            margin-left: -125px;
+        }
+
+        .decorative-corner {
+            left: -125px;
+        }
+
+        .decorative-corner_bottom {
+            left: calc(100% + 97px);
+        }
+    }
+
+    .result_section-resistances ul,
+    .result_section-weaknesses ul {
+        width: 600px;
+        height: 580px;
+    }
+
+    .element_item {
+        margin: 20px 0;
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+
+    .element_icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .result_section-rewards li {
+        font-size: 2rem;
+    }
+}
 
 @media screen and (max-width: 930px) {
     .decorative-corner_bottom {

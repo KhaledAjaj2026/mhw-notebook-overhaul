@@ -209,7 +209,7 @@ form {
 }
 @media screen and (max-width: 600px) {
   form {
-    left: calc(10.5vw - 1.5rem);
+    left: calc(13.5vw - 1.5rem);
     width: calc(80vw + 3rem);
   }
   #monster-search {
