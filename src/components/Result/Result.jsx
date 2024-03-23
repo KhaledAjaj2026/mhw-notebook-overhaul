@@ -25,7 +25,7 @@ export default function Result({
 	const renderAilmentList = () => {
 		if (result.ailments.length > 0) {
 			return result.ailments.map((ailment, i) => {
-				const ailmentName = ailment.name.replace(/\s+/g, '');
+				const ailmentName = ailment.name.replace(/\s+/g, '').toLowerCase();
 
 				return (
 					<div
@@ -34,7 +34,7 @@ export default function Result({
 					>
 						<p className='result_section-ailment_name'>{ailment.name}</p>
 						<img
-							src={`/public/assets/icons/${ailmentName}.png`}
+							src={`/assets/icons/${ailmentName}.png`}
 							className='result_section-ailment_icon'
 							alt={ailment.name}
 						/>
