@@ -104,7 +104,7 @@ export default function App() {
 			<div
 				className='background-image'
 				style={{
-					backgroundImage: `linear-gradient(to bottom, #232B2466 0%, #3d4c0063 100%), url(src/assets/biomes/${biome}.jpg)`,
+					backgroundImage: `linear-gradient(to bottom, #232B2466 0%, #3d4c0063 100%), url(/assets/biomes/${biome}.jpg)`,
 				}}
 			></div>
 			{loading ? (

@@ -1,6 +1,6 @@
 import React from 'react';
 import Carousel from '../Carousel/Carousel';
-import flare from '/src/assets/misc/lens-flare-green.png';
+import flare from '/assets/misc/lens-flare-green.png';
 import './Hero.css';
 
 export default function Hero({

@@ -6,7 +6,7 @@ import './Search.css';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 
 /** Location of directory for monster icon images. */
-const monsterIconsLocation = '/src/assets/monster-icons/';
+const monsterIconsLocation = '/assets/monster-icons/';
 
 /** MUI Autocomplete options
  * @property {string} label - monster name
@@ -206,7 +206,7 @@ export default function Search({
 					/>
 					<button type='button' className='search_submit' onClick={checkInput}>
 						<img
-							src='src/assets/misc/magnifying-glass-9.svg'
+							src='/assets/misc/magnifying-glass-9.svg'
 							className='search_icon'
 							alt='magnifying glass'
 						/>

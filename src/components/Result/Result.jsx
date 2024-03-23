@@ -1,7 +1,7 @@
 import React from 'react';
-import border from '/src/assets/misc/fancy-border.png';
-import topCorner from '/src/assets/misc/corner-design-topleft.png';
-import bottomCorner from '/src/assets/misc/corner-design-bottomright.png';
+import border from '/assets/misc/fancy-border.png';
+import topCorner from '/assets/misc/corner-design-topleft.png';
+import bottomCorner from '/assets/misc/corner-design-bottomright.png';
 import nameToHyphen from '../../utils/hyphen';
 import {
 	biomeThemeImage,
@@ -9,7 +9,7 @@ import {
 	biomeThemeSection,
 } from '../../utils/themes';
 import './Result.css';
-const monsterImgLocation = '/src/assets/monsters-min/';
+const monsterImgLocation = '/assets/monsters-min/';
 
 export default function Result({
 	result,
@@ -34,7 +34,7 @@ export default function Result({
 					>
 						<p className='result_section-ailment_name'>{ailment.name}</p>
 						<img
-							src={`src/assets/icons/${ailmentName}.png`}
+							src={`/public/assets/icons/${ailmentName}.png`}
 							className='result_section-ailment_icon'
 							alt={ailment.name}
 						/>
@@ -67,7 +67,7 @@ export default function Result({
 				return (
 					<div key={`element-${i}`} className={`element_item-container`}>
 						<img
-							src={`src/assets/icons/${itemName}.png`}
+							src={`/assets/icons/${itemName}.png`}
 							alt={item.element}
 							className={`element_icon`}
 						/>
