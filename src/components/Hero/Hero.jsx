@@ -3,18 +3,9 @@ import Carousel from '../Carousel/Carousel';
 import flare from '/assets/misc/lens-flare-green.png';
 import './Hero.css';
 
-export default function Hero({
-	showSearch,
-	handleShowSearch,
-	result,
-	handleDisabled,
-}) {
+export default function Hero({ handleShowSearch }) {
 	return (
-		<div
-			className={`content-container${showSearch ? ' disappear' : ' appear'}${
-				result.name === '' ? ' show' : ' hide'
-			}`}
-		>
+		<div className={'content-container'}>
 			<header
 				className='main_header-container'
 				data-aos='fade-in'
@@ -28,7 +19,7 @@ export default function Hero({
 				</h1>
 				<img className='main_header-flare' src={flare} alt='lens flare' />
 			</header>
-			<Carousel showSearch={showSearch} />
+			<Carousel />
 			<p
 				className='hero-caption'
 				data-aos='fade-in'
@@ -43,10 +34,7 @@ export default function Hero({
 			<button
 				type='button'
 				className='nav-button'
-				onClick={() => {
-					handleShowSearch();
-					handleDisabled();
-				}}
+				onClick={() => handleShowSearch()}
 				data-aos='fade-in'
 				data-aos-duration='2000'
 				data-aos-delay='2000'

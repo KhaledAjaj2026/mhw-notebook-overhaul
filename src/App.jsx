@@ -114,26 +114,21 @@ export default function App() {
 						<p>Loading...</p>
 					</div>
 				</div>
-			) : (
-				<Hero
-					showSearch={showSearch}
-					handleShowSearch={handleShowSearch}
+			) : showSearch ? (
+				<Search
+					input={input}
+					handleInput={handleInput}
 					result={result}
-					handleDisabled={handleDisabled}
+					handleResult={handleResult}
+					disabled={disabled}
+					handleFocus={handleFocus}
+					handleLoading={handleLoading}
+					error={error}
+					handleError={handleError}
 				/>
+			) : (
+				<Hero handleShowSearch={handleShowSearch} />
 			)}
-			<Search
-				showSearch={showSearch}
-				input={input}
-				handleInput={handleInput}
-				result={result}
-				handleResult={handleResult}
-				disabled={disabled}
-				handleFocus={handleFocus}
-				handleLoading={handleLoading}
-				error={error}
-				handleError={handleError}
-			/>
 			<Result
 				result={result}
 				biome={biome}

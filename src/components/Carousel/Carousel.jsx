@@ -43,11 +43,10 @@ const slides = [
 	</video>,
 ];
 
-export default function Carousel({ showSearch }) {
+export default function Carousel() {
 	return (
 		<div
 			id='carousel-container'
-			className={`${showSearch ? '' : ''}`}
 			data-aos='fade-in'
 			data-aos-duration='3000'
 			data-aos-delay='1000'

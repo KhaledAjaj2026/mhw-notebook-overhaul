@@ -144,9 +144,7 @@ export default function Search({
 		<>
 			{error ? <ErrorMessage error={error} /> : ''}
 			<form
-				className={`${showSearch ? 'appear' : 'disappear'}${
-					result.name === '' ? '' : ' raise_search'
-				}`}
+				className={`${result.name === '' ? '' : ' raise_search'}`}
 				onSubmit={(e) => e.preventDefault()}
 			>
 				<label htmlFor='monster-search' className='search_label'>
