@@ -111,7 +111,6 @@ export default function Search({
 	handleInput,
 	result,
 	handleResult,
-	disabled,
 	handleFocus,
 	handleLoading,
 	error,
@@ -154,7 +153,6 @@ export default function Search({
 					<Autocomplete
 						id='monster-search'
 						options={monsters}
-						disabled={disabled}
 						freeSolo
 						onChange={(event, value) => {
 							if (value && value.label !== input) {

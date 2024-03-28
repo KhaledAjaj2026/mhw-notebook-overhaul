@@ -1,4 +1,4 @@
-footer {
+#information-container {
   background: #322423;
   position: relative;
   width: 100%;
@@ -67,4 +67,4 @@ footer {
     font-size: 1.2rem;
     margin: auto 2rem;
   }
-}/*# sourceMappingURL=Footer.css.map */
+}/*# sourceMappingURL=Info.css.map */

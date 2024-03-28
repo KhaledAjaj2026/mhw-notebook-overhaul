@@ -1,9 +1,9 @@
 import React from 'react';
-import './Footer.css';
+import './Info.css';
 
-export default function Footer() {
+export default function Info() {
 	return (
-		<footer>
+		<div id='information-container'>
 			<div className='footer-title_container'>
 				<h2 className='footer_title'>
 					Monster Hunter World
@@ -24,6 +24,6 @@ export default function Footer() {
 					Copyright © 2024 Khaled Ajaj. All rights reserved.
 				</p>
 			</div>
-		</footer>
+		</div>
 	);
 }

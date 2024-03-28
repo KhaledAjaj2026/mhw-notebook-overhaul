@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Hero from './components/Hero/Hero';
 import Search from './components/Search/Search';
 import Result from '/src/components/Result/Result';
-import Footer from '/src/components/Footer/Footer';
+import Info from './components/About/Info';
 import nameToHyphen from './utils/hyphen';
 import Aos from 'aos';
 import axios from 'axios';
@@ -12,17 +12,17 @@ import './App.css';
 export default function App() {
 	/**
 	 * loading - check for initial site load, used for slower connections.
-	 * disabled - set "disabled" property on Search component.
 	 * input - capture user input, or selected Autocomplete value.
 	 * showSearch - show Search component, toggle upon clicking "Explore" btn.
+	 * showInfo - show Info component, toggle upon clicking "i" btn.
 	 * biome - determine which background image to display based on monster's biome.
 	 * focus - check if Search component is focused or blurred.
 	 * result - determine whether search query results in API fetch or not.
 	 */
 	const [loading, setLoading] = new useState(false);
-	const [disabled, setDisabled] = new useState(true);
 	const [input, setInput] = new useState('');
 	const [showSearch, setShowSearch] = new useState(false);
+	const [showInfo, setShowInfo] = new useState(false);
 	const [error, setError] = new useState('');
 	const [biome, setBiome] = new useState('astera');
 	const [focus, setFocus] = new useState(false);
@@ -120,7 +120,6 @@ export default function App() {
 					handleInput={handleInput}
 					result={result}
 					handleResult={handleResult}
-					disabled={disabled}
 					handleFocus={handleFocus}
 					handleLoading={handleLoading}
 					error={error}
@@ -136,7 +135,14 @@ export default function App() {
 				loading={loading}
 				handleLoading={handleLoading}
 			/>
-			{loading ? null : <Footer />}
+			<button
+				type='button'
+				className='info-button'
+				onClick={() => setShowInfo(true)}
+			>
+				i
+			</button>
+			{showInfo ? <Info /> : null}
 		</div>
 	);
 }
