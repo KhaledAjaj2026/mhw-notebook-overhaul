@@ -138,9 +138,9 @@ export default function App() {
 			<button
 				type='button'
 				className='info-button'
-				onClick={() => setShowInfo(true)}
+				onClick={() => setShowInfo(!showInfo)}
 			>
-				i
+				{showInfo ? 'X' : 'i'}
 			</button>
 			{showInfo ? <Info /> : null}
 		</div>
