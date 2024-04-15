@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Hero from './components/Hero/Hero';
 import Search from './components/Search/Search';
 import Result from '/src/components/Result/Result';
-import Info from './components/About/Info';
 import nameToHyphen from './utils/hyphen';
 import Aos from 'aos';
 import axios from 'axios';
@@ -142,7 +141,6 @@ export default function App() {
 			>
 				{showInfo ? 'X' : 'i'}
 			</button>
-			{showInfo ? <Info /> : null}
 		</div>
 	);
 }
