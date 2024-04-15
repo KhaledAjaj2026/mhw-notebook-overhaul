@@ -134,13 +134,6 @@ export default function App() {
 				loading={loading}
 				handleLoading={handleLoading}
 			/>
-			<button
-				type='button'
-				className='info-button'
-				onClick={() => setShowInfo(!showInfo)}
-			>
-				{showInfo ? 'X' : 'i'}
-			</button>
 		</div>
 	);
 }
