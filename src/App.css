@@ -12,6 +12,7 @@
 body {
   height: 100%;
   margin: 0;
+  background-attachment: fixed;
 }
 
 @keyframes buttonHover {
@@ -132,9 +133,8 @@ body {
   left: 0;
   right: 0;
   z-index: 0;
-  min-height: 100vh;
   background: linear-gradient(to bottom, rgba(21, 27, 22, 0.3019607843) 0%, rgba(28, 31, 15, 0.3019607843) 100%);
-  background-size: 100vw 100vh;
+  background-size: cover;
   background-attachment: fixed;
 }
 
