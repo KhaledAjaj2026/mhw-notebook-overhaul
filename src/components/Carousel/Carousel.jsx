@@ -11,6 +11,7 @@ const slides = [
 		muted={true}
 		loop={true}
 		poster='/assets/turf-wars/turf-war_poster-1.png'
+		playsInline
 	>
 		<source src='/assets/turf-wars/turf-war_1.mp4' type='video/mp4' />
 	</video>,
@@ -20,6 +21,7 @@ const slides = [
 		muted={true}
 		loop={true}
 		poster='/assets/turf-wars/turf-war_poster-2.png'
+		playsInline
 	>
 		<source src='/assets/turf-wars/turf-war_2.mp4' type='video/mp4' />
 	</video>,
@@ -29,6 +31,7 @@ const slides = [
 		muted={true}
 		loop={true}
 		poster='/assets/turf-wars/turf-war_poster-3.png'
+		playsInline
 	>
 		<source src='/assets/turf-wars/turf-war_3.mp4' type='video/mp4' />
 	</video>,
@@ -38,6 +41,7 @@ const slides = [
 		muted={true}
 		loop={true}
 		poster='/assets/turf-wars/turf-war_poster-4.png'
+		playsInline
 	>
 		<source src='/assets/turf-wars/turf-war_4.mp4' type='video/mp4' />
 	</video>,
